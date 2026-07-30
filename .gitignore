@@ -216,3 +216,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Large raster files - regenerate via src/chirps_raster_pilot.py rather than
+# storing in version control, per docs/dataset_publication_strategy.md
+data/external/*.tif
+data/external/*.tif.gz
