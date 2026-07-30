@@ -86,7 +86,7 @@ Status: In Progress. Milestone 2.1 (GBIF occurrence feasibility check) complete 
 
 Objectives
 
-Construct a machine-learning-ready dataset.
+Construct a machine-learning-ready dataset, using the confirmed spatial framework: a 5.5km x 5.5km regular grid as the unit of analysis, covering the Ahero Irrigation Scheme plus a 50km ecological buffer (see docs/assumptions_and_decision_log.md, Log Entry 002).
 
 Tasks
 
@@ -94,7 +94,8 @@ Tasks
 - Remove duplicates
 - Handle missing values
 - Standardize coordinate systems
-- Merge datasets
+- Generate the regular spatial grid across the confirmed analysis extent
+- Merge datasets onto the grid (aggregate finer-resolution layers, e.g. MODIS NDVI and SRTM, into grid cells; assign CHIRPS values natively)
 - Validate joins
 - Export processed dataset
 
