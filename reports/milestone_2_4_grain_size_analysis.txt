@@ -1,0 +1,52 @@
+Milestone 2.4 - Spatial Grain Size Selection Analysis
+============================================================
+
+1. NATIVE RESOLUTION OF ENVIRONMENTAL DATASETS
+------------------------------------------------------------
+  MODIS NDVI (MOD13Q1): 250 m
+  MODIS NDVI (MOD13A1): 500 m
+  SRTM DEM: 30 m
+  CHIRPS rainfall: ~5,500 m (0.05 deg)
+  NASA POWER meteorology: ~50,000-55,000 m (0.5 x 0.625 deg)
+
+2. OCCURRENCE RECORD DENSITY CONTEXT (Milestone 2.1 findings)
+------------------------------------------------------------
+  Total Kisumu County records (raw, Milestone 2.1): 161
+  Records within tight Ahero-area bounding box: 56
+  Estimated unique space-time events (post-duplicate collapse, approx): ~110-120 (pending formal dedup)
+
+3. RED-BILLED QUELEA ECOLOGY
+------------------------------------------------------------
+  Daily foraging flight distance: 50-65 km reported (multiple independent sources)
+  Typical distance to water dependency: ~30 km reported
+  Movement pattern: Highly mobile, nomadic, daily commuting between roost/feed/water sites
+
+4. LITERATURE PRECEDENT FOR GRAIN SIZE
+------------------------------------------------------------
+  Cheke, Venn & Jones (2007): Quarter-degree grid squares (~27.75 km at the equator) for quelea breeding-suitability forecasting, southern Africa
+  Dobson et al. (2023, dynamicSDM): Raster-based SDM for Quelea lathamii; pseudo-absence buffers sized to species movement capability and habitat-change rate, not administrative units
+  General SDM literature (e.g. Moudry et al. resolution studies): Grain size explicitly identified as a methodological choice requiring justification; performance and spatial pattern outputs both shown to depend on resolution choice
+
+5. CANDIDATE CELL SIZES UNDER CONSIDERATION
+------------------------------------------------------------
+  250 m
+  500 m
+  1000 m
+  5000 m
+
+6. KEY TENSION TO RESOLVE
+------------------------------------------------------------
+  Fine grain (250-500m, matching MODIS) offers high spatial detail but
+  risks false precision given sparse, presence-only occurrence data
+  (Milestone 2.1: ~56-120 usable points depending on deduplication).
+  Coarse grain (~5.5km, matching CHIRPS) aligns with our lowest-resolution
+  *usable* variable and matches the scale at which Cheke et al. (2007)
+  operated for the same species, but discards spatial detail from MODIS
+  and SRTM. NASA POWER's ~55km resolution is too coarse to inform grain
+  size directly (already flagged in the Dataset Feasibility Study as
+  contributing temporal, not spatial, signal).
+
+This analysis presents evidence only. Final grain size selection
+requires a deliberate decision, to be recorded in the Assumptions
+& Decision Log with full rationale before geospatial implementation
+proceeds.

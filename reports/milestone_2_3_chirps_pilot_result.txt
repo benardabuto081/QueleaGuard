@@ -1,0 +1,16 @@
+Milestone 2.3 - CHIRPS Rainfall Data Access Pilot
+=================================================
+
+Date of test: 2024-01-15
+Location: Ahero Irrigation Scheme (-0.1496144, 34.9263121)
+Source: CHIRPS v2.0 daily, p05 (0.05 degree, ~5.5km resolution)
+Access method: Direct HTTPS download from data.chc.ucsb.edu (public, no authentication)
+File size (compressed): 3.2 MB
+Raster dimensions: 7200 x 2000 pixels
+Confirmed resolution: 0.0500 degrees (~5.5 km)
+
+Result: 25.94 mm rainfall recorded at Ahero on 2024-01-15
+
+Conclusion: CHIRPS raster access confirmed feasible via public HTTPS,
+no authentication required. Value extraction via rasterio successful.
+Approved as primary rainfall source per Dataset Feasibility Study, Section 7.

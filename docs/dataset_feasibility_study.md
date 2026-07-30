@@ -233,7 +233,8 @@ Temporal features
 - month, season, day_of_year
 
 Spatial partition key
-- irrigation_scheme (ahero | nyamware)   # for disaggregated evaluation, spatial CV folds
+- grid_cell_id                          # 5.5km x 5.5km regular grid cell identifier (Log Entry 002)
+- within_scheme_boundary (1/0)          # whether the cell falls within the Ahero Irrigation Scheme itself, vs. the surrounding 50km ecological buffer
 
 This schema is provisional and will be finalized once study area, target framing, and pseudo-absence strategy are locked in.
 
@@ -248,9 +249,9 @@ This schema is provisional and will be finalized once study area, target framing
 | Use SRTM DEM and HydroSHEDS for terrain/hydrology | Approved | Mature, stable, high-resolution, no viable open alternative offers meaningful improvement for this use case |
 | Frame the target variable as occurrence/habitat-suitability risk rather than "infestation risk" | Approved | GBIF/eBird are presence-based observation data, not crop-damage records; this framing is the scientifically defensible one given available data (see Section 4, item 2) |
 | Meteorology source: NASA POWER vs. ERA5-Land | Under Review | NASA POWER is lower-friction (no registration) but ~55 km resolution likely erases spatial variance between the two schemes; ERA5-Land offers ~9 km resolution at the cost of CDS registration. Requires a short access-and-resolution comparison before final selection |
-| Study area scope (two schemes vs. county vs. basin-wide) | Pending | Depends entirely on Milestone 2.1 occurrence-density results |
+| Study area scope | Approved (Log Entry 001, Log Entry 002) | Ahero Irrigation Scheme confirmed as sole study area (Log Entry 001); analysis extent defined as Ahero + 50km ecological buffer (Log Entry 002) |
 | Pseudo-absence generation strategy | Pending | Depends on whether eBird EBD access is secured; design differs meaningfully between GBIF-only and GBIF+EBD scenarios |
-| Irrigation scheme boundary source | Pending | No authoritative open polygon confirmed yet; may require manual digitization |
+| Irrigation scheme boundary source | Approved (partially superseded) | Ahero Irrigation Scheme boundary confirmed via OpenStreetMap (Milestone 2.1). Individual operational block boundaries confirmed unavailable from any authoritative source and no longer required, since the adopted spatial framework uses a regular grid rather than block-level polygons (Log Entry 002, Section 11) |
 | Binary vs. multi-class target | Pending | Requires EDA on the actual occurrence data before deciding; multi-class only if data volume and label confidence support it |
 | Spatial (not random) cross-validation for evaluation | Approved | Standard practice for spatially autocorrelated ecological data; prevents inflated performance estimates, directly supports the disaggregated-by-scheme evaluation already committed to in the Specification |
 
@@ -272,7 +273,7 @@ These criteria define when QueleaGuard, as currently scoped, is considered techn
 - Occurrence records within even a widened bounding box (up to Lake Victoria basin scale) are too sparse to support any reliable train/test split.
 - No defensible way to construct absences is found (GBIF-only, no EBD access, no alternative negative-sampling design).
 - Environmental features show effectively zero spatial variance across the entire study area at all candidate scales, undermining the geospatial premise of the project.
-- No irrigation scheme boundary or reasonable proxy can be established, preventing meaningful "disaggregated by scheme" evaluation - in this case, the disaggregated evaluation requirement would be descoped rather than the whole project.
+- [Superseded by Log Entry 002] Disaggregated evaluation is no longer contingent on irrigation scheme boundary data - see Section 11 for the adopted grid-based spatial framework, which performs disaggregated evaluation via spatial cross-validation folds or distance bands instead.
 
 **If a No-Go condition is triggered**, the response is a scope adjustment (wider study area, reframed target variable, or descoped disaggregated evaluation) - not project cancellation. These criteria exist to catch that decision early, at low cost, rather than after feature engineering has begun.
 
@@ -306,3 +307,21 @@ This document is finalized for the current phase (Version 1.0). It supersedes th
 > **Project Motto**
 >
 > *Predict Early. Protect Harvests.*
+
+
+---
+
+# 11. Spatial Framework (Addendum - Log Entry 002)
+
+This section supersedes prior study-area framing elsewhere in this document wherever it conflicts with the framework below. Full evidence and rationale: docs/assumptions_and_decision_log.md, Log Entry 002.
+
+Following a dedicated literature review and empirical verification (Milestone 2.4), QueleaGuard adopts a regular spatial grid as its permanent spatial framework, replacing any assumption of scheme-level or operational-block-level polygons as the modelling unit:
+
+- **Study area:** Ahero Irrigation Scheme - the real-world system the project aims to support.
+- **Analysis extent:** Ahero Irrigation Scheme plus a 50km ecologically justified buffer, supported by three independent lines of evidence: Red-billed Quelea daily foraging range (50-65km reported; conservative lower bound adopted), empirical occurrence coverage (85.1% of confirmed GBIF/eBird records fall within 50km of Ahero), and unrestricted environmental predictor availability at this scale. The wider landscape within this radius - including the Nyando River corridor and its connection to Lake Victoria's Winam Gulf - is treated as a plausible ecological landscape influencing quelea movement, consistent with published knowledge of the species' ecology, not as a confirmed or site-verified roosting area.
+- **Spatial unit of analysis:** 5.5km x 5.5km regular grid cells, matching CHIRPS's native resolution, selected as a deliberate methodological decision balancing environmental data resolution, occurrence density, Red-billed Quelea movement ecology, computational efficiency, reproducibility, and SDM literature precedent jointly, rather than any single factor being decisive.
+- **Prediction target:** infestation risk predicted per grid cell within the analysis extent, with primary decision-support focus remaining the Ahero Irrigation Scheme itself.
+
+This framework replaces the two-scheme (Ahero/Nyamware) and operational-block polygon framings referenced elsewhere in this document as historical context only; earlier sections are retained for traceability but should be read as superseded where they conflict with this one.
+
+**Relationship to potential dataset publication:** whether the resulting gridded dataset (Section 6 schema) is ever published as an open, citable dataset is governed separately by docs/dataset_publication_strategy.md, which defers that decision pending implementation maturity, licensing review, and scientific evaluation. Nothing in this document should be read as committing to open dataset publication.

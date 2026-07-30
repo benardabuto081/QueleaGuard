@@ -1,0 +1,13 @@
+Milestone 2.4 - Buffer Distance Verification (50km radius)
+============================================================
+Total records (Milestone 2.1 Kisumu County pull): 161
+
+Records within 15 km of Ahero: 46 (28.6%)
+Records within 30 km of Ahero: 125 (77.6%)
+Records within 50 km of Ahero: 137 (85.1%)
+Records within 75 km of Ahero: 154 (95.7%)
+Records within 100 km of Ahero: 161 (100.0%)
+
+Nearest record: 2.2 km
+Farthest record: 83.8 km
+Median distance: 20.6 km

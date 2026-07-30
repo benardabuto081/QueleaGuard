@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>dlauth</title>
+    <link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://getbootstrap.com/docs/4.3/dist/js/bootstrap.min.js"></script>
+    <script>$(document).ready(function(){
+   $('#alert').delay(5000).fadeTo(2500,0);
+});
+    </script>
+    <style>html, body {
+  height: 100%;
+}
+body {
+  align-items: center;
+  margin-top: 0px;
+  background-color: #ffffff;
+}
+.box-signin {
+  max-width: 340px;
+  margin: auto;
+  border: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px;
+}
+.form-signin {
+  margin: auto;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-top: -1px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.form-signin button[type="submit"] {
+  margin-top: 10px;
+}
+    </style>
+  </head>
+  <body class="text-center">
+    <div class="row">
+      <div style="height: 100px; width: 420px" class="col-md-6 mx-auto mb-4">
+        <div id="alert">
+        </div>
+      </div>
+    </div><a href="https://iri.columbia.edu/" target="_blank"><img src="/auth/images/iri128.png" alt="" width="100" class="mb-4"></a>
+<h1 class="mb-4">Please sign in</h1>
+<p>The Data Library now requires all users to sign in. <a href="/auth/notice?redirect=/SOURCES/.UCSB/.CHIRPS/.v2p0/.daily-improved/.global/.0p05/.prcp/X/34.9263121/VALUE/Y/-0.1496144/VALUE/T/%281%2520Jan%25202024%29/%2831%2520Jan%25202024%29/RANGEEDGES/data.csv">Learn more.</a><br/>Don't have an account? <a href="/auth/signup?redirect=/SOURCES/.UCSB/.CHIRPS/.v2p0/.daily-improved/.global/.0p05/.prcp/X/34.9263121/VALUE/Y/-0.1496144/VALUE/T/%281%2520Jan%25202024%29/%2831%2520Jan%25202024%29/RANGEEDGES/data.csv">Create one.</a>
+</p>
+<div class="mt-4">
+  <div class="box-signin">
+    <form action="/auth/login/local/submit/login" method="POST" class="form form-signin">
+      <input name="redirect" type="text" value="/SOURCES/.UCSB/.CHIRPS/.v2p0/.daily-improved/.global/.0p05/.prcp/X/34.9263121/VALUE/Y/-0.1496144/VALUE/T/(1%20Jan%202024)/(31%20Jan%202024)/RANGEEDGES/data.csv" hidden=""/>
+      <label for="userName" class="sr-only">Email</label>
+      <input id="userName" name="email" type="email" placeholder="Email" required="" autofocus="" class="form-control"/>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input id="inputPassword" name="password" type="password" placeholder="Password" required="" class="form-control"/>
+      <button type="submit" class="btn btn-lg btn-primary btn-block">Sign in</button>
+      <p class="mt-2 mb-0">Forgot password? <a href="/auth/reset?redirect=/SOURCES/.UCSB/.CHIRPS/.v2p0/.daily-improved/.global/.0p05/.prcp/X/34.9263121/VALUE/Y/-0.1496144/VALUE/T/%281%2520Jan%25202024%29/%2831%2520Jan%25202024%29/RANGEEDGES/data.csv">Reset it.</a>
+      </p>
+    </form>
+  </div>
+</div>
+<div class="mt-3">
+  <p>or</p>
+</div>
+<div>
+  <div class="box-signin">
+    <p>Sign in with</p>
+    <div style="justify-content: center" class="row"><a href="/auth/login/oauth2/login?realm=google.com&amp;redirect=/SOURCES/.UCSB/.CHIRPS/.v2p0/.daily-improved/.global/.0p05/.prcp/X/34.9263121/VALUE/Y/-0.1496144/VALUE/T/%281%2520Jan%25202024%29/%2831%2520Jan%25202024%29/RANGEEDGES/data.csv"><img src="/auth/images/c92/google-light.png" title="Google" height="42"/></a><a href="/auth/login/oauth2/login?realm=github.com&amp;redirect=/SOURCES/.UCSB/.CHIRPS/.v2p0/.daily-improved/.global/.0p05/.prcp/X/34.9263121/VALUE/Y/-0.1496144/VALUE/T/%281%2520Jan%25202024%29/%2831%2520Jan%25202024%29/RANGEEDGES/data.csv"><img src="/auth/images/c92/github-light.png" alt="Github" height="42"/></a>
+    </div>
+  </div>
+</div>
+    <p class="text-muted mt-4 mb-0">By signing in, you agree to the <a href="/auth/legal/terms-of-service" target="_blank">Terms of Service</a> and <a href="/auth/legal/privacy-policy" target="_blank">Privacy Policy</a>
+    </p>
+    <p class="text-muted">© IRI 2025</p>
+  </body>
+</html>
