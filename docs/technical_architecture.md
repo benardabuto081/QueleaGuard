@@ -245,7 +245,7 @@ Additional analyses
 
 - Error analysis
 - Feature importance
-- Disaggregated evaluation by irrigation scheme sub-block (Ahero, Okana, Mbega, Kasiru/Kolal, Nokiso, Masune, Kobong'o), where applicable
+- Disaggregated evaluation by spatial partition (spatial cross-validation fold or distance-from-scheme-center band), per the grid-based spatial framework adopted in docs/assumptions_and_decision_log.md, Log Entry 002 - superseding block-level disaggregation, since operational block boundaries are not available from any authoritative source
 
 ---
 
