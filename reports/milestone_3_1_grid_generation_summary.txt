@@ -1,0 +1,17 @@
+Milestone 3.1 - Analysis Grid Generation Summary
+====================================================
+
+Source boundary: data/external/ahero_boundary.geojson (Ahero Irrigation Scheme, OpenStreetMap)
+Ahero polygon area: 12.33 sq km
+Buffer applied: 50 km (Log Entry 002)
+Grid cell size: 5500m x 5500m (5.5km, matching CHIRPS resolution)
+Coordinate system used for buffering/gridding: EPSG:32736 (UTM Zone 36S)
+
+Analysis extent bounding box (meters): (662142, 9930879) to (769387, 10036073)
+Analysis extent dimensions: 107.2 km x 105.2 km
+
+Total grid cells in final analysis grid: 328
+Cells within Ahero scheme boundary: 4
+Cells in surrounding ecological buffer only: 324
+
+Output file: data/processed/analysis_grid.geojson
