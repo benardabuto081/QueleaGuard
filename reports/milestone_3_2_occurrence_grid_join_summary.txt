@@ -1,0 +1,13 @@
+Milestone 3.2 - Occurrence-to-Grid Join Summary
+===================================================
+
+Source occurrences: data/raw/gbif_kisumu_county_raw.csv (161 raw GBIF/eBird records, Milestone 2.1)
+Analysis grid: data/processed/analysis_grid.geojson (328 cells, Milestone 3.1)
+
+Records matched to a grid cell (within analysis extent): 145
+Records outside the analysis extent: 16
+Records within Ahero scheme boundary cells specifically: 30
+
+Occupied grid cells: 26 of 328 total cells contain at least one occurrence record.
+
+Output file: data/processed/occurrences_with_grid_cell.csv

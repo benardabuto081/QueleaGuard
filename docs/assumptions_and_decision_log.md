@@ -97,3 +97,51 @@ Spatial resolution is the deciding factor over convenience. NASA POWER's no-auth
 **Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
 
 ---
+
+## Log Entry 004 — Occurrence-to-Grid Join: Persistent Site Identified in Buffer Zone
+
+**Date:** 2026-08-01 (Phase 3, Milestone 3.2)
+
+**Context:**
+During the occurrence-to-grid spatial join (Milestone 3.2), 145 of 161 raw GBIF/eBird records (Milestone 2.1) matched to a grid cell within the analysis extent; 16 fell outside it. Of matched records, one grid cell (cell_0080) accounted for 62 records (43% of matched records) - a concentration warranting investigation before being treated as clean data.
+
+**Finding:**
+Investigation confirmed this concentration reflects genuine repeated observation of a persistent site, not a duplication artifact: the 62 records span 36 distinct dates across a 1984-2024 date range, from many different individual observers (no observer contributing more than 2 records), clustered within approximately 100 meters of each other. The site sits within the analysis extent's ecological buffer (not within the Ahero scheme boundary itself), approximately 20.6km west of Ahero and geographically consistent with the shoreline of Lake Victoria's Winam Gulf near Kisumu.
+
+**Interpretation (deliberately bounded):**
+This finding is consistent with - but does not confirm - the "plausible ecological landscape" reasoning in Log Entry 002 regarding the Nyando River/Lake Victoria corridor's potential influence on quelea movement in the study area. It is evidence of a persistent, repeatedly-visited site near water, within the buffer zone the project defined for ecological reasons. It is not evidence of a confirmed roosting or breeding site - no site-specific ecological survey has been conducted, and citizen-science observation frequency reflects observer accessibility and interest as well as bird presence. This distinction is maintained consistently with the wording standard set in Log Entry 002.
+
+**Relevance to the project:**
+This is a concrete, data-derived example of why the 50km ecological buffer (rather than the scheme boundary alone) was methodologically appropriate: a real, repeatedly-documented site of interest exists within the buffer and would have been excluded entirely under a scheme-only study area. This strengthens (with real evidence, not just literature-based projection) the justification recorded in Log Entry 002.
+
+**No methodology change results from this entry** - it is a documentation of a finding that validates an existing decision, not a correction to it.
+
+**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+
+---
+
+## Log Entry 005 — Local Ecological Knowledge Recorded as Separate Artifact
+
+**Date:** 2026-08-01 (Phase 3, Milestone 3.2)
+
+**Context:**
+The project owner disclosed local ecological knowledge relevant to quelea behavior near the Ahero Irrigation Scheme, distinguishing personal observations (from growing up near the scheme) from secondhand community-reported knowledge (accounts from local farmers and residents regarding shoreline roosting and dawn feeding-ground movement, and floodplain/high-lake-level flooding history).
+
+**Decision:**
+This knowledge is recorded in a dedicated document, docs/local_ecological_knowledge_and_hypotheses.md, kept explicitly separate from project methodology. It is not treated as evidence, not incorporated into feature engineering, pseudo-absence generation, model tuning, or validation. Its sole role is generating testable hypotheses (five recorded, H1-H5) to be checked against model outputs and data patterns after modelling is complete, not before.
+
+**Rationale:**
+Local ecological knowledge is a recognized, legitimate input in applied ecological research, but conflating it with empirical evidence risks quietly biasing methodology toward a pre-existing narrative. Keeping it as a separate, clearly-attributed, clearly-bounded artifact preserves its value (hypothesis generation, eventual triangulation with model results) while protecting the scientific integrity of the modelling pipeline itself. This is consistent with the project's Responsible AI principles (transparency about knowledge sources) and its publication-readiness goal (LEK sections are a recognized, citable practice in applied ecology papers).
+
+**Specific care taken on attribution and place-naming:**
+Personal observation and community-reported knowledge are distinguished explicitly in the document, rather than presented uniformly as "local knowledge." The claim that Nyamware specifically is one of the areas most affected by quelea is recorded strictly as a locally-held belief, not as fact, and is explicitly flagged as unverifiable at present given Nyamware's location and extent remain unresolved (Log Entry 001).
+
+**Relationship to Log Entry 004:**
+The persistent occurrence site identified empirically in Log Entry 004 (cell_0080, near the Winam Gulf shoreline) is noted in the LEK document as broadly consistent with the community-reported shoreline-roosting narrative. This is stated as two independent sources pointing in a similar direction, not as confirmation of either one by the other.
+
+**Impact:**
+No change to methodology, spatial framework, feature engineering plan, or any prior decision. This entry documents the existence and intended treatment of a new qualitative knowledge source only.
+
+**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+
+---
