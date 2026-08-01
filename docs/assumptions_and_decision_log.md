@@ -145,3 +145,42 @@ No change to methodology, spatial framework, feature engineering plan, or any pr
 **Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
 
 ---
+
+## Log Entry 006 — Temporal Feature Engineering Framework
+
+**Date:** 2026-08-01 (Phase 3, Milestone 3.3)
+
+**Context:**
+Following the spatial framework (Log Entry 002), a corresponding temporal methodology was needed before environmental feature extraction could begin, since the project's goal is to predict occurrence based on conditions plausibly influencing birds before observation, not long-run average conditions at a location.
+
+**Decision:**
+QueleaGuard adopts per-occurrence, date-matched environmental features (not static per-cell climatology), with variable-specific temporal representations chosen for ecological reasons:
+
+- **Rainfall (CHIRPS):** multi-window antecedent accumulation (7-day, 30-day, 90-day totals preceding the observation date). Rationale: rainfall's ecological effect on quelea is lagged and cumulative - rain drives seed/grass growth over a period of weeks, which in turn drives food availability and breeding (Cheke, Venn & Jones 2007) - not an instantaneous same-day effect. Multiple windows allow the eventual model to reveal which lag is most predictive rather than assuming one in advance.
+- **Vegetation (MODIS NDVI):** nearest 16-day composite value at or before the observation date, plus an NDVI anomaly feature (deviation from that cell's typical seasonal NDVI). Rationale: NDVI is itself already a state variable representing current vegetation greenness, not a quantity that should be further accumulated over time; anomaly captures ecologically meaningful deviation from local seasonal norms, consistent with vegetation-flush-driven breeding cues in the literature.
+- **Meteorology (ERA5-Land - temperature, humidity, wind):** short window (7-day mean) plus same-day/nearest-day value. Rationale: these variables plausibly act more immediately on bird activity and flight/foraging conditions than on a lagged biological process, so a short window is mechanistically appropriate rather than an arbitrary simplification.
+- **Terrain/hydrology (SRTM elevation/slope, HydroSHEDS distance-to-water):** static, no temporal dimension. Rationale: these are physically time-invariant at any timescale relevant to this project.
+
+**Raw dataset vs. modelling dataset distinction (explicit):**
+The raw occurrence dataset (161 records, Milestone 2.1) and grid-matched dataset (145 records, Milestone 3.2) are retained in full and continue to be used in exploratory analyses, temporal summaries, and project documentation regardless of this decision. The temporal framework above defines a separate, feature-complete **modelling dataset**, which additionally requires every environmental variable to be extractable for a given record's date.
+
+**MODIS NDVI as the effective temporal boundary:**
+Since MODIS NDVI (operational from February 2000) is a core planned feature - not optional - and CHIRPS (1981-present) and ERA5-Land (confirmed via direct verification to cover 1950-present) both cover the full occurrence record range, MODIS's start date is the binding constraint on the modelling dataset's usable temporal range. This mirrors the spatial framework's logic (Log Entry 002), where CHIRPS's resolution was identified as the coarsest necessary layer and other sources were matched to it; here, MODIS's start date plays the equivalent temporal role.
+
+**Quantified impact (Milestone 3.3):**
+Of 145 occurrence records matched to the analysis grid (Milestone 3.2):
+- 133 records (91.7%) fall on or after January 2000 and are feature-complete modelling dataset candidates.
+- 8 records (5.5%) predate 2000 and are excluded from the feature-complete modelling dataset. These remain valid historical occurrence evidence and are retained in the raw and grid-matched datasets for EDA, temporal summaries, and documentation - the exclusion reflects a data availability constraint, not a data quality judgement about these specific observations.
+- 4 records (2.8%) have missing or unparseable year values and require separate handling (to be resolved during Milestone 3 preprocessing, not this decision).
+
+One excluded pre-2000 record (1984-12-29) shares coordinates with cell_0080, the persistent site identified in Log Entry 004 - additional, non-decisive context suggesting that site's observation pattern may extend back further than the feature-complete dataset can capture.
+
+**Dependency acknowledged, not yet resolved:**
+Pseudo-absence generation (Dataset Feasibility Study, Section 7 - status Pending) will require each generated pseudo-absence point to carry an associated date, so that environmental variables can be extracted for pseudo-absences using the same variable-specific temporal logic defined here. This is a formal requirement on the eventual pseudo-absence methodology, not a detail to be decided implicitly when that design work happens.
+
+**Rationale for the framework overall:**
+Matching temporal representation to each variable's actual ecological mechanism, rather than applying one uniform convention (e.g., "always use monthly averages"), is more scientifically defensible and more consistent with published SDM practice, and produces a methodology that can be justified point-by-point in an eventual publication's Methods section rather than asserted without support.
+
+**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+
+---

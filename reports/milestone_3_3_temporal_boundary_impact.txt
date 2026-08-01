@@ -1,0 +1,13 @@
+Milestone 3.3 - MODIS NDVI Temporal Boundary Impact
+=======================================================
+
+Candidate pool: 145 occurrence records matched to the analysis grid (Milestone 3.2)
+
+Records retained for feature-complete modelling dataset (year >= 2000): 133 (91.7%)
+Records excluded from modelling dataset, retained for EDA/historical context (year < 2000): 8 (5.5%)
+Records with missing/unparseable year: 4
+
+This exclusion reflects a data availability constraint (MODIS NDVI operational start,
+February 2000), not a data quality judgement. Pre-2000 records remain valid historical
+occurrence evidence and will continue to appear in exploratory analyses, temporal
+summaries, and project documentation.
