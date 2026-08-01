@@ -1,0 +1,3 @@
+AppEEARS task ID: 94425b98-8b7c-4670-a8ab-680569e0b896
+Submitted for: MOD13Q1.061 NDVI, Ahero coordinates, Jan 2024
+Check status with src/appeears_check_status.py before downloading.
