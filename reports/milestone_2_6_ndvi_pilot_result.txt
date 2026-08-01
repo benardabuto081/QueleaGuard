@@ -1,0 +1,16 @@
+Milestone 2.6 - MODIS NDVI (AppEEARS) Access Pilot
+=====================================================
+
+Product: MOD13Q1.061, 250m, 16-day composite NDVI
+Location: Ahero Irrigation Scheme (-0.1496144, 34.9263121)
+Period: January 2024
+Access method: NASA AppEEARS point-extraction API (asynchronous task queue),
+authenticated via NASA Earthdata login
+Rows retrieved: 3
+NDVI column: MOD13Q1_061__250m_16_days_NDVI
+Sample NDVI values: [0.4811, 0.5309, 0.553]
+
+Conclusion: MODIS NDVI access via AppEEARS confirmed feasible. Task processed
+quickly (well under the multi-hour worst case). Values require scaling per
+MOD13Q1 product documentation (raw NDVI is typically scaled by 0.0001) before
+use - to be handled in Milestone 3 preprocessing, not this pilot.
