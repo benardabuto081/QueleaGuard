@@ -1,0 +1,15 @@
+Milestone 2.5 - NASA POWER Access Pilot
+============================================================
+Location: Ahero (-0.1496144, 34.9263121)
+Period: 20240101 to 20240131
+Resolution (per NASA POWER documentation): ~0.5 x 0.625 degrees (~50-55 km)
+
+Sample daily values (first 5 days):
+  20240101: Temp=20.45C, RH=78.81%, Wind=0.98m/s
+  20240102: Temp=20.32C, RH=80.67%, Wind=1.13m/s
+  20240103: Temp=20.48C, RH=73.58%, Wind=1.78m/s
+  20240104: Temp=20.44C, RH=74.13%, Wind=1.01m/s
+  20240105: Temp=20.1C, RH=75.15%, Wind=1.08m/s
+
+Total days retrieved: 31
+Access method: Direct HTTPS GET, no authentication required

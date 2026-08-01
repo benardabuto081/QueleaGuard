@@ -1,0 +1,15 @@
+Milestone 2.5 - ERA5-Land Access Pilot
+=========================================
+
+Date of test: 2024-01-15
+Location: Ahero area (bounding box: [-0.0496144, 34.826312099999996, -0.24961440000000001, 35.0263121])
+Source: ERA5-Land reanalysis, Copernicus Climate Data Store
+Access method: cdsapi Python client, authenticated via personal API key
+Resolution (per ERA5-Land documentation): ~9 km
+
+Result: Successfully downloaded NetCDF file: data/external/era5land_ahero_20240115.nc
+
+Conclusion: ERA5-Land access confirmed feasible via CDS API, requires
+free registration and API key (unlike NASA POWER's no-auth access).
+Resolution (~9km) is substantially finer than NASA POWER (~50-55km) and
+closer to (though still coarser than) our adopted 5.5km grid.

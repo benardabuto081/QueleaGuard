@@ -248,7 +248,7 @@ This schema is provisional and will be finalized once study area, target framing
 | Use MODIS NDVI (via AppEEARS initially) as the primary vegetation source | Approved | Sufficient resolution to capture intra-scheme variation; AppEEARS avoids GEE account setup during the discovery phase |
 | Use SRTM DEM and HydroSHEDS for terrain/hydrology | Approved | Mature, stable, high-resolution, no viable open alternative offers meaningful improvement for this use case |
 | Frame the target variable as occurrence/habitat-suitability risk rather than "infestation risk" | Approved | GBIF/eBird are presence-based observation data, not crop-damage records; this framing is the scientifically defensible one given available data (see Section 4, item 2) |
-| Meteorology source: NASA POWER vs. ERA5-Land | Under Review | NASA POWER is lower-friction (no registration) but ~55 km resolution likely erases spatial variance between the two schemes; ERA5-Land offers ~9 km resolution at the cost of CDS registration. Requires a short access-and-resolution comparison before final selection |
+| Meteorology source: ERA5-Land selected over NASA POWER | Approved (Log Entry 003) | Both sources piloted directly (Milestone 2.5). ERA5-Land's ~9km resolution provides meaningful spatial variance across the project's ~5.5km grid; NASA POWER's ~55km resolution would reduce most of the ~330-360 grid cells to near-identical values, contributing temporal but not spatial signal. One-time CDS registration/license acceptance completed. |
 | Study area scope | Approved (Log Entry 001, Log Entry 002) | Ahero Irrigation Scheme confirmed as sole study area (Log Entry 001); analysis extent defined as Ahero + 50km ecological buffer (Log Entry 002) |
 | Pseudo-absence generation strategy | Pending | Depends on whether eBird EBD access is secured; design differs meaningfully between GBIF-only and GBIF+EBD scenarios |
 | Irrigation scheme boundary source | Approved (partially superseded) | Ahero Irrigation Scheme boundary confirmed via OpenStreetMap (Milestone 2.1). Individual operational block boundaries confirmed unavailable from any authoritative source and no longer required, since the adopted spatial framework uses a regular grid rather than block-level polygons (Log Entry 002, Section 11) |
@@ -286,8 +286,8 @@ These criteria define when QueleaGuard, as currently scoped, is considered techn
 | GBIF (bird occurrence) | Yes | No | No | No |
 | eBird EBD (bird occurrence + effort) | Pending decision | No | No | No |
 | CHIRPS (rainfall) | Yes | No | No | No |
-| NASA POWER (meteorology) | Under review vs. ERA5-Land | No | No | No |
-| ERA5-Land (meteorology, alternative) | Under review | No | No | No |
+| NASA POWER (meteorology) | Not selected (Log Entry 003) | Yes (Milestone 2.5 pilot) | Yes (pilot only) | No |
+| ERA5-Land (meteorology) | Yes (Log Entry 003) | Yes (Milestone 2.5 pilot) | Yes (pilot only) | No |
 | MODIS NDVI (vegetation) | Yes | No | No | No |
 | SRTM DEM (elevation/slope) | Yes | No | No | No |
 | HydroSHEDS (hydrology) | Yes | No | No | No |

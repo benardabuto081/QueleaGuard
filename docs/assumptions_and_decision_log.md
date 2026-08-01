@@ -70,3 +70,30 @@ A grid-based framework is supported by two independent justifications, either of
 **Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
 
 ---
+
+## Log Entry 003 — Meteorology Source: ERA5-Land Selected Over NASA POWER
+
+**Date:** 2026-08-01 (Phase 2, Milestone 2.5)
+
+**Original assumption:**
+Meteorology source (temperature, humidity, wind) was left "Under Review" between NASA POWER and ERA5-Land in the Dataset Feasibility Study, Section 7.
+
+**Evidence that led to the decision:**
+1. Both sources were piloted directly. NASA POWER: instant, no-authentication REST API access confirmed, real values retrieved for Ahero (Jan 2024). ERA5-Land: access confirmed via Copernicus CDS API following one-time account registration and dataset license acceptance; request processed and NetCDF file downloaded successfully in under 30 seconds.
+2. Resolution comparison: NASA POWER (~50-55km, per its own documentation) vs. ERA5-Land (~9km, per its own documentation), against the project's adopted 5.5km analysis grid (Log Entry 002).
+3. At NASA POWER's resolution, the project's full ~100km-wide analysis extent (Ahero + 50km buffer) would be covered by only 2-4 distinct meteorology values total, meaning the large majority of the project's ~330-360 grid cells would receive near-identical temperature/humidity/wind readings, contributing temporal but not spatial signal - a limitation already flagged as a risk in the original Dataset Feasibility Study (Section 2.2). ERA5-Land's ~9km resolution allows meaningfully distinct values between neighboring grid cells.
+
+**Corrected/finalized understanding:**
+**ERA5-Land is selected as the project's meteorology source** (temperature, dewpoint/humidity, wind), superseding NASA POWER. Access is via the Copernicus CDS API (`cdsapi` Python package), requiring one-time free registration and dataset license acceptance - both completed.
+
+**Rationale for the decision:**
+Spatial resolution is the deciding factor over convenience. NASA POWER's no-authentication access is a real convenience but does not offset a resolution gap severe enough to make the variable spatially uninformative across most of the analysis extent. ERA5-Land's one-time registration cost is trivial relative to the improvement in spatial signal quality.
+
+**Impact of the decision:**
+- Dataset Feasibility Study, Section 7 ("Engineering Decisions") and Section 9 ("Dataset Status Tracker") updated: ERA5-Land marked Approved/Selected, NASA POWER marked Not Selected (retained as a documented, evaluated alternative, not deleted from the record).
+- `src/nasa_power_pilot.py` and `src/era5land_pilot.py`, along with their reference outputs in `reports/`, are retained as evidence of the comparison, consistent with the project's publication-readiness standard (both a positive and a superseded result are preserved, not just the final choice).
+- No other documents require correction, as none had committed to NASA POWER specifically prior to this decision (all referenced it as "NASA POWER or ERA5-Land").
+
+**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+
+---
