@@ -288,7 +288,7 @@ These criteria define when QueleaGuard, as currently scoped, is considered techn
 | CHIRPS (rainfall) | Yes | No | No | No |
 | NASA POWER (meteorology) | Not selected (Log Entry 003) | Yes (Milestone 2.5 pilot) | Yes (pilot only) | No |
 | ERA5-Land (meteorology) | Yes (Log Entry 003) | Yes (Milestone 2.5 pilot) | Yes (pilot only) | No |
-| MODIS NDVI (vegetation) | Yes | No | No | No |
+| MODIS NDVI (vegetation) | Yes | Yes (Milestone 2.6 AppEEARS pilot) | Yes (pilot only) | No |
 | SRTM DEM (elevation/slope) | Yes | No | No | No |
 | HydroSHEDS (hydrology) | Yes | No | No | No |
 | ESA WorldCover / OSM (land cover, boundaries) | Yes (pending boundary confirmation) | Yes (pending boundary confirmation) | No | No |
@@ -325,3 +325,22 @@ Following a dedicated literature review and empirical verification (Milestone 2.
 This framework replaces the two-scheme (Ahero/Nyamware) and operational-block polygon framings referenced elsewhere in this document as historical context only; earlier sections are retained for traceability but should be read as superseded where they conflict with this one.
 
 **Relationship to potential dataset publication:** whether the resulting gridded dataset (Section 6 schema) is ever published as an open, citable dataset is governed separately by docs/dataset_publication_strategy.md, which defers that decision pending implementation maturity, licensing review, and scientific evaluation. Nothing in this document should be read as committing to open dataset publication.
+
+
+---
+
+# 12. Milestone 2 Closure Statement
+
+Milestone 2 (Data Acquisition) is complete as of 2026-08-01. Summary of outcomes:
+
+- **Bird occurrence (GBIF):** Feasibility confirmed (Milestone 2.1). Study area corrected from an assumed two-scheme framing to the single confirmed Ahero Irrigation Scheme (Log Entry 001). 161 raw records retrieved for Kisumu County; 85.1% fall within the adopted 50km analysis extent (Log Entry 002).
+- **Spatial framework:** Established and documented (Milestone 2.4, Log Entry 002) - study area, analysis extent, and 5.5km grid-based spatial unit of analysis, backed by literature precedent, empirical occurrence distribution, and environmental data availability.
+- **Rainfall (CHIRPS):** Access confirmed via direct raster download (Milestone 2.3). Real rainfall value extracted and verified for Ahero.
+- **Meteorology (ERA5-Land vs. NASA POWER):** Both piloted; ERA5-Land selected for its ~9km resolution advantage over NASA POWER's ~55km (Milestone 2.5, Log Entry 003).
+- **Vegetation (MODIS NDVI):** Access confirmed via NASA AppEEARS (Milestone 2.6). Real NDVI values retrieved with QA/quality fields intact and verified.
+- **Terrain/hydrology (SRTM, HydroSHEDS):** Not yet directly piloted with a live data pull; treated as low-risk given their maturity, stability, and lack of viable alternatives noted throughout this document. To be confirmed during Milestone 3 implementation rather than as a separate Milestone 2 pilot, since no access-method uncertainty comparable to the other sources has been identified.
+- **Agricultural calendar data:** Remains a stretch feature, unchanged from original assessment (Section 2.5) - weakest data source category, not a Milestone 2 blocker.
+
+**Feature inventory frozen entering Milestone 3:** GBIF/eBird occurrence, CHIRPS rainfall, ERA5-Land meteorology, MODIS NDVI, SRTM elevation/slope, HydroSHEDS hydrology distance features - all confirmed accessible at the resolutions documented in Section 2, gridded onto the 5.5km spatial framework established in Log Entry 002.
+
+Milestone 3 (Data Engineering) may now proceed under a stable, evidence-backed data and spatial foundation.
