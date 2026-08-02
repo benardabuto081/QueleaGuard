@@ -221,3 +221,7 @@ __marimo__/
 # storing in version control, per docs/dataset_publication_strategy.md
 data/external/*.tif
 data/external/*.tif.gz
+
+# CHIRPS local raster cache - large (~10GB), regenerate via
+# src/download_chirps_cache.py rather than storing in version control
+data/external/chirps_cache/

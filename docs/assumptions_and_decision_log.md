@@ -184,3 +184,31 @@ Matching temporal representation to each variable's actual ecological mechanism,
 **Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
 
 ---
+
+## Log Entry 007 — CHIRPS Direct-Read Access Pattern and Rainfall Feature Extraction
+
+**Date:** 2026-08-01 (Phase 3, Milestone 3.4)
+
+**Context:**
+Initial rainfall extraction attempts used a live remote API (NOAA ERDDAP CHIRPS mirror), which proved unreachable (connection timeouts), and subsequently a per-record download-and-decompress approach, which was inefficient (repeated temporary file creation) and triggered a geographic-CRS centroid computation warning.
+
+**Technical finding - direct compressed raster reading:**
+GDAL (and therefore rasterio, which is built on GDAL) supports reading gzip-compressed raster files directly via its `/vsigzip/` virtual filesystem, without decompressing to disk. This was confirmed empirically: rasterio's higher-level `gz://` and `gz+file://` URI schemes did not resolve correctly on this Windows/rasterio installation (confirmed via smoke test, both failed with "not recognized as a supported dataset name"), but the underlying raw GDAL path syntax (`/vsigzip/<absolute_posix_path>`) worked correctly and returned results identical to a fully decompressed read (25.94mm rainfall at Ahero, 2024-01-15, matching the Milestone 2.3 pilot exactly).
+
+**Extraction architecture adopted:**
+1. Grid cell centroids computed via a projected metric CRS (EPSG:32736, UTM Zone 36S - consistent with grid generation, Log Entry 002/Milestone 3.1), then reprojected to WGS84, avoiding the geographic-CRS centroid inaccuracy warning correctly rather than suppressing it.
+2. A local cache of all 3,247 unique CHIRPS daily raster files needed to cover every record's 90-day antecedent window (per Log Entry 006) was downloaded once via src/download_chirps_cache.py (10.84GB, resumable, courtesy-delayed).
+3. Extraction is batched by date, not by record: each unique daily raster is opened exactly once via `/vsigzip/`, all grid cells needing a value on that date are extracted in a single pass, then the file is closed. This guarantees each of the 3,247 files is opened at most once regardless of how many records/cells reference it (5,965 total (date, cell) extractions required across only 3,247 file opens).
+
+**Outcome:**
+All 133 modelling-candidate records successfully extracted with complete 91-day coverage (0 missing files, 0 incomplete records). Total extraction time: ~17.5 minutes. Rainfall features (7-day, 30-day, 90-day antecedent totals) saved to data/processed/rainfall_features.csv.
+
+**Rationale for recording this as a Decision Log entry rather than only in code comments:**
+The `/vsigzip/` finding and the URI scheme failure on this system are non-obvious and would otherwise need to be rediscovered by anyone reproducing this pipeline (a stated project priority - see docs/assumptions_and_decision_log.md project-wide reproducibility principle, and the Scientific Publication & Research Strategy). Documenting it here, alongside the architectural decision to batch by date rather than by record, preserves both the technical solution and the reasoning for future reuse (this pattern will be reused for ERA5-Land and MODIS NDVI extraction).
+
+**Impact:**
+No change to prior decisions (spatial framework, temporal framework, or data sources). This entry documents implementation methodology for Milestone 3.4, establishing a reusable extraction pattern for subsequent environmental variables.
+
+**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+
+---

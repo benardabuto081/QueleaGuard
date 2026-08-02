@@ -1,0 +1,29 @@
+Milestone 3.4 - CHIRPS Rainfall Feature Extraction Summary (final)
+======================================================================
+
+Candidate records: 133
+Successfully extracted: 133
+Unique dates processed: 3247
+Unique daily rasters opened: 3247 (each opened exactly once)
+Missing files: 0
+
+Access method: local CHIRPS raster cache, read directly via GDAL's
+/vsigzip/ virtual filesystem (confirmed working via smoke test) - no
+decompression to disk at any point.
+
+Grid cell centroids computed via projected CRS (EPSG:32736, UTM 36S),
+reprojected to WGS84.
+
+Windows computed: 7-day, 30-day, 90-day antecedent rainfall totals ending
+on each record's observation date, per Log Entry 006.
+
+Rainfall statistics across all records:
+       rainfall_7d  rainfall_30d  rainfall_90d
+count   133.000000    133.000000    133.000000
+mean     37.270376    161.437444    493.844361
+std      31.203358     89.888294    154.283236
+min       0.000000     14.750000    215.160000
+25%      17.350000     84.050000    366.060000
+50%      29.400000    149.810000    488.120000
+75%      56.480000    223.520000    625.560000
+max     125.750000    379.150000    824.750000
