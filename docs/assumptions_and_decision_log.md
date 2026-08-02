@@ -212,3 +212,29 @@ No change to prior decisions (spatial framework, temporal framework, or data sou
 **Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
 
 ---
+
+## Log Entry 008 — ERA5-Land Batched Extraction and CDS ZIP Format Finding
+
+**Date:** 2026-08-02 (Phase 3, Milestone 3.5)
+
+**Context:**
+Following the CHIRPS extraction pattern (Log Entry 007), ERA5-Land meteorology features (temperature, dewpoint/humidity, wind - 7-day mean + same-day, per Log Entry 006) were extracted for all 133 modelling-candidate records via the Copernicus CDS API.
+
+**Efficient batching approach:**
+Rather than one CDS request per record (133 requests) or per unique date (480 unique dates across all 7-day windows), requests were batched by (year, month) - only 60 unique combinations needed, since the CDS API supports requesting multiple specific days within a single month in one call. All 60 requests completed successfully (one transient connection error was automatically retried by the cdsapi client's built-in retry logic, with no data loss).
+
+**Technical finding - CDS returns ZIP archives despite requesting NetCDF format:**
+Downloaded files, despite the request specifying `"data_format": "netcdf"`, were ZIP archives (confirmed via file signature inspection: `PK\x03\x04`) containing the actual `.nc` file inside, not raw NetCDF files. This is a known current behavior of some CDS datasets and is not documented prominently on the API usage page. The extraction script now detects this via file signature (not file extension, which is unreliable) and extracts automatically before reading with xarray.
+
+**Outcome:**
+All 133 records successfully extracted with complete 7/7-day coverage (0 incomplete records). Meteorology features (temp_mean_7d, dewpoint_mean_7d, wind_mean_7d, and same-day equivalents) saved to data/processed/meteorology_features.csv.
+
+**Rationale for recording this as a Decision Log entry:**
+Like the CHIRPS /vsigzip/ finding (Log Entry 007), this is a non-obvious technical detail that would otherwise need rediscovery by anyone reproducing this pipeline. The (year, month) batching strategy is also a reusable pattern worth documenting explicitly for the MODIS NDVI extraction still to come.
+
+**Impact:**
+No change to prior decisions. Documents implementation methodology for Milestone 3.5.
+
+**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+
+---

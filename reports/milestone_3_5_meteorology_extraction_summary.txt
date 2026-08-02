@@ -1,0 +1,29 @@
+Milestone 3.5 - ERA5-Land Meteorology Feature Extraction Summary
+====================================================================
+
+Candidate records: 133
+Successfully extracted: 133
+Records with incomplete 7-day coverage: 0
+Unique (year, month) CDS requests: 60
+
+Access method: Copernicus CDS API (cdsapi), batched by year-month.
+Note: CDS returned ZIP archives (containing the actual NetCDF file)
+rather than raw .nc files despite requesting netcdf format directly -
+handled by detecting the ZIP signature and extracting automatically.
+
+Variables: 2m temperature, 2m dewpoint temperature (humidity proxy),
+10m wind speed (derived from u/v components). Midday (12:00) snapshot
+used as representative daily value.
+
+Windows computed: 7-day mean + same-day value, per Log Entry 006.
+
+Statistics across all records:
+       temp_mean_7d  dewpoint_mean_7d  wind_mean_7d
+count    133.000000        133.000000    133.000000
+mean      26.897744         14.940526      2.223985
+std        2.348236          3.291466      0.582708
+min       23.230000          2.470000      1.090000
+25%       25.460000         13.710000      1.810000
+50%       26.400000         15.310000      2.240000
+75%       27.750000         17.370000      2.670000
+max       34.630000         18.630000      3.520000

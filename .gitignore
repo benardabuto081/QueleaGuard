@@ -225,3 +225,7 @@ data/external/*.tif.gz
 # CHIRPS local raster cache - large (~10GB), regenerate via
 # src/download_chirps_cache.py rather than storing in version control
 data/external/chirps_cache/
+
+# ERA5-Land local cache - regenerate via src/extract_meteorology_features.py
+# rather than storing in version control
+data/external/era5land_cache/
