@@ -1,0 +1,29 @@
+Milestone 3.6 - MODIS NDVI Feature Extraction Summary
+==========================================================
+
+Candidate records: 133
+Successfully extracted: 133
+Records with composite gap > 16 days (i.e., relying on an older composite
+than the typical 16-day cycle would suggest): 0
+
+Access method: NASA AppEEARS point-extraction task, 20 unique grid cells,
+full MODIS history (2000-2026) requested in a single task.
+
+Nearest-composite logic: most recent 16-day NDVI composite at or before
+each record's observation date, per Log Entry 006.
+
+Seasonal anomaly: per-cell, per-calendar-month climatological mean NDVI
+(good-quality observations only) subtracted from the nearest composite
+value, capturing ecologically meaningful deviation from that location's
+typical greenness for that time of year.
+
+NDVI statistics across all records:
+       ndvi_nearest_composite  ndvi_anomaly
+count              133.000000    133.000000
+mean              -112.307721   -112.823750
+std                572.888127    572.804563
+min              -3000.000000  -3000.164600
+25%                  0.378200     -0.097600
+50%                  0.560300      0.011100
+75%                  0.669700      0.107300
+max                  0.760000      0.345100

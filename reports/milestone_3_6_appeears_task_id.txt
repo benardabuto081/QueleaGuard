@@ -1,0 +1,3 @@
+AppEEARS task ID: 28801afb-d2dc-4c7f-b999-72f567a455bf
+Submitted for: MOD13Q1.061 NDVI, 20 grid cells, 2000-2026 full history
+Check status before downloading (may take longer than the single-point Milestone 2.6 pilot).
