@@ -229,3 +229,8 @@ data/external/chirps_cache/
 # ERA5-Land local cache - regenerate via src/extract_meteorology_features.py
 # rather than storing in version control
 data/external/era5land_cache/
+
+# SRTM tile cache and mosaic - regenerate via src/download_srtm_tiles.py
+# rather than storing in version control
+data/external/srtm_cache/
+data/external/srtm_mosaic.tif

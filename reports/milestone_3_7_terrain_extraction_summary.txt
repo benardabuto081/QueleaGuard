@@ -1,0 +1,21 @@
+Milestone 3.7 - SRTM Terrain Feature Extraction Summary
+============================================================
+
+Grid cells processed: 328
+Source: CGIAR-CSI SRTM 90m v4.1, 4 tiles merged (43_12, 43_13, 44_12, 44_13)
+Access method: direct HTTPS download, no authentication, with retry/backoff
+
+Elevation: extracted at grid cell centroid.
+Slope: computed via gradient method (numpy.gradient), degrees, using
+SRTM's ~90m native resolution.
+
+Elevation/slope statistics:
+       elevation_m   slope_deg
+count   328.000000  328.000000
+mean   1564.960366    5.000244
+std     331.953750    4.992213
+min    1134.000000    0.000000
+25%    1247.500000    1.660000
+50%    1530.500000    3.720000
+75%    1857.250000    6.502500
+max    2583.000000   30.890000
