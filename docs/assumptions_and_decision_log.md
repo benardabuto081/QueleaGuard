@@ -238,3 +238,46 @@ No change to prior decisions. Documents implementation methodology for Milestone
 **Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
 
 ---
+
+## Log Entry 009 — Pseudo-Absence Generation Methodology: Approximate Target-Group Background Sampling
+
+**Date:** 2026-08-03 (Phase 3, Milestone 3.9)
+
+**Context:**
+Pseudo-absence generation strategy had remained "Pending" in the Dataset Feasibility Study (Section 7) since Milestone 2. Before any implementation, a structured literature review was conducted comparing candidate strategies against this project's specific characteristics: 133 modelling-candidate presence records, a documented GBIF/eBird observer-effort bias (Milestone 2.1: 78% of records from eBird; Log Entry 004: 43% of matched records concentrated in a single grid cell, cell_0080), the established grid-based spatial framework (Log Entry 002), and the temporal framework requiring every pseudo-absence to carry an assigned date (Log Entry 006).
+
+**Candidate strategies evaluated:**
+
+| Strategy | Strengths | Limitations for this project | Selected? |
+|---|---|---|---|
+| Random background sampling (Barbet-Massin et al. 2012) | Simple, most widely used in the literature (~92% of surveyed presence-only SDM studies use some random component); well-documented guidance on presence:background ratio by model type | Assumes roughly even sampling effort across the study area - an assumption directly contradicted by our own data (cell_0080 concentration; eBird hotspot bias). Would risk teaching the model "far from birding hotspots" as ecological absence rather than unobserved presence | No |
+| Environmentally stratified / profile-based sampling (e.g., BIOCLIM-envelope two-step methods; Engler et al. 2004) | Can produce more geographically constrained predictions | Documented to produce overly optimistic, narrow predictions and risks circular reasoning (defining absence by environmental dissimilarity, then "discovering" environment predicts presence) (Engler et al. 2004; Lobo et al. 2010) | No |
+| Target-Group Background, full checklist-based (Phillips et al. 2009; validated for bird citizen-science data with known ground-truth effort by Barber et al. 2022, Diversity and Distributions) | Directly corrects observer-effort bias rather than ignoring it; specifically validated on bird citizen-science platforms; naturally provides a real, defensible date per pseudo-absence (a checklist's date), directly satisfying the Log Entry 006 dependency | Requires complete checklist data (including explicit non-detections), which requires eBird's full EBD dataset - access not yet secured (Dataset Feasibility Study, Section 2.1: eBird EBD requires a data-use request, approval not instant) | Not yet (see "approximate" version below) |
+| Target-Group Background, approximate (this project's adopted approach) | Implementable now using existing GBIF API access; still directly targets the documented observer-effort bias by using other species' occurrence records as a proxy for "birding effort occurred here" | Weaker than full-checklist TGB: individual species occurrence records are a noisier proxy for effort than complete checklists, since they don't capture explicit non-detection events at the same reliability | **Yes (primary method)** |
+| Spatial thinning of presences (STSP) | Reduces spatial autocorrelation from clustered records (directly relevant to cell_0080/cell_0156 concentration) | Does not, on its own, correct observer-effort bias - a complementary technique, not a substitute for TGB | Yes (combined with TGB, not standalone) |
+| Advanced observer-weighted methods (e.g., presence-weighted observer-oriented approach, kernel density of per-observer effort) | More sophisticated bias correction, captures individual observer behaviour patterns | Requires rich per-observer effort data across many species/records to estimate reliably; overpowered and likely underdetermined given only 133 presence records | No |
+
+**Decision:**
+QueleaGuard adopts **approximate Target-Group Background (TGB) sampling** as its pseudo-absence generation strategy, combined with light spatial thinning to avoid over-concentration at known hotspots (cell_0080, cell_0156). Pseudo-absences will be drawn from locations and dates where other bird species were recorded via GBIF within the analysis extent (Log Entry 002), but *Quelea quelea* was not the species logged at that location/date. This is explicitly an **approximation of true checklist-based TGB**, not the full method described in Phillips et al. (2009) and validated by Barber et al. (2022) - the distinction is being stated explicitly here and must be carried through all subsequent documentation (README, Data & Methodology, and any eventual manuscript) rather than presented as equivalent to full-checklist TGB.
+
+**Explicit limitation statement:**
+This approximation is weaker than full-checklist TGB because individual GBIF occurrence records for other species do not reliably capture explicit non-detection ("surveyed, not seen") events the way complete eBird checklists do - a location with no *other*-species record either could genuinely be unvisited, or could reflect incomplete GBIF republishing of an eBird checklist. This limitation will be stated plainly in the Data & Methodology document and the eventual Responsible AI / Limitations sections, not minimized. Pursuing eBird EBD access remains a documented, credible path to upgrading this to full-checklist TGB in future work, per the Dataset Feasibility Study's original recommendation (Section 5).
+
+**Presence:pseudo-absence ratio:**
+A moderate, near-balanced ratio will be used (informed by Barbet-Massin et al. 2012's finding that tree-based machine learning methods - Random Forest, Gradient Boosting, both planned per the Technical Architecture - perform best with ratios closer to 1:1, unlike regression-based SDMs which tolerate much larger imbalanced background samples). The exact ratio will be finalized during implementation and reported transparently.
+
+**Key citations:**
+- Barbet-Massin, M., Jiguet, F., Albert, C.H., Thuiller, W. (2012). Selecting pseudo-absences for species distribution models: how, where and how many? *Methods in Ecology and Evolution*, 3, 327-338.
+- Phillips, S.J. et al. (2009). Sample selection bias and presence-only distribution models: implications for background and pseudo-absence data. *Ecological Applications*, 19(1), 181-197. [Target-Group Background method]
+- Barber, R.A. et al. (2022). Target-group backgrounds prove effective at correcting sampling bias in Maxent models. *Diversity and Distributions*, 28, 128-141. [Bird citizen-science validation with known ground-truth effort]
+- Engler, R., Guisan, A., Rechsteiner, L. (2004). An improved approach for predicting the distribution of rare and endangered species from occurrence and pseudo-absence data. *Journal of Applied Ecology*, 41(2), 263-274. [Limitation of profile-based methods]
+
+**Rationale for the decision:**
+Approximate TGB is the only evaluated strategy that directly addresses the specific, empirically-documented observer-effort bias in this project's data while remaining implementable with currently-available access (GBIF API, no pending EBD approval dependency), and it uniquely resolves the pseudo-absence dating requirement (Log Entry 006) as a natural byproduct of the method rather than a separate problem to solve. Choosing it over full-checklist TGB is a documented, honest scope decision - not a claim of methodological equivalence.
+
+**Impact:**
+Dataset Feasibility Study, Section 7 ("Pseudo-absence generation strategy") updated from Pending to Approved (approximate TGB). Implementation proceeds next: querying GBIF for other-species records within the analysis extent, spatial thinning, and construction of the final presence/pseudo-absence modelling dataset.
+
+**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+
+---
