@@ -1,0 +1,19 @@
+Milestone 3.8 - Hydrology (Distance-to-Water) Feature Extraction Summary
+=============================================================================
+
+Grid cells processed: 328
+Sources combined: HydroRIVERS Africa (684 reaches within analysis
+extent) + Lake Victoria boundary (OpenStreetMap, 1 feature)
+
+Distance computed from each grid cell centroid to the nearest water
+feature (river or lake), in meters, via projected CRS (EPSG:32736, UTM 36S).
+
+Distance statistics (meters):
+count     328.000000
+mean     1069.368293
+std       811.080679
+min         1.200000
+25%       363.350000
+50%       935.300000
+75%      1661.250000
+max      4162.900000

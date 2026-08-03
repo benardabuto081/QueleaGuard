@@ -234,3 +234,7 @@ data/external/era5land_cache/
 # rather than storing in version control
 data/external/srtm_cache/
 data/external/srtm_mosaic.tif
+
+# HydroSHEDS/HydroRIVERS cache - regenerate via
+# src/download_hydrosheds_data.py rather than storing in version control
+data/external/hydrosheds_cache/
