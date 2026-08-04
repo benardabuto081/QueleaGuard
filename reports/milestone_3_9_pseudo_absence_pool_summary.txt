@@ -1,0 +1,18 @@
+Milestone 3.9 - Pseudo-Absence Candidate Pool Summary
+==========================================================
+
+Raw effort pool (all-species GBIF query, capped at 3000): 3000
+After excluding Quelea quelea: 2399
+After year >= 2000 filter (matches modelling dataset temporal boundary, Log Entry 006): 2399
+After spatial join to analysis grid (Log Entry 002): 2336
+After spatial thinning (max 5 per grid cell): 196
+
+Unique grid cells represented: 55 of 328 total
+Unique species contributing to the effort proxy: 137
+
+This pool represents locations/dates where birding effort is evidenced
+via other-species GBIF records, but Quelea quelea was not recorded -
+the approximate Target-Group Background candidate set, per Log Entry 009.
+
+Next step: sample the final pseudo-absence set from this pool at the
+target presence:pseudo-absence ratio.

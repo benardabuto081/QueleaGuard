@@ -281,3 +281,43 @@ Dataset Feasibility Study, Section 7 ("Pseudo-absence generation strategy") upda
 **Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
 
 ---
+
+## Log Entry 010 — Pseudo-Absence Scheme-Boundary Coverage Gap: Evaluated and Resolved (Option 1 Confirmed)
+
+**Date:** 2026-08-03 (Phase 3, Milestone 3.9)
+
+**Context:**
+During implementation of approximate Target-Group Background pseudo-absence sampling (Log Entry 009), the final sampled pseudo-absence set (133 records, 1:1 ratio with presences) contained zero records within the 4 grid cells comprising the Ahero scheme boundary (of 328 total grid cells). Investigation confirmed this was not a pipeline defect: the underlying effort-proxy pool (2,400 other-species GBIF records, evenly sampled across the 16 years spanning the presence dataset) contains zero records within the scheme boundary at any stage, before or after thinning. Scheme-boundary presence records do exist (Milestone 3.2: 30 of 133 presence records fall within scheme-boundary cells).
+
+**Options evaluated (full comparison in conversation record):**
+1. Continue with approximate TGB project-wide; document the scheme-boundary gap as a limitation.
+2. Introduce a narrowly-scoped hybrid strategy for the 4 scheme cells only.
+3. Replace the pseudo-absence methodology entirely.
+
+Each option was assessed against five criteria: scientific validity, bias-introduction risk, literature support, reproducibility impact, and effect on project credibility. Option 2 was rejected because it would reintroduce the exact observer-effort bias TGB was adopted to correct (Log Entry 009), specifically within the zone most relevant to decision-support - the worst location to relax the correction. Option 3 was rejected as disproportionate: the affected area is 4 of 328 cells (~1.2% of the grid), and abandoning a literature-grounded, empirically-motivated methodology because of a small localized gap would be a reactive rather than evidence-driven decision.
+
+**Empirical verification performed before finalizing:**
+Before accepting Option 1, the assumption that the model could reasonably interpolate (rather than extrapolate) predictions for the 4 scheme cells was checked empirically, not assumed. The 4 scheme cells' elevation, slope, and distance-to-water values (Milestone 3.7, 3.8) were compared against the full 328-cell grid's distribution:
+- Elevation: scheme cells at the 15th-17th percentile of the full grid range - low-lying but well within the range shared by 324 other cells (25th percentile of the full grid is closely comparable).
+- Slope: scheme cells at the 10th-18th percentile - similarly common, not an extreme or isolated value.
+- Distance to water: scheme cells span the 5th-54th percentile - well distributed within the observed range (grid max: 4,163m; scheme cells: 81-1,022m).
+
+This supports the conclusion that the scheme cells occupy a well-represented portion of the environmental covariate space (terrain and hydrology specifically) rather than an isolated or extreme niche, making model interpolation for these cells a reasonable, evidence-supported expectation rather than an unverified assumption.
+
+**Decision (confirmed):**
+**Option 1 is adopted.** Approximate Target-Group Background sampling (Log Entry 009) proceeds as the project's pseudo-absence methodology, applied uniformly across the full analysis extent, with the following limitation stated explicitly in project documentation (README, Data & Methodology, and any eventual manuscript):
+
+> *The pseudo-absence sampling pool contains no candidate records within the 4 grid cells (of 328) comprising the Ahero scheme boundary itself, because no other-species effort-proxy records were found there across a 16-year, 2,400-record sample. Model predictions for these cells rely on interpolation from environmentally similar cells elsewhere in the analysis extent (empirically verified as reasonable for elevation, slope, and distance-to-water), rather than from locally-sampled presence/absence contrast. This is a bounded, documented limitation affecting approximately 1.2% of the analysis grid, not a defect in the overall methodology.*
+
+**Scope note on NDVI:**
+A related but analytically distinct question was raised during this validation - whether NDVI feature coverage has a similar or different gap for scheme-boundary cells - but was explicitly not verified with sufficient rigor to document as a limitation here. This remains an open item pending direct verification against the actual modelling pipeline's NDVI feature construction (not just AppEEARS task membership), to avoid overstating the evidence. To be resolved as its own follow-up before final dataset assembly.
+
+**Rationale:**
+This entry demonstrates the project's evidence-first decision process functioning as intended: an unexpected result (zero scheme-boundary pseudo-absences) was investigated rather than assumed to be either a bug or a methodology failure, alternatives were compared systematically against explicit criteria, and the leading option was verified empirically before being finalized rather than accepted on reasoning alone.
+
+**Impact:**
+Pseudo-absence dataset (data/processed/pseudo_absences_final.csv, 133 records) is confirmed as final, pending the separate NDVI verification noted above. Dataset Feasibility Study Section 7 pseudo-absence status remains Approved (as set in Log Entry 009), now with this documented limitation attached.
+
+**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+
+---

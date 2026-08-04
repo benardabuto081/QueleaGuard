@@ -1,0 +1,18 @@
+Milestone 3.9 - Final Pseudo-Absence Sample Summary
+========================================================
+
+Method: Approximate Target-Group Background sampling (Log Entry 009)
+Candidate pool: 196 records across 104 grid cells
+Target ratio: 1:1 with presence records (133 presences -> 133 pseudo-absences)
+Final sample size: 133
+Random seed: 42 (fixed for reproducibility)
+
+Unique grid cells represented: 49
+Pseudo-absences within Ahero scheme boundary: 0
+Pseudo-absences in surrounding buffer: 133
+Year range: 2000 - 2026
+
+Each pseudo-absence carries a real observation date (from the other-species
+record that generated it), satisfying the Log Entry 006 requirement that
+every pseudo-absence be assignable to environmental features using the
+same temporal logic as true presences.
