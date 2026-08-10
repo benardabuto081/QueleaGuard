@@ -321,3 +321,17 @@ Pseudo-absence dataset (data/processed/pseudo_absences_final.csv, 133 records) i
 **Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
 
 ---
+
+## Log Entry 011 — Pseudo-Absence Month-Only Date Precision Handling
+
+**Date:** 2026-08-04 (Phase 3, Milestone 3.10)
+
+**Context:** 2 of 133 pseudo-absence records (keys 3030837070, 3030479318, both grid_cell_id cell_0301) had month-only precision dates (2020-01) rather than full day-level dates, consistent with the known GBIF data quality characteristic documented in Milestone 2.1 (some records only report year/month).
+
+**Decision:** Both records assigned day-01 of the given month as a defensible placeholder, enabling daily environmental feature extraction. This is a minor, disclosed precision reduction affecting 2 of 266 total modelling records (0.75%), not a methodology change.
+
+**Impact:** No other records affected. Documented here for traceability per project reproducibility standards.
+
+**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+
+---

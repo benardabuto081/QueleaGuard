@@ -63,7 +63,7 @@ key,scientificName,decimalLatitude,decimalLongitude,eventDate,year,grid_cell_id,
 1986755948,"Columba guinea Linnaeus, 1758",-0.08181,34.774893,2018-01-04,2018,cell_0099,False,pseudo_absence,0
 6178537994,"Cercopithecus mitis Wolf, 1822",0.29134,34.856474,2026-02-18T11:43,2026,cell_0145,False,pseudo_absence,0
 46831396,"Trirhithrum overlaeti Munro, 1934",-0.183333,35.2667,2001-02-21,2001,cell_0286,False,pseudo_absence,0
-3030837070,"Culex Linnaeus, 1758",-0.2,35.3333,2020-01,2020,cell_0301,False,pseudo_absence,0
+3030837070,"Culex Linnaeus, 1758",-0.2,35.3333,2020-01-01,2020,cell_0301,False,pseudo_absence,0
 598138173,"Pycnonotus barbatus (Desfontaines, 1789)",-0.031405,34.938595,2011-01-20,2011,cell_0158,False,pseudo_absence,0
 5085200190,"Enteromius neumayeri (Fischer, 1884)",0.22053,35.29582,2013-01-24,2013,cell_0295,False,pseudo_absence,0
 46826030,"Ceratitis fasciventris (Bezzi, 1920)",-0.183333,35.2667,2001-02-21,2001,cell_0286,False,pseudo_absence,0
@@ -79,7 +79,7 @@ key,scientificName,decimalLatitude,decimalLongitude,eventDate,year,grid_cell_id,
 1986766057,"Elminia longicauda (Swainson, 1838)",0.068355,35.032883,2018-01-17,2018,cell_0200,False,pseudo_absence,0
 4905289680,Vernonia adoensis Sch.Bip. ex Walp.,0.166667,34.833334,2013-01-07T00:00,2013,cell_0123,False,pseudo_absence,0
 3520666362,"Crinifer zonurus (Ruppell, 1835)",-0.10724,34.763382,2021-01-02,2021,cell_0099,False,pseudo_absence,0
-3030479318,"Culex Linnaeus, 1758",-0.2,35.3333,2020-01,2020,cell_0301,False,pseudo_absence,0
+3030479318,"Culex Linnaeus, 1758",-0.2,35.3333,2020-01-01,2020,cell_0301,False,pseudo_absence,0
 3306958504,"Merops albicollis Vieillot, 1817",-0.04125,34.874583,2021-01-04,2021,cell_0138,False,pseudo_absence,0
 6118045877,"Eurillas ansorgei (Hartert, 1907)",0.20875,34.957917,2026-01-15,2026,cell_0183,False,pseudo_absence,0
 4029740024,"Egretta intermedia (Wagler, 1829)",-0.124583,34.707917,2023-01-21,2023,cell_0080,False,pseudo_absence,0

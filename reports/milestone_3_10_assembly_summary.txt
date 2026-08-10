@@ -1,0 +1,17 @@
+Milestone 3.10 - Partial Dataset Assembly Summary (NDVI pending)
+=====================================================================
+
+Presence records: 133
+Pseudo-absence records: 133
+Total records: 266
+
+Features joined: rainfall (7/30/90d), meteorology (7d mean + same-day),
+terrain (elevation, slope), hydrology (distance-to-water).
+
+NDVI: pending completion of AppEEARS gap-fill task
+(0889d6bb-d49a-44c5-9a41-239ee27bff4f), which covers the 43 grid cells
+used by pseudo-absence records not covered by the original Milestone 3.6
+NDVI extraction (which only covered presence-record cells).
+
+This is an intermediate file - data/processed/modelling_dataset_partial.csv,
+not the final modelling dataset.
