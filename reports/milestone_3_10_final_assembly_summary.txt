@@ -1,0 +1,21 @@
+Milestone 3.10 - Final Modelling Dataset Assembly Summary
+==============================================================
+
+Total records: 266
+Presence: 133
+Pseudo-absence: 133
+Columns: 20
+
+Features included: rainfall (7/30/90d), meteorology (7d mean + same-day
+temp/dewpoint/wind), NDVI (nearest composite + anomaly), terrain
+(elevation, slope), hydrology (distance-to-water).
+
+Missing values by column:
+ndvi_nearest_composite    4
+ndvi_anomaly              4
+
+This is the complete, final modelling dataset per the schema defined in
+the Dataset Feasibility Study, Section 6, incorporating the spatial
+framework (Log Entry 002), temporal framework (Log Entry 006), and
+pseudo-absence methodology (Log Entry 009, 010) established throughout
+this project.
