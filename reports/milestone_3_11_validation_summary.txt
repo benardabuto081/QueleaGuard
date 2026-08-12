@@ -1,0 +1,144 @@
+=== BASIC SHAPE ===
+Records: 259, Columns: 20
+Class balance:
+presence
+1    133
+0    126
+
+=== MISSING VALUES ===
+None
+
+=== PHYSICAL PLAUSIBILITY RANGES ===
+ndvi_nearest_composite: -0.183 to 0.900
+ndvi_anomaly: -0.674 to 0.345
+rainfall_7d: 0.000 to 143.390
+rainfall_30d: 7.570 to 379.150
+rainfall_90d: 187.950 to 856.910
+elevation_m: 1134.000 to 2214.000
+slope_deg: 0.000 to 15.130
+dist_to_water_m: 16.700 to 3553.800
+
+=== DUPLICATE KEY CHECK: record_key ===
+Duplicate record_key values: 0 (should be 0 - true unique identifier)
+
+=== DUPLICATE INVESTIGATION: (grid_cell_id, observation_date, presence) ===
+Records sharing (cell, date, presence) with >=1 other record: 164 of 259
+
+Breakdown by record_type:
+record_type
+pseudo_absence    87
+presence          77
+
+Top grid_cell_id/date clusters (by group size):
+grid_cell_id  observation_date  presence
+cell_0018     2016-01-23        0           5
+cell_0091     2019-01-24        0           5
+cell_0080     2024-06-27        1           5
+              2023-05-25        1           5
+              2024-06-28        1           5
+cell_0156     2024-07-31        1           5
+cell_0098     2013-02-27        0           4
+cell_0080     2019-12-04        1           4
+cell_0158     2011-01-20        0           4
+cell_0156     2020-02-03        1           4
+cell_0136     2011-07-14        1           4
+cell_0287     2001-02-20        0           4
+cell_0163     2015-01-12        0           4
+cell_0221     2018-01-17        0           4
+cell_0234     2021-11-16        1           4
+
+=== CROSS-CLASS CHECK: same (cell, date) in BOTH presence and pseudo-absence ===
+(cell, date) pairs with BOTH presence AND pseudo-absence: 0
+
+Pseudo-absence duplicate records - unique species involved: 63
+       key                                          scientificName
+3506669041                               Ardea alba Linnaeus, 1758
+ 600528492                Stephanoaetus coronatus (Linnaeus, 1766)
+ 600468654                  Schistolais leucopogon (Cabanis, 1875)
+4029740024                       Egretta intermedia (Wagler, 1829)
+4029736024                         Milvus migrans (Boddaert, 1783)
+ 942037076                    Gymnobucco bonapartei Hartlaub, 1854
+1346515117                 Eurillas latirostris (Strickland, 1844)
+3520666362                        Crinifer zonurus (Ruppell, 1835)
+1986776230                        Laniarius major (Hartlaub, 1848)
+6117573823                       Ploceus nigerrimus Vieillot, 1819
+3306711448                     Elminia longicauda (Swainson, 1838)
+ 604267549 Trachylaemus purpuratus (J.Verreaux & E.Verreaux, 1851)
+1986766057                     Elminia longicauda (Swainson, 1838)
+1986755948                           Columba guinea Linnaeus, 1758
+1986742072                      Bostrychia hagedash (Latham, 1790)
+ 598138173                Pycnonotus barbatus (Desfontaines, 1789)
+3306694708                         Milvus migrans (Boddaert, 1783)
+6118089025                          Prinia subflava (Gmelin, 1789)
+3306934672                 Vidua chalybeata (Statius Muller, 1776)
+ 586371387                        Cossypha heuglini Hartlaub, 1866
+3306695615                     Chrysococcyx klaas (Stephens, 1815)
+3498797692                         Merops oreobates (Sharpe, 1892)
+ 580835276                 Bradypterus cinnamomeus (Rüppell, 1840)
+1346515146                  Camaroptera chloronota Reichenow, 1895
+1416041564                                            BOLD:AAM3569
+3517071630               Streptopelia semitorquata (Rüppell, 1837)
+ 596869610                      Ploceus melanogaster Shelley, 1887
+ 604842431             Chlorophoneus sulfureopectus (Lesson, 1831)
+ 605073429                     Turdoides jardineii (A.Smith, 1836)
+3498788705            Camaroptera brevicaudata (Cretzschmar, 1830)
+5305248497                     Euplectes axillaris (A.Smith, 1838)
+6178510477                     Nectarinia kilimensis Shelley, 1885
+ 942034958              Chamaetylas poliocephala (Bonaparte, 1850)
+1346512904              Circaetus cinerascens J.W.Von Muller, 1851
+1346515118                  Schistolais leucopogon (Cabanis, 1875)
+3349923764                         Blastobasis kenya Adamski, 2010
+3530647589             Laniarius erythrogaster (Cretzschmar, 1829)
+3306958504                        Merops albicollis Vieillot, 1817
+1270009311                        Dacus limbipennis Macquart, 1844
+5308371897                   Uraeginthus bengalus (Linnaeus, 1766)
+1986783265                         Milvus aegyptius (Gmelin, 1788)
+  46831396                       Trirhithrum overlaeti Munro, 1934
+1270009190                        Dacus limbipennis Macquart, 1844
+3498785680                     Elminia longicauda (Swainson, 1838)
+  46826030                    Ceratitis fasciventris (Bezzi, 1920)
+1416041583                                            BOLD:AAM3569
+3306695515                             Buteo augur (Ruppell, 1836)
+5300131681                    Dicrurus adsimilis (Bechstein, 1794)
+1711646671                     Nectarinia kilimensis Shelley, 1885
+1986760729                        Cossypha heuglini Hartlaub, 1866
+4905266816                            Vernonia hymenolepis A.Rich.
+1986746824            Camaroptera brevicaudata (Cretzschmar, 1830)
+1711646871                          Lanius humeralis Stanley, 1814
+1711646770                         Milvus migrans (Boddaert, 1783)
+3030479318                                    Culex Linnaeus, 1758
+1416041287                                            BOLD:ACY6037
+5298375144                               Ardea alba Linnaeus, 1758
+3542727705                       Saxicola rubetra (Linnaeus, 1758)
+1711646769                    Cyanomitra verticalis (Latham, 1790)
+1986779527                         Lonchura bicolor (Fraser, 1843)
+1413928624                                            BOLD:ACM4446
+1270009162                        Dacus limbipennis Macquart, 1844
+1986781113                  Melaenornis pammelaina (Stanley, 1814)
+ 942031626                    Cisticola marginatus (Heuglin, 1869)
+4994106280                      Crithagra burtoni (G.R.Gray, 1862)
+2656093688             Laniarius erythrogaster (Cretzschmar, 1829)
+ 942031673          Crithagra mozambica (P.L.Statius Müller, 1776)
+2656422684                     Nectarinia kilimensis Shelley, 1885
+5304272336                   Uraeginthus bengalus (Linnaeus, 1766)
+1711646655              Granatina ianthinogaster (Reichenow, 1879)
+3030837070                                    Culex Linnaeus, 1758
+3132750267                            Motacilla clara Sharpe, 1908
+4993874825                  Phyllastrephus cabanisi (Sharpe, 1882)
+ 942031671               Eurystomus glaucurus (P.L.S.Müller, 1776)
+2661524565                        Cossypha heuglini Hartlaub, 1866
+2657380655                Pycnonotus barbatus (Desfontaines, 1789)
+6178557094              Terpsiphone viridis (Statius Muller, 1776)
+2656818554              Granatina ianthinogaster (Reichenow, 1879)
+5295710505                      Bostrychia hagedash (Latham, 1790)
+3132827398                            Motacilla clara Sharpe, 1908
+4167963336                    Enteromius neumayeri (Fischer, 1884)
+5085199864                    Enteromius neumayeri (Fischer, 1884)
+ 942031694            Acrocephalus gracilirostris (Hartlaub, 1864)
+4532703709                    Enteromius neumayeri (Fischer, 1884)
+4905289680                     Vernonia adoensis Sch.Bip. ex Walp.
+5085200190                    Enteromius neumayeri (Fischer, 1884)
+3538569984                         Euplectes orix (Linnaeus, 1758)
+
+=== SUMMARY ===
+Validation complete. Review flags above before declaring Milestone 3 closed.

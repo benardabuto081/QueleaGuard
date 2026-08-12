@@ -1,18 +1,29 @@
-Milestone 3.10 - Final Modelling Dataset Assembly Summary
+Milestone 3.10 - Final Modelling Dataset Assembly Summary (corrected)
 ==============================================================
 
-Total records: 266
+Total records: 262
 Presence: 133
-Pseudo-absence: 133
+Pseudo-absence: 129
 Columns: 20
+
+Corrections applied in this assembly:
+- Task 190: NDVI extraction now filters to good-quality composites before
+  nearest-composite selection, eliminating 8 records that previously held
+  the MODIS fill value (-3000) as if it were valid NDVI.
+- Post-fix, 4 pseudo-absence records (cell_0283 x2, cell_0146 x2, all
+  dated Jan 2000) were found to predate MODIS's first good-quality
+  composite (2000-02-18) and have no valid NDVI value. Excluded, not
+  backfilled, per the same precedent established in Log Entry 006 for
+  the 8 pre-2000 presence records. Final class balance is
+  133 presence : 129 pseudo-absence
+  (133:129), not the originally planned exact 1:1.
 
 Features included: rainfall (7/30/90d), meteorology (7d mean + same-day
 temp/dewpoint/wind), NDVI (nearest composite + anomaly), terrain
 (elevation, slope), hydrology (distance-to-water).
 
 Missing values by column:
-ndvi_nearest_composite    4
-ndvi_anomaly              4
+None
 
 This is the complete, final modelling dataset per the schema defined in
 the Dataset Feasibility Study, Section 6, incorporating the spatial

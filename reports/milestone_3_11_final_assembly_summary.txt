@@ -1,0 +1,23 @@
+Milestone 3.11 - Final Modelling Dataset (TGB contradiction fix)
+==============================================================
+
+Total records: 259
+Presence: 133
+Pseudo-absence: 126
+Columns: 20
+
+Correction applied: 3 pseudo-absence records excluded because they shared
+a (grid_cell_id, observation_date) pair with a confirmed Quelea quelea
+presence record - all 4 records bear sequential GBIF keys consistent with
+a single shared eBird checklist (cell_0079, 2016-01-17). This violates
+the Target-Group Background pseudo-absence assumption (an observer was
+present and did NOT detect the target species) and required correction,
+not just documentation, per Log Entry 013.
+
+Missing values by column:
+None
+
+This dataset incorporates: spatial framework (Log Entry 002), temporal
+framework (Log Entry 006), pseudo-absence methodology (Log Entry 009,
+010), NDVI quality-filter fix (Task 190 / Log Entry 012), and the
+presence/pseudo-absence checklist-contradiction fix (Log Entry 013).

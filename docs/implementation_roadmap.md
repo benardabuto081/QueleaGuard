@@ -367,8 +367,8 @@ Before any task is considered complete, verify that:
 
 ## Data
 
-- [ ] Dataset collected
-- [ ] Dataset cleaned
+- [x] Dataset collected
+- [x] Dataset cleaned
 - [ ] Data dictionary completed
 
 ---

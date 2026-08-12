@@ -1,7 +1,11 @@
 ﻿"""
-Milestone 3.10 (final) - Assemble the complete modelling dataset: all
-266 records (133 presence + 133 pseudo-absence), fully joined with every
-environmental feature table.
+Milestone 3.10 (final, corrected) - Assemble the complete modelling dataset,
+now with the NDVI quality-filter fix (Task 190) applied, and a post-merge
+completeness filter that drops any record missing NDVI - not just presence
+records pre-dating year 2000, but any record (presence or pseudo-absence)
+that predates MODIS's first valid composite (2000-02-18). This generalizes
+the exclusion rule from Log Entry 006 rather than relying on the approximate
+year>=2000 proxy alone.
 
 Output: data/processed/modelling_dataset_final.csv
         reports/milestone_3_10_final_assembly_summary.txt
@@ -44,7 +48,7 @@ def main():
     combined = pd.concat([presences, pa], ignore_index=True)
     print(f"Combined base records: {len(combined)} ({(combined['presence']==1).sum()} presence, {(combined['presence']==0).sum()} pseudo-absence)")
 
-    # --- Rainfall: combine presence + pseudo-absence tables, then join ---
+    # --- Rainfall ---
     rainfall = pd.concat([
         pd.read_csv(RAINFALL_PRESENCE)[["record_key", "rainfall_7d", "rainfall_30d", "rainfall_90d"]],
         pd.read_csv(RAINFALL_PA)[["record_key", "rainfall_7d", "rainfall_30d", "rainfall_90d"]],
@@ -60,7 +64,7 @@ def main():
     ], ignore_index=True)
     combined = combined.merge(met, on="record_key", how="left")
 
-    # --- NDVI ---
+    # --- NDVI (corrected via Task 190 quality-filter fix) ---
     ndvi_cols = ["record_key", "ndvi_nearest_composite", "ndvi_anomaly"]
     ndvi = pd.concat([
         pd.read_csv(NDVI_PRESENCE)[ndvi_cols],
@@ -76,8 +80,23 @@ def main():
     hydrology = pd.read_csv(HYDROLOGY_PATH)
     combined = combined.merge(hydrology, on="grid_cell_id", how="left")
 
+    # --- Post-merge completeness filter (generalizes Log Entry 006) ---
+    # NDVI is a required, non-optional core feature. Any record - presence
+    # or pseudo-absence - that predates MODIS's first valid good-quality
+    # composite (2000-02-18) will have no NDVI value after the Task 190 fix.
+    # This is a genuine data availability constraint, not a quality
+    # judgement, and is handled identically to the original 8 pre-2000
+    # presence exclusions in Log Entry 006: excluded, not backfilled.
+    pre_filter_count = len(combined)
+    dropped = combined[combined["ndvi_nearest_composite"].isna()]
+    if len(dropped) > 0:
+        print(f"\nDropping {len(dropped)} record(s) with no valid NDVI composite (MODIS temporal boundary):")
+        print(dropped[["record_key", "grid_cell_id", "observation_date", "record_type"]].to_string(index=False))
+    combined = combined[combined["ndvi_nearest_composite"].notna()].copy()
+
     combined.to_csv(OUTPUT_PATH, index=False)
     print(f"\nFinal modelling dataset: {len(combined)} records, {len(combined.columns)} columns")
+    print(f"({pre_filter_count} pre-filter -> {len(combined)} post-filter)")
     print(f"Saved to {OUTPUT_PATH}")
 
     print("\nMissing value summary (all columns):")
@@ -87,13 +106,25 @@ def main():
     print("\nClass balance:")
     print(combined["presence"].value_counts())
 
-    summary = f"""Milestone 3.10 - Final Modelling Dataset Assembly Summary
+    summary = f"""Milestone 3.10 - Final Modelling Dataset Assembly Summary (corrected)
 ==============================================================
 
 Total records: {len(combined)}
 Presence: {(combined['presence']==1).sum()}
 Pseudo-absence: {(combined['presence']==0).sum()}
 Columns: {len(combined.columns)}
+
+Corrections applied in this assembly:
+- Task 190: NDVI extraction now filters to good-quality composites before
+  nearest-composite selection, eliminating 8 records that previously held
+  the MODIS fill value (-3000) as if it were valid NDVI.
+- Post-fix, 4 pseudo-absence records (cell_0283 x2, cell_0146 x2, all
+  dated Jan 2000) were found to predate MODIS's first good-quality
+  composite (2000-02-18) and have no valid NDVI value. Excluded, not
+  backfilled, per the same precedent established in Log Entry 006 for
+  the 8 pre-2000 presence records. Final class balance is
+  {(combined['presence']==1).sum()} presence : {(combined['presence']==0).sum()} pseudo-absence
+  (133:129), not the originally planned exact 1:1.
 
 Features included: rainfall (7/30/90d), meteorology (7d mean + same-day
 temp/dewpoint/wind), NDVI (nearest composite + anomaly), terrain

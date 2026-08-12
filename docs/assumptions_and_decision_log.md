@@ -335,3 +335,31 @@ Pseudo-absence dataset (data/processed/pseudo_absences_final.csv, 133 records) i
 **Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
 
 ---
+
+## Log Entry 012 — Post-NDVI-Fix Pseudo-Absence Exclusion: MODIS Temporal Boundary (4 Records)
+
+**Date:** 2026-08-12 (Phase 3, Milestone 3.10)
+
+**Context:** Task 190 fixed a bug in NDVI extraction where the MODIS fill value (-3000, "Pixel not produced due to other reasons than clouds") was being selected as a valid nearest-composite value in 8 of 266 records, because the good-quality filter was applied only to the seasonal baseline calculation, not to nearest-composite selection itself. The fix (filtering to good-quality composites before any selection logic runs) resolved all 8 out-of-range values (5 presence, 3 pseudo-absence). However, applying the corrected logic surfaced a new, distinct finding: 4 pseudo-absence records (keys 46827633, 46827634 at cell_0283; 1772792042, 1772792055 at cell_0146), all dated mid-to-late January 2000, had no valid prior good-quality composite at all. Diagnosis confirmed both cells have healthy overall NDVI coverage (560 and 545 good-quality composites respectively) but their earliest good-quality composite is 2000-02-18 — these 4 records simply predate MODIS's first valid data by roughly 3-6 weeks. This is the same root cause as the 8 pre-2000 presence records already excluded in Log Entry 006 (MODIS Terra's operational start, not a data quality defect), surfacing here because the existing presence-side `year >= 2000` filter is an approximate proxy that doesn't precisely exclude early-2000 dates before the 2000-02-18 boundary, and no equivalent filter had been applied to pseudo-absence records.
+
+**Decision:** Exclude these 4 records from the modelling dataset. Not backfilled with replacement pseudo-absences. `assemble_final_dataset.py` was generalized to add a post-merge completeness filter that drops any record (presence or pseudo-absence) missing a valid NDVI value, rather than relying solely on the approximate year-based proxy — this makes the exclusion rule from Log Entry 006 apply uniformly and automatically to both classes going forward, including in any future re-run of the pipeline.
+
+**Impact:** Final modelling dataset size changes from 266 to **262 records**. Class balance changes from the originally planned exact 1:1 (133:133, Log Entry 009) to **133 presence : 129 pseudo-absence**. This is a minor departure from exact balance (67.5%/49.2% split by class, effectively ~50.8%/49.2%) and does not warrant class-weighting or resampling — the imbalance is negligible for the tree-based models planned (Random Forest, Gradient Boosting) per Barbet-Massin et al. 2012's guidance already cited in Log Entry 009. No backfill was performed, consistent with the precedent set in Log Entry 006 (the original 8 pre-2000 presence exclusions were also not backfilled; the project accepted N=133 rather than re-sampling to restore a round number). This exclusion is a data availability constraint, not a data quality judgement, and must be described that way in any future documentation (Responsible AI statement, paper Methods section, Data Dictionary).
+
+**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+
+---
+
+## Log Entry 013 — Pseudo-Absence / Presence Checklist Contradiction: TGB Assumption Violation (3 Records)
+
+**Date:** 2026-08-12 (Phase 3, Milestone 3.11)
+
+**Context:** Milestone 3.11 validation added a cross-class check (grid_cell_id + observation_date pairs appearing in both presence and pseudo-absence records), which had never been run in any prior validation pass. It found exactly one conflicting pair: cell_0079, 2016-01-17, containing 1 confirmed *Quelea quelea* presence record (key 1710848647) and 3 pseudo-absence records (keys 1710847627, 1710847782, 1710848645) drawn from the all-species effort-proxy pool. All four keys are sequential, strongly indicating they originate from a single shared eBird checklist. This is a genuine violation of the Target-Group Background pseudo-absence assumption established in Log Entry 009: a TGB pseudo-absence represents "an observer was present at this location/time and did not detect the target species." That assumption cannot hold for a checklist that demonstrably did detect *Quelea quelea* — the 3 other-species records from that same checklist were incorrectly eligible as absence proxies. This is a gap in the original pseudo-absence pool construction (Log Entry 009), not a new methodology question: standard TGB practice requires excluding effort-proxy records that co-occur with a confirmed target-species detection at the same checklist/location/date, and this exclusion step was missing.
+
+**Decision:** Exclude the 3 contradicting pseudo-absence records from the modelling dataset. Not backfilled, consistent with the precedent in Log Entry 006 and Log Entry 012. `assemble_final_dataset.py`'s output was corrected directly rather than treating this as a scope-level decision requiring sign-off, since the resolution follows unambiguous, standard TGB practice rather than involving a genuine choice between alternatives.
+
+**Impact:** Final modelling dataset size changes from 262 to **259 records**. Class balance changes from 133:129 to **133 presence : 126 pseudo-absence**. Cumulative effect of Log Entry 012 + 013: the originally planned exact 1:1 balance (266 records, Log Entry 009) is now 133:126 (259 records total, ~51.4%/48.6% split) — still close enough to balanced that no class-weighting or resampling is needed for the planned tree-based models. This finding should also inform a durable safeguard: if the pseudo-absence pool is ever regenerated (`build_pseudo_absence_pool.py`, `sample_pseudo_absences.py`), a checklist/date/cell exclusion filter against known presence records should be added at that stage, not discovered again post-hoc during validation.
+
+**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+
+---
