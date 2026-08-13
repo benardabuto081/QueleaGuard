@@ -1,197 +1,430 @@
 key,scientificName,decimalLatitude,decimalLongitude,eventDate,year,grid_cell_id,within_scheme_boundary
-3506669041,"Ardea alba Linnaeus, 1758",-0.3515,34.6539,2021-01-31,2021,cell_0041,False
-4029739953,"Pycnonotus tricolor (Hartlaub, 1862)",0.20875,34.957917,2023-01-19,2023,cell_0183,False
-2658389354,"Spermestes cucullata Swainson, 1837",0.24726,34.87463,2019-01-04,2019,cell_0144,False
-6178656802,"Equus quagga boehmi Matschie, 1892",-0.332604,34.573496,2026-02-22T15:58,2026,cell_0025,False
-5302480412,"Eurillas latirostris (Strickland, 1844)",0.24726,34.87463,2024-01-15,2024,cell_0144,False
-3306926563,"Vanellus crassirostris (Hartlaub, 1855)",-0.124583,34.707917,2021-01-01,2021,cell_0080,False
-600528492,"Stephanoaetus coronatus (Linnaeus, 1766)",-0.379649,35.37572,2011-01-22,2011,cell_0310,False
-1986786394,"Motacilla capensis Linnaeus, 1766",0.067725,35.03414,2018-01-29,2018,cell_0200,False
-1346519223,"Sarothrura pulchra (J.E.Gray, 1829)",0.22692,34.884655,2015-01-10,2015,cell_0144,False
-600468654,"Schistolais leucopogon (Cabanis, 1875)",-0.379649,35.37572,2011-01-21,2011,cell_0310,False
-3132637734,"Milvus migrans (Boddaert, 1783)",-0.125407,34.742504,2020-01-14,2020,cell_0080,False
-4029740024,"Egretta intermedia (Wagler, 1829)",-0.124583,34.707917,2023-01-21,2023,cell_0080,False
-2029936031,"Zosterops senegalensis Bonaparte, 1850",0.24726,34.87463,2017-01-07,2017,cell_0144,False
-865162812,"Strumigenys Smith, 1860",0.2,34.88,2001-04-25,2001,cell_0143,False
-935602157,"Kakamega poliothorax (Reichenow, 1900)",0.24726,34.87463,2013-01-11,2013,cell_0144,False
-4029736024,"Milvus migrans (Boddaert, 1783)",-0.124583,34.707917,2023-01-21,2023,cell_0080,False
-942037076,"Gymnobucco bonapartei Hartlaub, 1854",0.314053,34.86674,2013-02-25,2013,cell_0145,False
-1710848537,"Ceryle rudis (Linnaeus, 1758)",-0.162675,34.747555,2016-01-17,2016,cell_0079,False
-1346515117,"Eurillas latirostris (Strickland, 1844)",0.212681,34.92315,2015-01-12,2015,cell_0163,False
-1986741612,"Bubulcus ibis (Linnaeus, 1758)",-0.047,34.792,2018-01-02,2018,cell_0100,False
-1415644122,BOLD:AAU1731,0.243,34.85,2001-02-20,2001,cell_0125,False
-1204590653,"Crinifer zonurus (Ruppell, 1835)",-0.125407,34.742504,2013-01-11,2013,cell_0080,False
-3520666362,"Crinifer zonurus (Ruppell, 1835)",-0.10724,34.763382,2021-01-02,2021,cell_0099,False
-1986776230,"Laniarius major (Hartlaub, 1848)",0.068893,35.0331,2018-01-17,2018,cell_0200,False
-1710847627,"Himantopus himantopus (Linnaeus, 1758)",-0.162675,34.747555,2016-01-17,2016,cell_0079,False
-1986741901,"Bubulcus ibis (Linnaeus, 1758)",-0.09,34.776,2018-01-02,2018,cell_0099,False
-1413928907,BOLD:ABV7598,0.206,34.894,2001-02-19,2001,cell_0143,False
-6117573823,"Ploceus nigerrimus Vieillot, 1819",0.20875,34.874583,2026-01-14,2026,cell_0143,False
-3417843140,Formicidae,0.34,34.87,2001-03-15,2001,cell_0146,False
-3306711448,"Elminia longicauda (Swainson, 1838)",-0.04125,34.874583,2021-01-04,2021,cell_0138,False
-604267549,"Trachylaemus purpuratus (J.Verreaux & E.Verreaux, 1851)",-0.379649,35.37572,2011-01-22,2011,cell_0310,False
-6178537994,"Cercopithecus mitis Wolf, 1822",0.29134,34.856474,2026-02-18T11:43,2026,cell_0145,False
-4029736951,"Chrysococcyx cupreus (Shaw, 1792)",0.20875,34.874583,2023-01-18,2023,cell_0143,False
-6118045877,"Eurillas ansorgei (Hartert, 1907)",0.20875,34.957917,2026-01-15,2026,cell_0183,False
-6117792471,"Cecropis abyssinica (Guerin-Meneville, 1843)",0.20875,34.957917,2026-01-15,2026,cell_0183,False
-1710847782,"Ploceus intermedius Rüppell, 1845",-0.162675,34.747555,2016-01-17,2016,cell_0079,False
-1986766057,"Elminia longicauda (Swainson, 1838)",0.068355,35.032883,2018-01-17,2018,cell_0200,False
-582524501,"Cecropis semirufa (Sundevall, 1850)",-0.051124,34.921116,2011-01-20,2011,cell_0158,False
-1986755948,"Columba guinea Linnaeus, 1758",-0.08181,34.774893,2018-01-04,2018,cell_0099,False
-3132834492,"Lanius humeralis Stanley, 1814",0.126533,34.84318,2020-01-14,2020,cell_0123,False
-1986742072,"Bostrychia hagedash (Latham, 1790)",0.0681,35.032698,2018-01-17,2018,cell_0200,False
-598138173,"Pycnonotus barbatus (Desfontaines, 1789)",-0.031405,34.938595,2011-01-20,2011,cell_0158,False
-3306694708,"Milvus migrans (Boddaert, 1783)",-0.04125,34.79125,2021-01-01,2021,cell_0100,False
-6118089025,"Prinia subflava (Gmelin, 1789)",0.20875,34.874583,2026-01-14,2026,cell_0143,False
-1503319869,Bothroponera talpa Mayr,0.33,34.87,2001-04-24,2001,cell_0146,False
-3498794698,"Buccanodon duchaillui (Cassin, 1855)",0.20875,34.957917,2022-01-27,2022,cell_0183,False
-4029736981,"Prinia bairdii (Cassin, 1855)",0.20875,34.957917,2023-01-19,2023,cell_0183,False
-3306934672,"Vidua chalybeata (Statius Muller, 1776)",-0.04125,34.79125,2021-01-01,2021,cell_0100,False
-4905266815,Vernonia hymenolepis A.Rich.,0.283333,34.866667,2013-01-06T00:00,2013,cell_0145,False
-1986746174,"Campethera tullbergi Sjöstedt, 1892",0.068683,35.033662,2018-01-26,2018,cell_0200,False
-3306691526,"Merops apiaster Linnaeus, 1758",-0.04125,34.79125,2021-01-01,2021,cell_0100,False
-586371387,"Cossypha heuglini Hartlaub, 1866",-0.031405,34.938595,2011-01-20,2011,cell_0158,False
-3306957427,"Cossypha heuglini Hartlaub, 1866",-0.04125,34.874583,2021-01-04,2021,cell_0138,False
-3507021185,"Chlidonias leucopterus (Temminck, 1815)",-0.3515,34.6539,2021-01-31,2021,cell_0041,False
-1710847456,"Laniarius erythrogaster (Cretzschmar, 1829)",-0.162675,34.747555,2016-01-17,2016,cell_0079,False
-3306695615,"Chrysococcyx klaas (Stephens, 1815)",-0.04125,34.79125,2021-01-01,2021,cell_0100,False
-3498797692,"Merops oreobates (Sharpe, 1892)",0.292083,34.957917,2022-01-26,2022,cell_0185,False
-1986756301,"Columba guinea Linnaeus, 1758",0.19994,35.099228,2018-01-25,2018,cell_0242,False
-3132845389,"Motacilla cinerea Tunstall, 1771",0.27317,34.93212,2020-01-12,2020,cell_0165,False
-6178332787,"Junonia chorimene (Guérin-Méneville, 1844)",-0.117778,34.540556,2026-02-21T08:42,2026,cell_0016,False
-580835276,"Bradypterus cinnamomeus (Rüppell, 1840)",-0.379649,35.37572,2011-01-21,2011,cell_0310,False
-1346515146,"Camaroptera chloronota Reichenow, 1895",0.212681,34.92315,2015-01-12,2015,cell_0163,False
-1710848645,"Centropus superciliosus Hemprich & Ehrenberg, 1829",-0.162675,34.747555,2016-01-17,2016,cell_0079,False
-3506630760,"Turdoides plebejus (Cretzschmar, 1828)",-0.3515,34.6539,2021-01-31,2021,cell_0041,False
-1416041564,BOLD:AAM3569,0.24,34.85,2001-02-20,2001,cell_0125,False
-3517071630,"Streptopelia semitorquata (Rüppell, 1837)",-0.366264,34.629143,2021-01-31,2021,cell_0041,False
-596869610,"Ploceus melanogaster Shelley, 1887",-0.379649,35.37572,2011-01-21,2011,cell_0310,False
-604842431,"Chlorophoneus sulfureopectus (Lesson, 1831)",-0.031405,34.938595,2011-01-20,2011,cell_0158,False
-6178408290,"Ardea ibis Linnaeus, 1758",-0.107631,34.548819,2026-02-20T18:19,2026,cell_0016,False
-142745592,"Dacus triater Munro, 1937",-0.183333,35.2667,2001-02-20,2001,cell_0286,False
-605073429,"Turdoides jardineii (A.Smith, 1836)",-0.031405,34.938595,2011-01-20,2011,cell_0158,False
-3506048692,"Pycnonotus barbatus (Desfontaines, 1789)",-0.3515,34.6539,2021-01-31,2021,cell_0041,False
-3030717410,"Culex Linnaeus, 1758",-0.2,35.3333,2020-01,2020,cell_0301,False
-3498788705,"Camaroptera brevicaudata (Cretzschmar, 1830)",0.292083,34.957917,2022-01-26,2022,cell_0185,False
-1986783557,"Milvus aegyptius (Gmelin, 1788)",0.19994,35.099217,2018-01-25,2018,cell_0223,False
-6170162136,"Gyps africanus Salvadori, 1865",0.047348,34.708514,2013-01-29,2013,cell_0083,False
-5305248497,"Euplectes axillaris (A.Smith, 1838)",-0.154066,34.832905,2024-01-10,2024,cell_0117,False
-6178510477,"Nectarinia kilimensis Shelley, 1885",0.011352,34.570337,2026-02-26T16:14,2026,cell_0032,False
-6171315365,Physalis peruviana L.,-0.540394,34.824364,2026-02-24T14:14:43,2026,cell_0109,False
-942034958,"Chamaetylas poliocephala (Bonaparte, 1850)",0.314053,34.86674,2013-02-25,2013,cell_0145,False
-3350398848,"Mometa Durrant, 1914",0.24,34.85,2001-02-20,2001,cell_0125,False
-1346512904,"Circaetus cinerascens J.W.Von Muller, 1851",0.212681,34.92315,2015-01-12,2015,cell_0163,False
-1346515118,"Schistolais leucopogon (Cabanis, 1875)",0.212681,34.92315,2015-01-12,2015,cell_0163,False
-3498782693,"Sarothrura pulchra (J.E.Gray, 1829)",0.292083,34.957917,2022-01-26,2022,cell_0185,False
-821840667,"Campephaga flava Vieillot, 1817",-0.134947,35.267517,2011-01-21,2011,cell_0287,False
-3349923764,"Blastobasis kenya Adamski, 2010",-0.12,35.27,2001-04-28,2001,cell_0288,False
-3530647589,"Laniarius erythrogaster (Cretzschmar, 1829)",-0.10724,34.763382,2021-01-02,2021,cell_0099,False
-1346512880,"Terpsiphone viridis (Statius Muller, 1776)",0.212681,34.92315,2015-01-12,2015,cell_0163,False
-46822657,"Ceratitis capitata (Wiedemann, 1824)",-0.269722,35.1614,2001-02-21,2001,cell_0251,False
-942037316,"Illadopsis albipectus (Reichenow, 1888)",0.314053,34.86674,2013-02-25,2013,cell_0145,False
-3306958504,"Merops albicollis Vieillot, 1817",-0.04125,34.874583,2021-01-04,2021,cell_0138,False
-3347267978,"Mometa Durrant, 1914",0.24,34.85,2001-02-20,2001,cell_0125,False
-46828571,"Ceratitis rubivora Coquillett, 1901",-0.183333,35.2667,2000-01-27,2000,cell_0286,False
-1270009311,"Dacus limbipennis Macquart, 1844",-0.1487,35.2878,2001-02-20,2001,cell_0287,False
-5308371897,"Uraeginthus bengalus (Linnaeus, 1766)",-0.040748,34.46475,2024-01-17,2024,cell_0006,False
-1986783265,"Milvus aegyptius (Gmelin, 1788)",-0.085912,34.753853,2018-01-04,2018,cell_0099,False
-46831396,"Trirhithrum overlaeti Munro, 1934",-0.183333,35.2667,2001-02-21,2001,cell_0286,False
-1270009190,"Dacus limbipennis Macquart, 1844",-0.1487,35.2878,2001-02-20,2001,cell_0287,False
-3498785680,"Elminia longicauda (Swainson, 1838)",0.292083,34.957917,2022-01-26,2022,cell_0185,False
-3498796682,"Neocossyphus poensis (Strickland, 1844)",0.292083,34.957917,2022-01-26,2022,cell_0185,False
-821983212,"Bradornis microrhynchus Reichenow, 1887",-0.184245,35.249252,2011-01-21,2011,cell_0286,False
-46826030,"Ceratitis fasciventris (Bezzi, 1920)",-0.183333,35.2667,2001-02-21,2001,cell_0286,False
-2250586635,BOLD:ACS3800,-0.12255,35.2709,2001-04-28,2001,cell_0288,False
-3306927469,"Chalcomitra senegalensis (Linnaeus, 1766)",-0.04125,34.874583,2021-01-04,2021,cell_0138,False
-1416041583,BOLD:AAM3569,0.24,34.85,2001-02-20,2001,cell_0125,False
-3132845264,"Merops muelleri (Cassin, 1857)",0.27317,34.93212,2020-01-12,2020,cell_0165,False
-5299861890,"Crinifer zonurus (Ruppell, 1835)",-0.040748,34.46475,2024-01-01,2024,cell_0006,False
-6178703689,"Euxerus erythropus (E.Geoffroy Saint-Hilaire, 1803)",-0.117778,34.540556,2026-02-21T08:42,2026,cell_0016,False
-1270009193,"Dacus limbipennis Macquart, 1844",0.3031,35.0558,2001-02-19,2001,cell_0225,False
-3306695515,"Buteo augur (Ruppell, 1836)",-0.04125,34.874583,2021-01-04,2021,cell_0138,False
-6178758829,"Junonia oenone (Linnaeus, 1764)",-0.117778,34.540556,2026-02-21T08:42,2026,cell_0016,False
-5300131681,"Dicrurus adsimilis (Bechstein, 1794)",-0.040748,34.46475,2024-01-17,2024,cell_0006,False
-46827634,"Ceratitis venusta (Munro, 1956)",-0.366667,35.2833,2000-01-28,2000,cell_0283,False
-1711646671,"Nectarinia kilimensis Shelley, 1885",0.002666,34.524235,2016-01-23,2016,cell_0018,False
-6178501449,"Papilio nireus Linnaeus, 1758",-0.117778,34.540556,2026-02-21T08:42,2026,cell_0016,False
-1986760729,"Cossypha heuglini Hartlaub, 1866",0.080083,35.073203,2018-01-17,2018,cell_0221,False
-3132356795,"Nectarinia kilimensis Shelley, 1885",0.225545,34.99609,2020-01-11,2020,cell_0184,False
-5285046303,"Bulinus globosus (Morelet, 1866)",-0.318111,35.006889,2024-01-30,2024,cell_0193,False
-1270011356,"Dacus triater Munro, 1937",-0.0941,35.2714,2001-02-20,2001,cell_0288,False
-6178394223,"Kobus ellipsiprymnus defassa (Rüppell, 1835)",-0.232516,34.516842,2026-02-22T15:58,2026,cell_0013,False
-4905266816,Vernonia hymenolepis A.Rich.,0.166667,34.833334,2013-01-07T00:00,2013,cell_0123,False
-5296432391,"Ploceus jacksoni Shelley, 1888",-0.040748,34.46475,2024-01-17,2024,cell_0006,False
-1986746824,"Camaroptera brevicaudata (Cretzschmar, 1830)",0.080097,35.073195,2018-01-17,2018,cell_0221,False
-1711646871,"Lanius humeralis Stanley, 1814",0.002666,34.524235,2016-01-23,2016,cell_0018,False
-5300062888,"Terpsiphone viridis (Statius Muller, 1776)",-0.040748,34.46475,2024-01-16,2024,cell_0006,False
-1711646770,"Milvus migrans (Boddaert, 1783)",0.002666,34.524235,2016-01-23,2016,cell_0018,False
-6178630961,"Apis mellifera Linnaeus, 1758",0.015926,34.657265,2026-02-26T21:26,2026,cell_0064,False
-3030479318,"Culex Linnaeus, 1758",-0.2,35.3333,2020-01,2020,cell_0301,False
-1416041287,BOLD:ACY6037,-0.133,35.279,2001-02-20,2001,cell_0287,False
-3030338678,"Culex Linnaeus, 1758",-0.2,35.3333,2020-01,2020,cell_0301,False
+576971039,"Apalis porphyrolaema Reichenow & Neumann, 1895",-0.379649,35.37572,2011-01-21,2011,cell_0310,False
+4919139280,"Brycoptera lobata Ragge, 1981",0.220772,34.885192,2024-07-28T16:04:17,2024,cell_0144,False
+3498783768,"Cossypha heuglini Hartlaub, 1866",-0.374583,34.457917,2022-02-10,2022,cell_0000,False
+3356269658,"Eurillas gracilis (Cabanis, 1880)",0.20875,34.874583,2021-09-11,2021,cell_0143,False
+5006973748,"Diceros bicornis michaeli Zukowsky, 1965",-0.152789,35.232809,2024-12-31T13:39:33,2024,cell_0271,False
+857832132,"Sarcophaga furcoides Zumpt, 1967",0.227,34.8805,2011-02-07,2011,cell_0144,False
+3819425116,"Colius striatus J.F.Gmelin, 1789",-0.457917,34.624583,2022-06-15,2022,cell_0039,False
+1668880348,"Halcyon senegalensis (Linnaeus, 1766)",-0.368897,35.286286,2017-09-15T18:00,2017,cell_0283,False
+46826147,"Ceratitis fasciventris (Bezzi, 1920)",-0.183333,35.2667,2000-06-04,2000,cell_0286,False
+577017111,"Arizelocichla masukuensis (Shelley, 1897)",-0.379649,35.37572,2011-01-21,2011,cell_0310,False
+3735149431,"Psalidoprocne albiceps P.L.Sclater, 1864",0.20875,34.874583,2022-03-08,2022,cell_0143,False
+3498781774,"Vanellus spinosus (Linnaeus, 1758)",-0.374583,34.457917,2022-02-10,2022,cell_0000,False
+820386922,"Apaloderma narina (Stephens, 1815)",0.22692,34.884655,2012-08-18,2012,cell_0144,False
+965433884,"Nectarinia kilimensis Shelley, 1885",0.22692,34.884655,2013-08-09,2013,cell_0144,False
+2249871344,BOLD:ADE1279,0.2347,35.1408,2016-05-04,2016,cell_0243,False
+1415643409,Coenagrionidae,0.226,34.858,2012-03-09,2012,cell_0144,False
+3995401804,"Lanius humeralis Stanley, 1814",0.058236,34.581203,2022-10-21,2022,cell_0033,False
 6170942262,Passiflora subpeltata Ortega,-0.540366,34.824201,2026-02-23T13:43:52,2026,cell_0109,False
-4028689042,"Buteo augur (Ruppell, 1836)",0.245558,35.211835,2023-01-06T18:02,2023,cell_0279,False
-6162782062,Oxalis latifolia Kunth,-0.541353,34.814636,2026-02-22T09:24:22,2026,cell_0109,False
-1270009320,"Dacus limbipennis Macquart, 1844",-0.0941,35.2714,2001-02-20,2001,cell_0288,False
-1986783542,"Milvus aegyptius (Gmelin, 1788)",0.080112,35.073175,2018-01-17,2018,cell_0221,False
-5298375144,"Ardea alba Linnaeus, 1758",-0.401432,34.66487,2024-01-18,2024,cell_0056,False
-6163157536,"Papilio demodocus Esper, 1798",0.277632,34.751548,2026-02-19T13:02:46,2026,cell_0088,False
-4516352174,"Corvus albus Statius Muller, 1776",0.12843,34.859615,2024-01-08T12:53,2024,cell_0142,False
-3542727705,"Saxicola rubetra (Linnaeus, 1758)",-0.013232,34.811043,2021-01-04,2021,cell_0120,False
-1711646769,"Cyanomitra verticalis (Latham, 1790)",0.002666,34.524235,2016-01-23,2016,cell_0018,False
-1986779527,"Lonchura bicolor (Fraser, 1843)",0.080125,35.073167,2018-01-17,2018,cell_0221,False
-1772792055,"Merops muelleri (Cassin, 1857)",0.353234,34.863804,2000-01-18,2000,cell_0146,False
-1413928624,BOLD:ACM4446,-0.12,35.272,2001-04-28,2001,cell_0288,False
-1270009162,"Dacus limbipennis Macquart, 1844",-0.1487,35.2878,2001-02-20,2001,cell_0287,False
-1986781113,"Melaenornis pammelaina (Stanley, 1814)",0.080088,35.073178,2018-01-17,2018,cell_0221,False
-1772792042,"Sylvia atricapilla (Linnaeus, 1758)",0.353234,34.863804,2000-01-18,2000,cell_0146,False
-942031626,"Cisticola marginatus (Heuglin, 1869)",-0.131836,34.760742,2013-02-27,2013,cell_0098,False
-4994106280,"Crithagra burtoni (G.R.Gray, 1862)",-0.087593,35.32436,2024-01-20T15:26:27,2024,cell_0303,False
-2656093688,"Laniarius erythrogaster (Cretzschmar, 1829)",-0.496628,34.76794,2019-01-24,2019,cell_0091,False
-5300517824,"Turdus pelios Bonaparte, 1850",-0.40167,34.66486,2024-01-18,2024,cell_0056,False
+3030714769,"Culex Linnaeus, 1758",-0.2,35.3333,2020-12,2020,cell_0301,False
+3347167607,"Labeobarbus altianalis (Boulenger, 1900)",-0.17,35.18,2011-05-26,2011,cell_0253,False
+2693482320,"Nectarinia kilimensis Shelley, 1885",0.291555,34.858154,2019-09-02,2019,cell_0145,False
+4029735927,"Parus funereus (J.Verreaux & E.Verreaux, 1855)",0.20875,34.874583,2023-01-18,2023,cell_0143,False
+4029735943,"Anastomus lamelligerus Temminck, 1823",-0.124583,34.707917,2023-01-21,2023,cell_0080,False
+3306579762,"Corvus albus Statius Muller, 1776",-0.124583,34.707917,2016-07-10,2016,cell_0080,False
+4165554721,"Microcarbo africanus (Gmelin, 1789)",-0.33944,34.509961,2023-07-18T03:31:14,2023,cell_0011,False
 942031673,"Crithagra mozambica (P.L.Statius Müller, 1776)",-0.131836,34.760742,2013-02-27,2013,cell_0098,False
-6178457071,"Chalcomitra senegalensis (Linnaeus, 1766)",-0.206226,34.511293,2026-02-22T15:58,2026,cell_0014,False
-2656422684,"Nectarinia kilimensis Shelley, 1885",-0.496628,34.76794,2019-01-24,2019,cell_0091,False
-1772792077,"Campephaga petiti Oustalet, 1884",0.353234,34.863804,2000-01-18,2000,cell_0146,False
-6178407918,"Phacochoerus africanus massaicus Lönnberg, 1908",-0.206226,34.511293,2026-02-22T15:58,2026,cell_0014,False
-5304272336,"Uraeginthus bengalus (Linnaeus, 1766)",-0.40167,34.66486,2024-01-18,2024,cell_0056,False
-1711646655,"Granatina ianthinogaster (Reichenow, 1879)",0.002666,34.524235,2016-01-23,2016,cell_0018,False
-6170890547,"Balearica regulorum (E.T.Bennett, 1834)",-0.102258,34.693083,2013-01-28T15:01:27,2013,cell_0062,False
-3030837070,"Culex Linnaeus, 1758",-0.2,35.3333,2020-01,2020,cell_0301,False
-3132750267,"Motacilla clara Sharpe, 1908",0.27317,34.93212,2020-01-12,2020,cell_0165,False
-6178545683,"Papio anubis (Lesson, 1827)",-0.206226,34.511293,2026-02-22T15:58,2026,cell_0014,False
-4993874825,"Phyllastrephus cabanisi (Sharpe, 1882)",-0.086397,35.323817,2024-01-20T15:27:08,2024,cell_0303,False
-942031671,"Eurystomus glaucurus (P.L.S.Müller, 1776)",-0.131836,34.760742,2013-02-27,2013,cell_0098,False
-3030471158,"Culex Linnaeus, 1758",-0.2,35.3333,2020-01,2020,cell_0301,False
-2661524565,"Cossypha heuglini Hartlaub, 1866",-0.496628,34.76794,2019-01-24,2019,cell_0091,False
-2657380655,"Pycnonotus barbatus (Desfontaines, 1789)",-0.496628,34.76794,2019-01-24,2019,cell_0091,False
-6178557094,"Terpsiphone viridis (Statius Muller, 1776)",0.011304,34.570219,2026-02-26T16:14,2026,cell_0032,False
-3132613439,"Cinnyris venustus (Shaw, 1799)",0.126533,34.84318,2020-01-14,2020,cell_0123,False
-6171038409,Solanum aculeastrum Dunal,-0.541347,34.8243,2026-02-27T16:45:36,2026,cell_0109,False
-2656818554,"Granatina ianthinogaster (Reichenow, 1879)",-0.496628,34.76794,2019-01-24,2019,cell_0091,False
-5295710505,"Bostrychia hagedash (Latham, 1790)",-0.154066,34.832905,2024-01-10,2024,cell_0117,False
-6178916769,"Apis mellifera Linnaeus, 1758",0.014705,34.655299,2026-02-25T21:26,2026,cell_0064,False
-6178898434,"Colius striatus J.F.Gmelin, 1789",0.006357,34.602546,2026-02-19T08:42,2026,cell_0032,False
-3132827398,"Motacilla clara Sharpe, 1908",0.27317,34.93212,2020-01-12,2020,cell_0165,False
-4167963336,"Enteromius neumayeri (Fischer, 1884)",-0.03705,35.04802,2013-01-26,2013,cell_0198,False
-5085199864,"Enteromius neumayeri (Fischer, 1884)",-0.03705,35.04802,2013-01-26,2013,cell_0198,False
-5308244457,"Zosterops senegalensis Bonaparte, 1850",0.225545,34.99609,2024-01-20,2024,cell_0184,False
-6178487699,"Junonia oenone (Linnaeus, 1764)",-0.206226,34.511293,2026-02-22T15:58,2026,cell_0014,False
-942031694,"Acrocephalus gracilirostris (Hartlaub, 1864)",-0.131836,34.760742,2013-02-27,2013,cell_0098,False
-3132433755,"Sylvia atricapilla (Linnaeus, 1758)",0.27317,34.93212,2020-01-12,2020,cell_0165,False
-6170983143,Musa acuminata Colla,-0.535933,34.824988,2026-02-26T15:52:52,2026,cell_0109,False
-5297336502,"Bostrychia hagedash (Latham, 1790)",0.201535,35.097515,2024-01-03,2024,cell_0223,False
-6170890785,Eriobotrya japonica (Thunb.) Lindl.,-0.514812,34.819122,2026-02-28T10:58:11,2026,cell_0110,False
-4532703709,"Enteromius neumayeri (Fischer, 1884)",0.22053,35.29582,2013-01-24,2013,cell_0295,False
-46820853,"Ceratitis argenteobrunnea Munro, 1935",-0.269722,35.1614,2001-02-21,2001,cell_0251,False
-46827633,"Ceratitis venusta (Munro, 1956)",-0.366667,35.2833,2000-01-28,2000,cell_0283,False
-4905289680,Vernonia adoensis Sch.Bip. ex Walp.,0.166667,34.833334,2013-01-07T00:00,2013,cell_0123,False
-6179019374,"Apis mellifera Linnaeus, 1758",0.014705,34.655299,2026-02-25T21:26,2026,cell_0064,False
-6178497784,"Urocolius macrourus (Linnaeus, 1766)",-0.206226,34.511293,2026-02-22T15:58,2026,cell_0014,False
+2669556626,"Motacilla aguimp Temminck, 1820",0.06314,34.913345,2019-05-04,2019,cell_0160,False
+4029735931,"Hylia prasina (Cassin, 1855)",0.20875,34.874583,2023-01-18,2023,cell_0143,False
+942034746,"Elminia longicauda (Swainson, 1838)",0.314053,34.86674,2013-02-25,2013,cell_0145,False
+3818326658,Plagiorchiida,-0.32,35.01,2013-03-10,2013,cell_0193,False
+3306557402,"Pycnonotus tricolor (Hartlaub, 1862)",-0.124583,34.79125,2015-05-30,2015,cell_0099,False
+2832385617,"Merops muelleri (Cassin, 1857)",0.266417,34.937655,2012-05-12,2012,cell_0164,False
+2839987630,"Chrysococcyx cupreus (Shaw, 1792)",0.266417,34.937655,2012-05-13,2012,cell_0164,False
+4600102341,"Junonia gregorii Butler, 1895",0.218553,34.883667,2024-01-05T10:50:03,2024,cell_0143,False
+1986738954,"Balearica regulorum (E.T.Bennett, 1834)",0.203115,35.11258,2017-08-11,2017,cell_0242,False
+1392132883,"Ardea melanocephala Children & Vigors, 1826",-0.125453,34.742805,2012-11-10,2012,cell_0080,False
+5006713555,"Ceryle rudis (Linnaeus, 1758)",-0.175625,34.701719,2024-11-07T07:29,2024,cell_0061,False
+958753133,"Elminia longicauda (Swainson, 1838)",0.290505,34.83902,2013-06-06,2013,cell_0126,False
+899969003,"Pseudoromicia tenuipinnis (Peters, 1872)",-0.10961,34.74593,2012-01-08,2012,cell_0080,False
+2702537218,"Actophilornis africanus (J.F.Gmelin, 1789)",-0.125407,34.742504,2019-11-22,2019,cell_0080,False
+3306687073,"Gymnobucco bonapartei Hartlaub, 1854",0.292083,35.04125,2021-03-25,2021,cell_0205,False
+942034941,"Ploceus melanogaster Shelley, 1887",0.314053,34.86674,2013-02-25,2013,cell_0145,False
+4993958872,Saccharum officinarum L.,0.185325,35.116043,2024-12-03T18:06,2024,cell_0242,False
+3306575702,"Apus affinis (J.E.Gray, 1830)",-0.124583,34.79125,2016-07-10,2016,cell_0099,False
+2898384740,"Cyrestis camillus Fabricius, 1781",0.210697,34.930213,2020-10-08T10:18:01,2020,cell_0163,False
+657600861,Staphylinidae,0.25,34.85,2001-09-07,2001,cell_0125,False
+4506306788,"Halcyon senegalensis (Linnaeus, 1766)",-0.349101,34.656483,2023-12-16T12:58:12,2023,cell_0057,False
+2609671193,"Motacilla clara Sharpe, 1908",0.2928,34.8687,2019-11-25,2019,cell_0145,False
+3030472251,"Culex Linnaeus, 1758",-0.2,35.3333,2020-11,2020,cell_0301,False
+3306578643,"Ploceus cucullatus (Statius Muller, 1776)",-0.124583,34.79125,2016-07-10,2016,cell_0099,False
+46820855,"Ceratitis argenteobrunnea Munro, 1935",-0.183333,35.2667,2000-05-03,2000,cell_0286,False
+968714232,"Vanellus spinosus (Linnaeus, 1758)",-0.129518,34.740944,2013-10-13,2013,cell_0079,False
+3030837219,"Culex Linnaeus, 1758",-0.2,35.3333,2020-05,2020,cell_0301,False
+1415643273,BOLD:ABV3873,0.252,34.92,2012-06-25,2012,cell_0164,False
+1986731562,"Accipiter rufiventris A.Smith, 1830",0.283333,34.883333,2017-06-01,2017,cell_0145,False
+4138629354,"Equus quagga boehmi Matschie, 1892",-0.016706,34.780468,2023-06-19T13:15:44,2023,cell_0101,False
+3306587039,Milvus parasiticus,0.20875,34.957917,2017-02-05,2017,cell_0183,False
+3030315394,"Culex Linnaeus, 1758",-0.2,35.3333,2020-09,2020,cell_0301,False
+1415643282,BOLD:ABV3500,0.252,34.92,2012-06-25,2012,cell_0164,False
+865162303,"Cataulacus striativentris Santschi, 1924",0.1,34.52,2001-10-01,2001,cell_0020,False
+4416307337,"Hemisus guineensis Cope, 1865",-0.125,34.875,2023-03-16,2023,cell_0137,False
+865161999,"Technomyrmex moerens Santschi, 1913",0.1,34.52,2001-10-01,2001,cell_0020,False
+657592277,Staphylinidae,0.25,34.85,2001-07-20,2001,cell_0125,False
+657645184,"Diatrechus Bernhauer, 1911",0.25,34.85,2001-09-07,2001,cell_0125,False
+3348194143,Plagiorchiida,-0.32,35.01,2013-03-10,2013,cell_0193,False
+2669414356,"Elminia longicauda (Swainson, 1838)",0.0724,34.97738,2019-05-03,2019,cell_0181,False
+4465417247,Justicia flava (Forssk.) Vahl,0.182493,35.161463,2023-12-07T16:52,2023,cell_0260,False
+1986736816,"Apus niansae (Reichenow, 1887)",-0.097,34.645,2017-11-11,2017,cell_0046,False
+3926512992,"Streptopelia semitorquata (Rüppell, 1837)",-0.124583,35.207917,2022-08-03,2022,cell_0272,False
+958751262,"Apaloderma vittatum Shelley, 1882",0.290505,34.83902,2013-06-06,2013,cell_0126,False
+4903812412,Parthenium hysterophorus L.,-0.170562,35.18409,2024-06-08T10:28:37,2024,cell_0253,False
+3819429910,"Terpsiphone viridis (Statius Muller, 1776)",-0.457917,34.874583,2022-05-14,2022,cell_0130,False
+3326299577,"Psalidoprocne Cabanis, 1850",0.292083,34.957917,2021-07-11,2021,cell_0185,False
+3995665119,"Egretta garzetta (Linnaeus, 1766)",-0.131081,34.739262,2022-07-25,2022,cell_0079,False
+3030337586,"Culex Linnaeus, 1758",-0.2,35.3333,2020-12,2020,cell_0301,False
+3306569690,"Cinnyris venustus (Shaw, 1799)",0.125417,34.957917,2015-12-31,2015,cell_0182,False
+3306687074,"Apaloderma vittatum Shelley, 1882",0.292083,35.04125,2021-03-19,2021,cell_0205,False
+1986779406,"Lonchura nigriceps (Cassin, 1852)",0.203543,35.110948,2017-08-11,2017,cell_0242,False
+1415643275,BOLD:ABU9936,0.228,34.963,2012-06-25,2012,cell_0184,False
+5297261755,"Tricholaema hirsuta (Swainson, 1821)",0.081892,34.988647,2024-05-11,2024,cell_0181,False
+822524370,"Bostrychia hagedash (Latham, 1790)",-0.393,35.237144,2012-07-17,2012,cell_0266,False
+3306657416,"Elminia longicauda (Swainson, 1838)",0.042083,35.04125,2019-04-14,2019,cell_0200,False
+6422488547,"Motacilla aguimp Temminck, 1820",0.364634,34.857324,2026-06-22T09:32:57,2026,cell_0146,False
+5007374876,"Colobus guereza matschiei Neumann, 1899",-0.141736,34.824559,2024-12-25T15:08,2024,cell_0117,False
+3351082197,Plagiorchiida,-0.32,35.01,2013-03-10,2013,cell_0193,False
+2669352034,"Oreolais pulcher (Sharpe, 1891)",0.0724,34.97738,2019-05-02,2019,cell_0181,False
+657609045,Carabidae,0.25,34.85,2001-09-07,2001,cell_0125,False
+3326296577,"Pycnonotus tricolor (Hartlaub, 1862)",0.292083,34.957917,2021-07-11,2021,cell_0185,False
+4919184015,"Pycnonotus barbatus (Desfontaines, 1789)",0.284851,34.761581,2024-07-30T09:14:14,2024,cell_0107,False
+1346512846,"Motacilla aguimp Temminck, 1820",0.212681,34.92315,2015-01-12,2015,cell_0163,False
+2249871956,BOLD:ADE1279,0.175,35.0876,2016-05-05,2016,cell_0223,False
+975747110,"Pycnonotus barbatus (Desfontaines, 1789)",-0.401222,34.665188,2013-11-28,2013,cell_0056,False
+46826196,"Ceratitis fasciventris (Bezzi, 1920)",-0.183333,35.2667,2000-08-17,2000,cell_0286,False
+4611162380,"Ploceus castanops Shelley, 1888",-0.144885,34.736954,2023-04-06,2023,cell_0079,False
+2190418173,"Columba guinea Linnaeus, 1758",-0.12973,34.740883,2018-10-01,2018,cell_0079,False
+657640501,Pselaphidae,0.25,34.85,2001-09-07,2001,cell_0125,False
+3513368748,"Eurillas latirostris (Strickland, 1844)",0.212681,34.92315,2021-05-01,2021,cell_0163,False
+838103051,"Ploceus pelzelni (Shelley, 1887)",-0.349614,34.654755,2012-07-12,2012,cell_0057,False
+6413895438,"Nudaurelia petiveri Guérin-Méneville, 1845",0.297092,34.773338,2026-06-02T15:52:15,2026,cell_0107,False
+3326297565,"Chalcomitra senegalensis (Linnaeus, 1766)",0.292083,34.79125,2021-07-08,2021,cell_0107,False
+1986732183,"Actophilornis africanus (J.F.Gmelin, 1789)",-0.166667,34.783333,2017-06-01,2017,cell_0098,False
+2697658003,"Muscicapa adusta (F.Boie, 1828)",0.179171,35.010883,2019-09-06,2019,cell_0203,False
+975746456,"Cypsiurus parvus (M.H.K.Lichtenstein, 1823)",-0.401222,34.665188,2013-11-28,2013,cell_0056,False
+3326299576,"Ploceus cucullatus (Statius Muller, 1776)",0.292083,34.79125,2021-07-08,2021,cell_0107,False
+1831098922,"Trioceros ellioti (Günther, 1895)",0.230712,34.754133,2018-02-26T11:18Z,2018,cell_0106,False
+1200328532,"Dendropicos fuscescens (Vieillot, 1818)",0.259208,35.088444,2013-05-12,2013,cell_0224,False
+968712540,"Corythornis cristatus (Pallas, 1764)",-0.129518,34.740944,2013-10-13,2013,cell_0079,False
+2626125466,"Bematistes Hemming, 1935",-0.518515,35.048507,2020-03-09,2020,cell_0189,False
+958752802,"Chalcomitra rubescens (Vieillot, 1819)",0.290505,34.83902,2013-06-06,2013,cell_0126,False
+2249872569,BOLD:ADE1279,0.175,35.0876,2016-05-05,2016,cell_0223,False
+1986779663,"Lybius bidentatus (Shaw, 1799)",0.182023,35.235379,2018-05-12,2018,cell_0278,False
+2988294803,Pontederia crassipes Mart.,-0.322316,34.723011,2020-11-01T17:43:34,2020,cell_0076,False
+2265825932,"Papio anubis (Lesson, 1827)",-0.236903,35.395503,2019-06-07T10:29:55,2019,cell_0313,False
+1947775587,"Xenopus victorianus Ahl, 1924",0.30725,34.76004,2018-04-06,2018,cell_0107,False
+818380902,"Batis erlangeri Neumann, 1907",-0.031405,34.938595,2012-02-18,2012,cell_0158,False
+3454085530,"Oreolais pulcher (Sharpe, 1891)",0.20875,34.957917,2021-11-11,2021,cell_0183,False
+1947775597,"Xenopus victorianus Ahl, 1924",-0.12248,35.25958,2018-04-05,2018,cell_0288,False
+3306660340,"Ploceus baglafecht (Daudin, 1802)",0.042083,35.04125,2019-04-14,2019,cell_0200,False
+6441992609,Momordica foetida Schum.,0.132671,34.869702,2026-07-04T16:58:39,2026,cell_0142,False
+142742655,"Bactrocera cucurbitae (Coquillett, 1899)",0.016667,35.1833,2001-08-01,2001,cell_0256,False
+1346512855,"Turdus pelios Bonaparte, 1850",0.212681,34.92315,2015-01-12,2015,cell_0163,False
+577014409,"Apalis cinerea (Sharpe, 1891)",-0.379649,35.37572,2011-01-22,2011,cell_0310,False
+975746999,"Scopus umbretta Gmelin, 1789",-0.401222,34.665188,2013-11-28,2013,cell_0056,False
+1986731376,"Accipiter minullus (Daudin, 1800)",-0.536035,34.671627,2018-03-20,2018,cell_0053,False
+3819436906,"Spermestes cucullata Swainson, 1837",-0.457917,34.874583,2022-05-14,2022,cell_0130,False
+1415643265,BOLD:ABU9678,0.228,34.963,2012-06-25,2012,cell_0184,False
+2692446125,"Saxicola torquatus (Linnaeus, 1766)",0.179171,35.010883,2019-08-14,2019,cell_0203,False
+2692556281,"Dendrocygna viduata (Linnaeus, 1766)",-0.171318,34.910065,2019-08-30,2019,cell_0156,True
+2669519487,"Ploceus baglafecht (Daudin, 1802)",0.06314,34.913345,2019-05-04,2019,cell_0160,False
+1416040620,BOLD:ACF2797,0.11,35.25,2011-12-06,2011,cell_0292,False
+3306569691,"Spermestes cucullata Swainson, 1837",0.125417,34.957917,2015-12-31,2015,cell_0182,False
+6162782062,Oxalis latifolia Kunth,-0.541353,34.814636,2026-02-22T09:24:22,2026,cell_0109,False
+4610147151,"Sarothrura pulchra (J.E.Gray, 1829)",0.212681,34.92315,2023-08-28,2023,cell_0163,False
+142745593,"Dacus limbipennis Macquart, 1844",-0.183333,35.2667,2000-10-12,2000,cell_0286,False
+1986732202,"Actophilornis africanus (J.F.Gmelin, 1789)",-0.152055,34.81543,2017-09-07,2017,cell_0117,False
+3819425108,"Egretta intermedia (Wagler, 1829)",-0.457917,34.54125,2022-06-14,2022,cell_0009,False
+3997605890,"Ploceus cucullatus (Statius Muller, 1776)",-0.046892,34.792124,2022-10-18,2022,cell_0100,False
+1883745976,"Hipposideros caffer (Sundevall, 1846)",-0.11742,34.54124,2015-03-17,2015,cell_0016,False
+3454076127,"Microcarbo africanus (Gmelin, 1789)",0.125417,35.124583,2021-10-09,2021,cell_0241,False
+4416307427,"Ptychadena anchietae (Bocage, 1868)",-0.125,34.875,2023-03-16,2023,cell_0137,False
+4465454244,Achyranthes aspera L.,0.182523,35.161428,2023-12-07T16:47,2023,cell_0260,False
+1986762654,"Cyanomitra verticalis (Latham, 1790)",0.199587,35.119665,2017-08-11,2017,cell_0242,False
+3306575701,"Lophaetus occipitalis (Daudin, 1800)",-0.124583,34.79125,2016-07-10,2016,cell_0099,False
+4892009221,"Lamprotornis superbus Rüppell, 1845",-0.130811,34.794937,2024-06-03T08:34:26,2024,cell_0098,False
+1986731824,"Acrocephalus gracilirostris (Hartlaub, 1864)",-0.166667,34.783333,2017-06-01,2017,cell_0098,False
+3306587041,"Spermestes cucullata Swainson, 1837",0.20875,34.957917,2017-02-05,2017,cell_0183,False
+46824693,"Ceratitis discussa Munro, 1935",-0.183333,35.2667,2000-05-03,2000,cell_0286,False
+3926511944,"Hirundo rustica Linnaeus, 1758",-0.124583,35.207917,2022-08-03,2022,cell_0272,False
+818697726,"Anaplectes rubriceps (Sundevall, 1850)",-0.02706,35.04305,2012-02-17,2012,cell_0199,False
+4046302368,"Milvus migrans (Boddaert, 1783)",-0.039139,34.62204,2023-02-20T00:02,2023,cell_0047,False
+1986743541,"Bycanistes subcylindricus (P.L.Sclater, 1871)",0.069228,35.033307,2018-01-05,2018,cell_0200,False
+4165365272,"Varanus niloticus (Linnaeus, 1766)",-0.33944,34.509961,2023-07-18T02:49:58,2023,cell_0011,False
+865162638,Formicidae,0.33,34.87,2001-04-24,2001,cell_0146,False
+577029937,"Actophilornis africanus (J.F.Gmelin, 1789)",-0.171296,34.910088,2011-07-14,2011,cell_0156,True
+3306584102,"Hirundo rustica Linnaeus, 1758",0.20875,34.957917,2017-02-05,2017,cell_0183,False
+3454077121,"Motacilla cinerea Tunstall, 1771",0.125417,35.124583,2021-10-09,2021,cell_0241,False
+4046254333,"Corvus albus Statius Muller, 1776",-0.053668,34.758256,2023-02-17T04:30,2023,cell_0100,False
+4925834735,"Junonia Hübner, 1819",0.350525,34.868901,2024-06-23T12:06,2024,cell_0146,False
+2690652007,"Crithagra striolata (Rüppell, 1840)",0.179171,35.010883,2019-08-03,2019,cell_0203,False
+4400826344,"Philothamnus battersbyi Loveridge, 1951",0.125,35.125,2023-04-05,2023,cell_0241,False
+1986733968,"Anastomus lamelligerus Temminck, 1823",-0.071718,34.775727,2017-11-22,2017,cell_0100,False
+1947775593,"Xenopus victorianus Ahl, 1924",0.14782,35.15558,2018-04-09,2018,cell_0259,False
+1986740929,"Bostrychia hagedash (Latham, 1790)",0.069243,34.486187,2017-12-29,2017,cell_0008,False
+2249872064,BOLD:ADE1279,0.2234,35.1347,2016-05-04,2016,cell_0243,False
+1986736564,"Apus caffer (M.H.K.Lichtenstein, 1823)",0.202888,35.104058,2017-08-11,2017,cell_0242,False
+4046323282,"Pycnonotus barbatus (Desfontaines, 1789)",-0.052982,34.756882,2023-02-17T22:31,2023,cell_0100,False
+2848580846,"Gymnobucco bonapartei cinereiceps Sharpe, 1891",-0.351,35.319,2020-03-10,2020,cell_0298,False
+4029735584,"Ardea melanocephala Children & Vigors, 1826",-0.04125,34.79125,2022-12-23,2022,cell_0100,False
+1883745767,"Hipposideros caffer (Sundevall, 1846)",-0.11742,34.54124,2015-03-17,2015,cell_0016,False
+911792057,Isoglossa Oerst.,-0.45472,34.86111,2012-12-03,2012,cell_0130,False
+911791902,Acanthaceae,-0.4575,34.86083,2012-12-03,2012,cell_0130,False
+2668664298,"Ceblepyris caesius Lichtenstein & Mhc, 1823",0.0724,34.97738,2019-05-02,2019,cell_0181,False
+1986732273,"Alcedo cristata cristata Pallas, 1764",-0.166667,34.783333,2017-06-01,2017,cell_0098,False
+6273598658,"Passer griseus (Vieillot, 1817)",-0.476089,34.834648,2026-05-05T12:12,2026,cell_0110,False
+1415643268,BOLD:ABU9728,0.252,34.92,2012-06-25,2012,cell_0164,False
+6171430160,Duranta erecta L.,-0.541301,34.824952,2026-03-01T09:17:17,2026,cell_0109,False
+4976342516,"Trachylepis striata (Peters, 1844)",-0.365434,35.290661,2024-10-21T10:17,2024,cell_0283,False
+3498782979,"Ploceus cucullatus (Statius Muller, 1776)",-0.29125,34.79125,2022-02-24,2022,cell_0095,False
+2669519574,"Chrysococcyx caprius (Boddaert, 1783)",0.148795,34.880146,2019-05-04,2019,cell_0142,False
+4852021607,"Stephanoaetus coronatus (Linnaeus, 1766)",0.218489,34.829132,2024-03-12T06:07,2024,cell_0124,False
+1413924304,BOLD:AAQ1889,-0.43,35.3,2012-03-05,2012,cell_0296,False
+1986741901,"Bubulcus ibis (Linnaeus, 1758)",-0.09,34.776,2018-01-02,2018,cell_0099,False
+46821948,"Ceratitis caetrata Munro, 1949",-0.166667,35.0667,2000-04-09,2000,cell_0216,False
+1415643722,BOLD:ABA9340,0.228,34.963,2012-09-12,2012,cell_0184,False
+2882955668,"Junonia Hübner, 1819",-0.420978,35.315742,2020-10-05T12:02:35,2020,cell_0297,False
+577872221,"Apus apus (Linnaeus, 1758)",-0.051124,34.921116,2011-01-20,2011,cell_0158,False
+46822373,"Ceratitis capitata (Wiedemann, 1824)",-0.269722,35.1614,2001-07-30,2001,cell_0251,False
+835302175,"Melaenornis fischeri (Reichenow, 1884)",-0.393,35.237144,2012-07-17,2012,cell_0266,False
+1416040605,BOLD:ACG9240,0.11,35.25,2011-12-04,2011,cell_0292,False
+4919720472,"Cuculus solitarius Stephens, 1815",-0.153851,34.819122,2024-05-01T18:03:11,2024,cell_0117,False
+3926511945,"Cecropis abyssinica (Guerin-Meneville, 1843)",-0.124583,35.207917,2022-08-03,2022,cell_0272,False
+1200328577,"Nectarinia kilimensis Shelley, 1885",0.259208,35.088444,2013-05-12,2013,cell_0224,False
+2979481808,"Calicophoron Näsmark, 1937",-0.318111,35.00689,2017-02-17,2017,cell_0193,False
+3415697372,"Junonia Hübner, 1819",-0.352985,35.327387,2021-11-16T12:29,2021,cell_0298,False
+1883745394,"Hipposideros caffer (Sundevall, 1846)",-0.11742,34.54124,2015-03-17,2015,cell_0016,False
+4465509408,Solanum aculeastrum Dunal,0.182518,35.162113,2023-12-07T17:17,2023,cell_0260,False
+3819426872,"Uraeginthus ianthinogaster Reichenow, 1879",-0.457917,34.874583,2022-05-14,2022,cell_0130,False
+3819425117,"Amaurornis flavirostra (Swainson, 1837)",-0.457917,34.624583,2022-06-15,2022,cell_0039,False
+4165353690,"Cossypha heuglini Hartlaub, 1866",-0.33944,34.509961,2023-07-18T03:18:57,2023,cell_0011,False
+3819425175,"Empidornis semipartitus (Rüppell, 1840)",-0.374583,34.624583,2022-06-21,2022,cell_0041,False
+3347171521,"Labeobarbus altianalis (Boulenger, 1900)",-0.17,35.18,2011-05-26,2011,cell_0253,False
+3326300577,"Chlorocichla laetissima (Sharpe, 1899)",0.20875,34.957917,2021-07-11,2021,cell_0183,False
+953063425,"Lophaetus occipitalis (Daudin, 1800)",-0.046692,34.823914,2011-02-02,2011,cell_0119,False
+3306584219,"Bleda syndactylus (Swainson, 1837)",0.042083,35.04125,2017-02-27,2017,cell_0200,False
+6171272590,Crassocephalum vitellinum (Benth.) S.Moore,-0.541353,34.814636,2026-02-22T09:49:12,2026,cell_0109,False
+1415643701,BOLD:ACG6009,0.228,34.963,2012-09-12,2012,cell_0184,False
+4908824626,"Equus quagga Boddaert, 1785",-0.046681,34.712865,2024-06-02T14:00:53,2024,cell_0081,False
+1099972962,"Eidolon helvum (Kerr, 1792)",-0.06794,34.501676,2015-07-03,2015,cell_0006,False
+3306643431,"Lophaetus occipitalis (Daudin, 1800)",0.042083,35.04125,2019-04-14,2019,cell_0200,False
+3306568590,"Hirundo rustica Linnaeus, 1758",0.125417,34.957917,2015-12-31,2015,cell_0182,False
+4400826946,"Philothamnus semivariegatus (Smith, 1840)",-0.125,34.875,2023-04-26,2023,cell_0137,False
+2005653561,"Leptailurus serval (Schreber, 1776)",-0.125,34.625,2012-12-26,2012,cell_0046,False
+46821955,"Ceratitis caetrata Munro, 1949",-0.269722,35.1614,2001-06-08,2001,cell_0251,False
+1986736574,"Apus barbatus (P.L.Sclater, 1866)",-0.02047,34.87033,2017-08-05,2017,cell_0139,False
+4903818849,"Caridina nilotica (P.Roux, 1833)",-0.192315,34.953693,2024-05-19T11:13,2024,cell_0175,False
+3926511947,"Apus affinis (J.E.Gray, 1830)",-0.124583,35.207917,2022-08-03,2022,cell_0272,False
+3306567685,Milvus parasiticus,0.125417,34.957917,2015-12-19,2015,cell_0182,False
+577134749,"Actophilornis africanus (J.F.Gmelin, 1789)",-0.167091,34.871765,2011-07-14,2011,cell_0136,False
+958752205,"Hedydipna collaris (Vieillot, 1819)",0.290505,34.83902,2013-06-06,2013,cell_0126,False
+4165466897,"Mycteria ibis (Linnaeus, 1766)",-0.33944,34.509961,2023-07-18T07:14:32,2023,cell_0011,False
+1986748523,"Ceryle rudis (Linnaeus, 1758)",-0.074895,34.708186,2017-09-06,2017,cell_0081,False
+4458471021,"Amauris albimaculata Butler, 1875",0.294738,34.830118,2023-11-25T09:22,2023,cell_0126,False
 4028818115,"Lanius excubitoroides Prevost & Des Murs, 1847",0.245558,35.211835,2023-01-06T18:03,2023,cell_0279,False
-6182779924,"Sheppardia aequatorialis (Jackson, 1906)",0.221027,34.902025,2026-01-06,2026,cell_0164,False
-5085200190,"Enteromius neumayeri (Fischer, 1884)",0.22053,35.29582,2013-01-24,2013,cell_0295,False
-6178621580,"Lissotis melanogaster (Ruppell, 1835)",0.045982,34.708692,2013-01-29T06:27:07,2013,cell_0083,False
-3538569984,"Euplectes orix (Linnaeus, 1758)",-0.013232,34.811043,2021-01-04,2021,cell_0120,False
-4994050458,"Spermophaga ruficapilla (Shelley, 1888)",0.223177,34.911898,2024-01-19T12:39:35,2024,cell_0164,False
-46826177,"Ceratitis fasciventris (Bezzi, 1920)",-0.366667,35.2833,2000-01-28,2000,cell_0283,False
+2294623033,"Chlorocebus pygerythrus (F.Cuvier, 1821)",-0.008033,34.598592,2019-07-19T08:38,2019,cell_0032,False
+1986737292,"Ardea alba Linnaeus, 1758",-0.172686,34.914028,2017-09-07,2017,cell_0156,True
+3347168803,"Labeobarbus altianalis (Boulenger, 1900)",-0.17,35.18,2011-05-26,2011,cell_0253,False
+3998441000,Centella asiatica (L.) Urb.,-0.016405,34.603802,2022-12-05T12:34:41.790Z,2022,cell_0032,False
+577269698,"Anaplectes rubriceps (Sundevall, 1850)",-0.031405,34.938595,2011-01-20,2011,cell_0158,False
+2170625756,"Motacilla aguimp Temminck, 1820",-0.026098,34.683025,2018-06-18,2018,cell_0064,False
+5316271659,"Crithagra striolata (Rüppell, 1840)",-0.369144,35.296364,2000-11-03,2000,cell_0283,False
+2848585860,"Indicator conirostris (Cassin, 1856)",-0.351,35.319,2020-03-10,2020,cell_0298,False
+1416040609,BOLD:ABZ3304,0.11,35.25,2011-12-04,2011,cell_0292,False
+865161977,"Technomyrmex moerens Santschi, 1913",0.1,34.52,2001-10-01,2001,cell_0020,False
+1416040582,BOLD:ACR5697,0.11,35.25,2011-12-04,2011,cell_0292,False
+1883745078,"Myotis bocagii (Peters, 1870)",0.33163,34.87875,2015-03-10,2015,cell_0146,False
+6178557736,Syzygium cumini (L.) Skeels,-0.535933,34.824988,2026-03-05T13:41:45,2026,cell_0109,False
+975746957,"Bostrychia hagedash (Latham, 1790)",-0.401222,34.665188,2013-11-28,2013,cell_0056,False
+951877976,"Ardea ibis Linnaeus, 1758",-0.185394,34.928284,2013-04-22,2013,cell_0155,False
+3306568592,"Elminia longicauda (Swainson, 1838)",0.125417,34.957917,2015-12-19,2015,cell_0182,False
+1986731484,"Accipiter melanoleucus A.Smith, 1830",0.333333,34.873333,2017-06-01,2017,cell_0146,False
+142745633,"Dacus limbipennis Macquart, 1844",0.016667,35.1833,2001-08-01,2001,cell_0256,False
+3351047166,Plagiorchiida,-0.32,35.01,2013-03-10,2013,cell_0193,False
+2684295884,"Anastomus lamelligerus Temminck, 1823",-0.171318,34.910065,2019-07-07,2019,cell_0156,True
+1415643718,BOLD:ABV0395,0.228,34.963,2012-09-12,2012,cell_0184,False
+3926511946,"Ploceus ocularis A.Smith, 1828",-0.124583,35.207917,2022-08-03,2022,cell_0272,False
+1986738103,"Apus apus (Linnaeus, 1758)",-0.172333,34.919265,2018-02-16,2018,cell_0156,True
+2249871237,BOLD:ADE1279,0.2347,35.1408,2016-05-04,2016,cell_0243,False
+979598415,"Buteo augur (Ruppell, 1836)",-0.031405,34.938595,2001-12-25,2001,cell_0158,False
+2170632540,"Upupa epops Linnaeus, 1758",-0.026098,34.683025,2018-06-21,2018,cell_0064,False
+1986742987,"Buteo augur (Ruppell, 1836)",-0.019792,34.873933,2017-08-05,2017,cell_0139,False
+842734849,"Spermestes cucullata Swainson, 1837",-0.393,35.237144,2012-07-17,2012,cell_0266,False
+2848558844,"Oriolus percivali Ogilvie-Grant, 1903",-0.351,35.319,2020-03-10,2020,cell_0298,False
+2688336211,"Bycanistes subcylindricus (P.L.Sclater, 1871)",0.179171,35.010883,2019-08-14,2019,cell_0203,False
+4919681435,"Cuculus solitarius Stephens, 1815",-0.150255,34.813601,2024-05-01T17:49:10,2024,cell_0117,False
+4046309312,"Lanius humeralis Stanley, 1814",-0.039139,34.62204,2023-02-20T00:27,2023,cell_0047,False
+4165464871,"Polyura Billberg, 1820",-0.33944,34.509961,2023-07-18T03:37:02,2023,cell_0011,False
+577020488,"Bathmocercus rufus Reichenow, 1895",-0.379649,35.37572,2011-01-21,2011,cell_0310,False
+975746952,"Ardea ibis Linnaeus, 1758",-0.401222,34.665188,2013-11-28,2013,cell_0056,False
+577003614,"Arizelocichla kikuyuensis (Sharpe, 1891)",-0.379649,35.37572,2011-01-22,2011,cell_0310,False
+4851828318,"Anas undulata C.F.Dubois, 1838",-0.429254,35.309062,2024-03-10T20:56,2024,cell_0296,False
+2680979995,"Hirundo angolensis Bocage, 1868",-0.493138,34.75114,2019-06-19,2019,cell_0072,False
+3306687526,"Psalidoprocne albiceps P.L.Sclater, 1864",-0.04125,34.874583,2021-01-04,2021,cell_0138,False
+833058180,"Lamprotornis superbus Rüppell, 1845",-0.349614,34.654755,2012-07-12,2012,cell_0057,False
+2848584834,"Onychognathus walleri elgonensis (Sharpe, 1891)",-0.351,35.319,2020-03-10,2020,cell_0298,False
+4993874825,"Phyllastrephus cabanisi (Sharpe, 1882)",-0.086397,35.323817,2024-01-20T15:27:08,2024,cell_0303,False
+1986732080,"Actophilornis africanus (J.F.Gmelin, 1789)",-0.153908,34.832556,2018-02-10,2018,cell_0117,False
+3956413415,Solanum mauritianum Scop.,-0.570267,34.674877,2022-07-13T07:37:21.905Z,2022,cell_0053,False
+577075298,"Actophilornis africanus (J.F.Gmelin, 1789)",-0.167091,34.871765,2011-07-14,2011,cell_0136,False
+2170650304,"Tchagra senegalus (Linnaeus, 1766)",-0.026098,34.683025,2018-06-21,2018,cell_0064,False
+2668890279,"Pycnonotus barbatus (Desfontaines, 1789)",0.0724,34.97738,2019-05-02,2019,cell_0181,False
+2006095147,Artocarpus heterophyllus Lam.,-0.038333,34.752777,2019-02-28T09:36:28,2019,cell_0081,False
+2366589721,"Anomalurus derbianus (Gray, 1842)",0.125,34.875,2019-03-14,2019,cell_0142,False
+1883745929,"Hipposideros caffer (Sundevall, 1846)",-0.11742,34.54124,2015-03-17,2015,cell_0016,False
+3819425166,"Lamprotornis superbus Rüppell, 1845",-0.374583,34.624583,2022-06-21,2022,cell_0041,False
+2249872929,BOLD:ADE1279,0.2234,35.1347,2016-05-04,2016,cell_0243,False
+2005653960,"Umma saphirina Förster, 1916",-0.375,34.875,2016-07-30,2016,cell_0132,False
+828407574,"Corvus albus Statius Muller, 1776",-0.393,35.237144,2012-07-17,2012,cell_0266,False
+3326297567,"Ploceus bicolor Vieillot, 1819",0.292083,34.957917,2021-07-11,2021,cell_0185,False
+6170949609,"Polytoxon robustum (Simroth, 1896)",-0.514812,34.819122,2026-03-02T10:14:37,2026,cell_0110,False
+1986761036,"Crithagra gularis (A.Smith, 1836)",0.182011,35.235375,2018-05-12,2018,cell_0278,False
+4516352174,"Corvus albus Statius Muller, 1776",0.12843,34.859615,2024-01-08T12:53,2024,cell_0142,False
+3498782785,"Colius striatus J.F.Gmelin, 1789",-0.374583,34.457917,2022-02-10,2022,cell_0000,False
+3819436907,"Nectarinia kilimensis Shelley, 1885",-0.457917,34.79125,2022-05-14,2022,cell_0092,False
+3454078130,"Chalcomitra senegalensis (Linnaeus, 1766)",0.125417,35.124583,2021-10-09,2021,cell_0241,False
+3347162425,"Labeobarbus altianalis (Boulenger, 1900)",-0.17,35.18,2011-05-26,2011,cell_0253,False
+2648135682,Ricinus communis L.,-0.166851,35.364723,2019-04-20T11:04:50.276Z,2019,cell_0315,False
+4465512399,Croton megalocarpus Hutch.,0.182513,35.16197,2023-12-07T17:15,2023,cell_0260,False
+3819425111,"Haliaeetus vocifer (Daudin, 1800)",-0.457917,34.54125,2022-06-14,2022,cell_0009,False
+2029107695,"Aquila pomarina C.L.Brehm, 1831",-0.02912,35.41544,2018-11-13T12:05Z,2018,cell_0326,False
+2883103293,"Papilio jacksoni Sharpe, 1891",-0.419537,35.313438,2020-10-05T11:45:40,2020,cell_0297,False
+3498781958,"Mycteria ibis (Linnaeus, 1766)",-0.29125,34.79125,2022-02-24,2022,cell_0095,False
+3819425118,"Bradypterus baboecala (Vieillot, 1817)",-0.457917,34.624583,2022-06-15,2022,cell_0039,False
+1986741938,"Bubulcus ibis (Linnaeus, 1758)",0.174833,35.237547,2017-07-11,2017,cell_0278,False
+3336680768,"Turdus pelios Bonaparte, 1850",-0.457917,34.54125,2021-08-17,2021,cell_0009,False
+577798487,"Apus affinis (J.E.Gray, 1830)",-0.167091,34.871765,2011-07-14,2011,cell_0136,False
+1947775688,"Xenopus victorianus Ahl, 1924",-0.14041,35.27434,2018-04-05,2018,cell_0287,False
+1415636125,BOLD:ABA9340,0.217,34.852,2013-05-23,2013,cell_0124,False
+1414873465,BOLD:ABA1355,-0.43333,35.3,2012-05-07,2012,cell_0296,False
+2182207962,"Ploceus baglafecht (Daudin, 1802)",-0.026098,34.683025,2018-06-22,2018,cell_0064,False
+6170890785,Eriobotrya japonica (Thunb.) Lindl.,-0.514812,34.819122,2026-02-28T10:58:11,2026,cell_0110,False
+3454076126,"Cisticola cantans (Heuglin, 1869)",0.125417,35.124583,2021-10-09,2021,cell_0241,False
+3498782786,"Cinnyris mariquensis A.Smith, 1836",-0.374583,34.457917,2022-02-10,2022,cell_0000,False
+3952344255,Solanum mauritianum Scop.,-0.56693,34.674125,2022-07-13T07:18:48.159Z,2022,cell_0053,False
+4111913597,"Stephanoaetus coronatus (Linnaeus, 1766)",0.062248,34.8564,2023-05-05T14:57,2023,cell_0140,False
+2882925903,"Papilio mackinnoni Sharpe, 1891",-0.421283,35.315995,2020-10-05T12:13:21,2020,cell_0297,False
+912289412,Bothriocline fusca (S.Moore) M.G.Gilbert,0.037222,35.266667,2000-11-09T00:00,2000,cell_0291,False
+3819425109,"Streptopelia semitorquata (Rüppell, 1837)",-0.457917,34.54125,2022-06-14,2022,cell_0009,False
+46822354,"Ceratitis capitata (Wiedemann, 1824)",-0.269722,35.1614,2001-06-08,2001,cell_0251,False
+2883140589,Thunbergia erecta (Benth.) T.Anderson,-0.011488,34.801694,2020-09-28T10:55:06,2020,cell_0101,False
+2249872051,BOLD:ADE1279,0.2347,35.1408,2016-05-04,2016,cell_0243,False
+1986731296,"Accipiter badius (Gmelin, 1788)",-0.048082,34.82152,2018-02-16,2018,cell_0119,False
+1200328509,"Elminia longicauda (Swainson, 1838)",0.259208,35.088444,2013-05-11,2013,cell_0224,False
+3513837201,"Granatina ianthinogaster (Reichenow, 1879)",-0.403084,34.64433,2021-05-08,2021,cell_0040,False
+4506255298,"Corvus albus Statius Muller, 1776",-0.371647,35.28533,2023-12-23T08:24:58,2023,cell_0283,False
+4465735423,Ageratum conyzoides L.,0.182353,35.161818,2023-12-07T17:24,2023,cell_0260,False
+2668758518,"Camaroptera brachyura (Vieillot, 1821)",0.06314,34.913345,2019-05-03,2019,cell_0160,False
+3819430883,"Apus caffer (M.H.K.Lichtenstein, 1823)",-0.457917,34.79125,2022-05-14,2022,cell_0092,False
+4597532553,"Palpopleura portia (Drury, 1773)",-0.014638,34.535867,2024-03-14T10:30,2024,cell_0018,False
+819064902,"Apus affinis (J.E.Gray, 1830)",0.028854,34.625275,2012-08-14,2012,cell_0049,False
+6178532205,Desmodium intortum (Mill.) Urb.,0.073219,34.56145,2026-03-06T09:51,2026,cell_0034,False
+2043573110,"Dendrocygna viduata (Linnaeus, 1766)",-0.400724,34.77319,2017-04-14,2017,cell_0093,False
+4165434999,"Corvus albus Statius Muller, 1776",-0.52002,34.728304,2023-07-17T02:39:04,2023,cell_0072,False
+2170633814,"Laniarius erythrogaster (Cretzschmar, 1829)",-0.026098,34.683025,2018-06-20,2018,cell_0064,False
+2669388624,"Cisticola cantans (Heuglin, 1869)",0.06314,34.913345,2019-05-04,2019,cell_0160,False
+577070548,"Actophilornis africanus (J.F.Gmelin, 1789)",-0.167091,34.871765,2011-07-14,2011,cell_0136,False
+952836898,"Delichon urbicum (Linnaeus, 1758)",-0.046692,34.823914,2011-02-03,2011,cell_0119,False
+1986732209,"Actophilornis africanus (J.F.Gmelin, 1789)",-0.164601,34.95333,2017-11-22,2017,cell_0176,True
+1986738959,"Balearica regulorum (E.T.Bennett, 1834)",0.174683,35.237587,2017-07-12,2017,cell_0278,False
+4400826844,"Dendroaspis polylepis Günther, 1864",-0.125,34.875,2023-04-01,2023,cell_0137,False
+4111823590,"Bycanistes subcylindricus (P.L.Sclater, 1871)",0.282731,34.751863,2023-05-04T17:23,2023,cell_0088,False
+46825989,"Ceratitis fasciventris (Bezzi, 1920)",-0.166667,35.0667,2000-06-09,2000,cell_0216,False
+818752260,"Aerospiza Roberts, 1922",-0.031405,34.938595,2012-02-18,2012,cell_0158,False
+4597086713,"Platycypha caligata (Selys, 1853)",-0.003252,34.545534,2024-03-15T10:41,2024,cell_0018,False
+4400826402,"Elapsoidea loveridgei multicincta Laurent, 1956",-0.625,34.875,2023-04-13,2023,cell_0127,False
+6431686408,"Bunaea alcinoe Stoll, 1780",-0.039906,35.274803,2026-06-29T06:18:47,2026,cell_0289,False
+4413475656,Thunbergia alata Bojer ex Sims,0.112068,35.104281,2023-08-26T12:28:35,2023,cell_0240,False
+1413924704,BOLD:AAI3775,-0.43,35.3,2012-03-09,2012,cell_0296,False
+1986742749,"Bostrychia hagedash (Latham, 1790)",0.17474,35.2376,2017-07-12,2017,cell_0278,False
+1986746387,"Cecropis daurica (Laxmann, 1769)",-0.020517,34.870377,2017-08-05,2017,cell_0139,False
+4458529572,"Palpopleura portia (Drury, 1773)",0.005081,34.653183,2023-12-05T16:01:21,2023,cell_0048,False
+1986732174,"Actophilornis africanus (J.F.Gmelin, 1789)",-0.158207,34.864292,2017-11-22,2017,cell_0136,False
+865162334,"Cataulacus striativentris Santschi, 1924",0.1,34.52,2001-10-01,2001,cell_0020,False
+2249872108,BOLD:ADE1279,0.175,35.0876,2016-05-05,2016,cell_0223,False
+1414873416,BOLD:ABA1355,-0.43333,35.3,2012-05-07,2012,cell_0296,False
+1883745314,"Hipposideros caffer (Sundevall, 1846)",-0.11742,34.54124,2015-03-17,2015,cell_0016,False
+1947775589,"Xenopus victorianus Ahl, 1924",-0.12248,35.25958,2018-04-05,2018,cell_0288,False
+975741583,"Buteo buteo (Linnaeus, 1758)",0.2066,34.772892,2013-12-01,2013,cell_0105,False
+4598220385,"Pseudagrion hageni Karsch, 1893",-0.125,34.625,2024-03-18,2024,cell_0046,False
+1986733659,"Anaplectes rubriceps (Sundevall, 1850)",-0.192201,35.131277,2017-11-12,2017,cell_0234,False
+3336680767,"Merops albicollis Vieillot, 1817",-0.457917,34.54125,2021-08-17,2021,cell_0009,False
+2012968506,"Pycnonotus barbatus (Desfontaines, 1789)",-0.471702,35.176,2019-03-01T18:25,2019,cell_0247,False
+4165612648,"Palpopleura portia (Drury, 1773)",0.109826,34.506708,2023-06-24T11:38:40,2023,cell_0020,False
+4112181621,"Nectarinia kilimensis Shelley, 1885",0.085586,34.877072,2023-05-05T15:19,2023,cell_0141,False
+4598220374,"Zygonyx natalensis (Martin, 1900)",-0.125,34.625,2024-03-18,2024,cell_0046,False
+2684274170,"Granatina ianthinogaster (Reichenow, 1879)",-0.029039,34.852093,2019-07-20,2019,cell_0119,False
+3514017242,"Laniarius funebris (Hartlaub, 1863)",-0.403084,34.64433,2021-05-01,2021,cell_0040,False
+2992867645,Ricinus communis L.,-0.04406,34.743758,2020-11-27T10:16:38,2020,cell_0081,False
+1947775599,"Xenopus victorianus Ahl, 1924",-0.14041,35.27434,2018-04-05,2018,cell_0287,False
+820580658,"Apus affinis (J.E.Gray, 1830)",0.028854,34.625275,2012-08-16,2012,cell_0049,False
+3925399658,Musa acuminata Colla,-0.034241,34.64959,2022-10-11T10:01:19,2022,cell_0047,False
+1986741328,"Bathmocercus rufus Reichenow, 1895",0.071798,35.020942,2018-03-01,2018,cell_0201,False
+828548139,"Colius striatus J.F.Gmelin, 1789",-0.393,35.237144,2012-07-17,2012,cell_0266,False
+2533581814,"Pseudagrion kersteni (Gerstäcker, 1869)",-0.375,34.875,2016-08-02,2016,cell_0132,False
+1366888330,"Lophaetus occipitalis (Daudin, 1800)",-0.07682,34.72274,2015-04-23,2015,cell_0081,False
+3513911260,"Sylvietta whytii Shelley, 1894",-0.403343,34.644653,2021-05-03,2021,cell_0040,False
+1947775685,"Amietia nutti (Boulenger, 1896)",0.14782,35.15558,2018-04-09,2018,cell_0259,False
+1403306002,"Balearica regulorum (E.T.Bennett, 1834)",-0.178613,35.230408,2015-12-19,2015,cell_0270,False
+2696152993,"Polyboroides typus A.Smith, 1829",0.179171,35.010883,2019-09-06,2019,cell_0203,False
+818515106,"Atimastillas flavigula (Cabanis, 1880)",-0.024147,34.953243,2012-02-19,2012,cell_0179,False
+3819425172,"Streptopelia decipiens (Hartlaub & Finsch, 1870)",-0.374583,34.624583,2022-06-21,2022,cell_0041,False
+2249871804,BOLD:ADE1279,0.175,35.0876,2016-05-05,2016,cell_0223,False
+1416040575,BOLD:ADF8243,0.11,35.25,2011-12-06,2011,cell_0292,False
+2977385248,Nicandra physalodes (L.) Gaertn.,0.153566,35.193998,2020-08-13T11:20:45.346Z,2020,cell_0259,False
+1200328512,"Drepanorhynchus reichenowi Fischer, 1884",0.259208,35.088444,2013-05-10,2013,cell_0224,False
+844526791,"Scopus umbretta Gmelin, 1789",-0.349614,34.654755,2012-07-12,2012,cell_0057,False
+2005655505,"Lygodactylus capensis (Smith, 1849)",-0.125,34.875,2018-10-17,2018,cell_0137,False
+1986733423,"Anaplectes rubriceps (Sundevall, 1850)",-0.53712,34.67125,2018-03-20,2018,cell_0053,False
+2005653581,"Chlorocebus tantalus (Ogilby, 1841)",0.125,34.625,2015-12-24,2015,cell_0051,False
+3955496515,Psidium guajava L.,-0.56693,34.674125,2022-07-13T07:17:47.178Z,2022,cell_0053,False
+1947775595,"Xenopus victorianus Ahl, 1924",-0.14041,35.27434,2018-04-10,2018,cell_0287,False
+6430955390,"Sphodromantis gastrica Stal, 1858",0.054084,34.700194,2026-06-16T08:27:06,2026,cell_0065,False
+4111983657,"Ploceus bicolor Vieillot, 1819",0.085586,34.877072,2023-05-05T15:18,2023,cell_0141,False
+4413482063,"Xylocopa flavorufa (DeGeer, 1778)",-0.427469,34.689798,2023-09-12,2023,cell_0055,False
+823325137,"Ceryle rudis (Linnaeus, 1758)",-0.349614,34.654755,2012-07-12,2012,cell_0057,False
+4903768712,"Protopterus aethiopicus Heckel, 1851",-0.199378,34.957138,2024-06-05T11:42,2024,cell_0175,False
+1986736514,"Apus apus (Linnaeus, 1758)",-0.157,35.065,2017-11-08,2017,cell_0216,False
+6163157536,"Papilio demodocus Esper, 1798",0.277632,34.751548,2026-02-19T13:02:46,2026,cell_0088,False
+4413552195,Thunbergia alata Bojer ex Sims,0.114379,35.101828,2023-08-26T12:28:35,2023,cell_0240,False
+1986755738,"Columba guinea Linnaeus, 1758",-0.16056,35.073509,2017-09-07,2017,cell_0216,False
+3819425165,Aves,-0.374583,34.624583,2022-06-21,2022,cell_0041,False
+818513200,"Arizelocichla masukuensis (Shelley, 1897)",-0.430069,35.229668,2012-02-16,2012,cell_0265,False
+2611310689,"Ciconia ciconia (Linnaeus, 1758)",-0.16066,35.283398,2015-11-25T15:13,2015,cell_0287,False
+3819435890,Aves,-0.457917,34.79125,2022-05-14,2022,cell_0092,False
+1668880191,"Bucorvus leadbeateri (Vigors, 1825)",-0.281562,35.259043,2017-09-15T17:58,2017,cell_0284,False
+4598220428,"Zygonyx torridus (Kirby, 1889)",-0.125,34.625,2024-03-16,2024,cell_0046,False
+4904113609,"Nothobranchius derhami Valdesalici & Amato, 2019",-0.192258,34.953974,2024-06-05T09:05,2024,cell_0175,False
+1986756195,"Coracias caudatus Linnaeus, 1766",-0.160873,35.074113,2017-09-07,2017,cell_0216,False
+4458439894,"Junonia sophia (Fabricius, 1793)",0.277705,34.915569,2023-11-25T08:05,2023,cell_0165,False
+3336680785,"Passer griseus (Vieillot, 1817)",-0.54125,34.624583,2021-08-20,2021,cell_0037,False
+4112217638,"Nectarinia kilimensis Shelley, 1885",0.085586,34.877072,2023-05-05T15:19,2023,cell_0141,False
+952810252,"Ardea melanocephala Children & Vigors, 1826",-0.046692,34.823914,2011-02-03,2011,cell_0119,False
+4028689042,"Buteo augur (Ruppell, 1836)",0.245558,35.211835,2023-01-06T18:02,2023,cell_0279,False
+2977321152,Pentas lanceolata (Forssk.) Deflers,-0.36709,35.246529,2020-06-17T15:40:41.761Z,2020,cell_0267,False
+2209854485,"Lanius humeralis Stanley, 1814",-0.224339,34.957073,2018-12-04,2018,cell_0175,False
+46822657,"Ceratitis capitata (Wiedemann, 1824)",-0.269722,35.1614,2001-02-21,2001,cell_0251,False
+4111979654,"Chlorocichla laetissima (Sharpe, 1899)",0.085586,34.877072,2023-05-05T15:13,2023,cell_0141,False
+46820853,"Ceratitis argenteobrunnea Munro, 1935",-0.269722,35.1614,2001-02-21,2001,cell_0251,False
+1986732396,"Agricola pallidus (J.W.Müller, 1851)",0.104637,35.081925,2017-12-04,2017,cell_0221,False
+4903835699,"Cercopithecus ascanius schmidti Matschie, 1892",-0.380217,35.324654,2024-06-26T12:14:31,2024,cell_0297,False
+2012968496,"Milvus migrans (Boddaert, 1783)",-0.471702,35.176,2019-03-01T17:48,2019,cell_0247,False
+4980505559,"Bitis nasicornis (Shaw & Nodder, 1792)",0.364432,34.914428,2024-10-19T04:42,2024,cell_0166,False
+3383941686,Bauhinia monandra Kurz,-0.237265,35.01069,2021-05-09T08:28:23,2021,cell_0194,False
+5063297819,Scadoxus multiflorus (Martyn) Raf.,0.145788,34.884642,2024-12-29T12:31:28,2024,cell_0142,False
+1947775682,"Xenopus victorianus Ahl, 1924",-0.14041,35.27434,2018-04-05,2018,cell_0287,False
+3498781773,"Camaroptera brevicaudata (Cretzschmar, 1830)",-0.374583,34.457917,2022-02-10,2022,cell_0000,False
+3336680784,"Vidua chalybeata (Statius Muller, 1776)",-0.457917,34.624583,2021-08-20,2021,cell_0039,False
+1986736815,"Apus caffer (M.H.K.Lichtenstein, 1823)",-0.020523,34.870335,2017-08-05,2017,cell_0139,False
+3512802210,"Cuculus solitarius Stephens, 1815",-0.403343,34.644653,2021-05-03,2021,cell_0040,False
+2029113530,"Aquila pomarina C.L.Brehm, 1831",0.15406,35.30154,2018-11-13T11:05Z,2018,cell_0308,False
+4400826768,"Boaedon capensis Duméril, Bibron & Duméril, 1854",-0.375,35.375,2023-03-31,2023,cell_0311,False
+4046265396,"Milvus migrans (Boddaert, 1783)",-0.039139,34.62204,2023-02-20T00:32,2023,cell_0047,False
+4597569629,"Zygonyx torridus (Kirby, 1889)",-0.003184,34.545468,2024-03-14T10:40,2024,cell_0018,False
+3336680786,"Uraeginthus ianthinogaster Reichenow, 1879",-0.54125,34.624583,2021-08-20,2021,cell_0037,False
+4400827051,"Crotaphopeltis degeni (Boulenger, 1906)",-0.625,34.875,2023-04-21,2023,cell_0127,False
+3960249312,Brassica oleracea L.,0.198241,35.083049,2022-07-19T08:02:34.848Z,2022,cell_0223,False
+4165522909,Tridax procumbens L.,-0.520429,34.714398,2023-07-19T08:48:36,2023,cell_0072,False
+3819425173,"Prinia subflava (Gmelin, 1789)",-0.374583,34.624583,2022-06-21,2022,cell_0041,False
+4980482229,Clerodendrum rotundifolium Oliv.,-0.524363,34.810184,2024-09-11T17:31:50,2024,cell_0110,False
+4400264893,Senna didymobotrya (Fresen.) H.S.Irwin & Barneby,-0.303962,35.274208,2023-08-18T10:01:10,2023,cell_0284,False

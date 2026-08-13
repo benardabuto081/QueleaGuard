@@ -1,0 +1,19 @@
+Milestone 4.4 - Corrected Pseudo-Absence Candidate Pool
+==========================================================
+
+Rebuilt from month-stratified effort pool (fetch_effort_pool_v2_month_stratified.py),
+correcting the severe January-concentration bug (96.8% of original pseudo-absences
+fell in Jan/Feb). Root cause: original fetch_effort_pool.py queried GBIF by year
+only, capping at 150/year, which combined with GBIF's undocumented default result
+ordering to produce near-total January truncation in several years.
+
+Also adds the presence-conflict exclusion safeguard flagged in Log Entry 013:
+94 effort-proxy records were excluded because
+they shared a (grid_cell_id, date) pair with a confirmed presence record.
+
+Raw rebuilt effort pool: 2465 (approx, pre-filters)
+After year >= 2000 filter and spatial join: 2225
+After presence-conflict exclusion: 2131
+After spatial thinning (max 5/cell): 429
+
+v1 (biased) pool backed up to: data/processed/pseudo_absence_pool_v1_month_skewed.csv

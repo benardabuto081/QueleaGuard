@@ -1,0 +1,17 @@
+Milestone 4.4 - Corrected Final Pseudo-Absence Sample
+===========================================================
+
+Method: Approximate Target-Group Background sampling (Log Entry 009),
+rebuilt on a month-stratified, presence-conflict-safe effort pool
+(Log Entry 014, pending).
+
+Candidate pool: 429 records across 130 grid cells
+Target ratio: 1:1 with presence records
+Final sample size: 133
+Random seed: 42 (fixed for reproducibility)
+
+Unique grid cells represented: 81
+Pseudo-absences within Ahero scheme boundary: 0
+Year range: 2001 - 2026
+
+v1 (month-biased) sample backed up to: data/processed/pseudo_absences_final_v1_month_skewed.csv

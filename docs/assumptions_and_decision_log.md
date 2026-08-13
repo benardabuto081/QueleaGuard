@@ -363,3 +363,25 @@ Pseudo-absence dataset (data/processed/pseudo_absences_final.csv, 133 records) i
 **Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
 
 ---
+
+## Log Entry 014 — Pseudo-Absence Month-Concentration Bug: Root Cause, GBIF Pagination Investigation, and Correction
+
+**Date:** 2026-08-12 (Phase 4, Milestone 4.4)
+
+**Context:** EDA (Milestone 4.1) found that 96.8% of pseudo-absence records (122 of 126) fell in January or February, versus 20.3% for presence records — a severe temporal confound that would have let models trivially separate classes by calendar month rather than by environmental suitability, since most rainfall/temperature/dewpoint/NDVI features correlate strongly with season. Root-cause diagnosis traced this to `fetch_effort_pool.py` (the script underlying the original Log Entry 009 pseudo-absence methodology): it queried GBIF's `occurrence/search` endpoint filtered by `year` only, capped at 150 records/year via pagination. Inspection of the raw pool showed several years (2000, 2011, 2012) were literally 150/150 January, and others were heavily January/February-dominated. GBIF's `occurrence/search` endpoint does not publish a guaranteed default sort order; empirically, results returned within a year-only query were overwhelmingly front-loaded from January, and the 150-record cap truncated before reaching other months in years with more data available than the cap. This is structurally the same class of bug as the year-level effort-pool skew already caught and fixed during original pseudo-absence construction (Log Entry 009) — a within-year analog that had gone undetected because no month-level QC had been run on the pool until this EDA pass.
+
+**Investigation of the fix approach:** GBIF's `occurrence/search` API supports an explicit `month` integer parameter (1-12), independent of `year`. Querying by `(year, month)` pairs directly removes any dependency on the endpoint's undocumented internal ordering, rather than working around it. This mirrors the batching pattern already used for ERA5-Land extraction (Log Entry 008, batched by year-month).
+
+**Decision:** Rebuilt the effort-proxy pool via `fetch_effort_pool_v2_month_stratified.py`, querying all 16 presence-spanning years x 12 months (192 queries, ~13 records/pair target). Result: 2,371 records with a genuinely flat month distribution (182-208 per month, max 8.8% concentration, versus 90.7% in a single month previously). While rebuilding, also closed the safeguard gap flagged in Log Entry 013: `build_pseudo_absence_pool_v2.py` now excludes any effort-proxy record sharing a (grid_cell_id, date) pair with a confirmed presence record *before* thinning, rather than relying on post-hoc detection during validation. This excluded 94 records that would otherwise have reintroduced the exact TGB assumption violation found in Milestone 3.11.
+
+**QC performed before proceeding to environmental extraction (per explicit requirement — extraction was deliberately held back pending this verification):**
+- Month distribution: presence max 18.8% (November), pseudo-absence max 16.8% (May) — no severe single-month concentration in either class.
+- Cross-class contradiction check: 0 (cell, date) pairs shared between presence and pseudo-absence — safeguard confirmed working structurally.
+- Year distribution: both classes spread across the full 2000-2026 range, weighted toward 2021-2024 in both (consistent with known eBird growth, not an artifact).
+- Spatial coverage: pseudo-absence now spans 81 unique grid cells (up from 49), 8 shared with presence (up from 6) — broader, not narrower, environmental sampling.
+
+**Impact:** All v1 (month-biased) files preserved for traceability: `data/raw/gbif_all_species_effort_pool_v1_month_skewed.csv`, `data/processed/pseudo_absence_pool_v1_month_skewed.csv`, `data/processed/pseudo_absences_final_v1_month_skewed.csv`. The v1-derived final modelling dataset (259 records, validated in Milestone 3.11) is also preserved in full via Git history at commit 4728c6b and must be treated as superseded, not deleted, for reproducibility. **Environmental feature extraction (CHIRPS, ERA5-Land, MODIS NDVI) has NOT yet been re-run for the corrected pseudo-absence set** — record keys changed with the rebuild, so rainfall/meteorology/NDVI features must be freshly extracted for the new 133-record pseudo-absence sample before a new final dataset can be assembled. This is the next task, not yet started as of this log entry.
+
+**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+
+---
