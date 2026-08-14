@@ -1,0 +1,14 @@
+QueleaGuard Milestone 4.5 - AppEEARS NDVI Provenance
+============================================================
+Task ID: be74e08a-bee5-4418-acd1-e024b3582f93
+Task name: queleaguard_ndvi_pa_v2_gap_45cells
+Product: MOD13Q1.061
+Layer: _250m_16_days_NDVI
+Purpose: Corrected v2 pseudo-absence NDVI gap, 45 cells
+
+Files downloaded from AppEEARS:
+- queleaguard-ndvi-pa-v2-gap-45cells-MOD13Q1-061-results.csv | file_id=1a216ffb-9731-4c7d-b5aa-28a5eed495c9 | size=7408789
+- queleaguard-ndvi-pa-v2-gap-45cells-granule-list.txt | file_id=ff331ac0-2e69-4ef1-af18-48eab6da33a8 | size=196992
+- queleaguard-ndvi-pa-v2-gap-45cells-request.json | file_id=d56449ab-3482-4c6c-a0b4-55fde3f6cf36 | size=6229
+- queleaguard-ndvi-pa-v2-gap-45cells-MOD13Q1-061-metadata.xml | file_id=0bd81724-ae7e-4eef-95c1-fbbe2538caf8 | size=35657
+- README.md | file_id=79cd2e64-4ad8-49d0-bf41-0954cfd03531 | size=33569

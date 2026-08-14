@@ -1,0 +1,58 @@
+{
+  "project": "QueleaGuard",
+  "model_purpose": "Ngao Presentation / Demo",
+  "model_type": "Random Forest",
+  "artifact": "ngao_presentation_random_forest.joblib",
+  "dataset": {
+    "path": "data/processed/ngao_presentation_dataset.csv",
+    "rows": 259,
+    "features_original": 14,
+    "features_final": 11,
+    "presence_rows": 133,
+    "pseudo_absence_rows": 126
+  },
+  "features": [
+    "rainfall_7d",
+    "rainfall_30d",
+    "rainfall_90d",
+    "temp_mean_7d",
+    "dewpoint_mean_7d",
+    "wind_mean_7d",
+    "ndvi_nearest_composite",
+    "ndvi_anomaly",
+    "elevation_m",
+    "slope_deg",
+    "dist_to_water_m"
+  ],
+  "removed_features": [
+    "temp_same_day",
+    "dewpoint_same_day",
+    "wind_same_day"
+  ],
+  "validation": {
+    "method": "StratifiedGroupKFold",
+    "n_splits": 5,
+    "group_definition": "identical environmental feature profiles",
+    "group_leakage": false,
+    "conflicting_repeated_profile_labels": false
+  },
+  "cross_validation_metrics": {
+    "accuracy": 0.873,
+    "balanced_accuracy": 0.872,
+    "precision": 0.878,
+    "recall": 0.887,
+    "f1": 0.88
+  },
+  "baseline": {
+    "type": "majority_class",
+    "balanced_accuracy": 0.5,
+    "balanced_accuracy_improvement": 0.372
+  },
+  "training_configuration": {
+    "n_estimators": 300,
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "status": "presentation_model_only",
+  "production_model": false
+}

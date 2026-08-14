@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmi:MI_Metadata
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.isotc211.org/2005/gmi https://ngdc.noaa.gov/metadata/published/xsd/schema.xsd"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:gco="http://www.isotc211.org/2005/gco"
+  xmlns:gmd="http://www.isotc211.org/2005/gmd"
+  xmlns:gmx="http://www.isotc211.org/2005/gmx"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:gss="http://www.isotc211.org/2005/gss"
+  xmlns:gts="http://www.isotc211.org/2005/gts"
+  xmlns:gsr="http://www.isotc211.org/2005/gsr"
+  xmlns:gmi="http://www.isotc211.org/2005/gmi"
+  xmlns:srv="http://www.isotc211.org/2005/srv">
+
+
+  <!-- FILE IDENTIFIER -->
+  <gmd:fileIdentifier>
+    <gco:CharacterString>queleaguard-ndvi-pa-v2-gap-45cells-MOD13Q1-061-metadata.xml</gco:CharacterString>
+  </gmd:fileIdentifier>
+
+  <!-- METADATA AND RESOURCE LANGUAGE -->
+  <gmd:language>
+    <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/php/code_list.php" codeListValue="eng">eng
+    </gmd:LanguageCode>
+  </gmd:language>
+
+  <!-- CHARACTER SET -->
+  <gmd:characterSet>
+    <gmd:MD_CharacterSetCode
+      codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode"
+      codeListValue="UTF8">UTF8
+    </gmd:MD_CharacterSetCode>
+  </gmd:characterSet>
+
+  <!-- HIERARCHY LEVEL -->
+  <gmd:hierarchyLevel>
+    <gmd:MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode"
+                      codeListValue="series">series
+    </gmd:MD_ScopeCode>
+  </gmd:hierarchyLevel>
+
+  <!-- CONTACT INFORMATION -->
+  <gmd:contact>
+    <gmd:CI_ResponsibleParty>
+      <gmd:organisationName>
+        <gco:CharacterString>LP DAAC at The EROS Center</gco:CharacterString>
+      </gmd:organisationName>
+      <gmd:contactInfo>
+        <gmd:CI_Contact>
+          <gmd:phone>
+            <gmd:CI_Telephone>
+              <gmd:voice>
+                <gco:CharacterString>605-594-6116</gco:CharacterString>
+              </gmd:voice>
+              <gmd:voice>
+                <gco:CharacterString>866-573-3222 (866-LPE-DAAC)</gco:CharacterString>
+              </gmd:voice>
+              <gmd:facsimile>
+                <gco:CharacterString>605-594-6963</gco:CharacterString>
+              </gmd:facsimile>
+            </gmd:CI_Telephone>
+          </gmd:phone>
+          <gmd:address>
+            <gmd:CI_Address>
+              <gmd:deliveryPoint>
+                <gco:CharacterString>Mundt Federal Building</gco:CharacterString>
+              </gmd:deliveryPoint>
+              <gmd:city>
+                <gco:CharacterString>Sioux Falls</gco:CharacterString>
+              </gmd:city>
+              <gmd:administrativeArea>
+                <gco:CharacterString>SD</gco:CharacterString>
+              </gmd:administrativeArea>
+              <gmd:postalCode>
+                <gco:CharacterString>57198</gco:CharacterString>
+              </gmd:postalCode>
+              <gmd:country>
+                <gco:CharacterString>United States</gco:CharacterString>
+              </gmd:country>
+              <gmd:electronicMailAddress>
+                <gco:CharacterString>LPDAAC@usgs.gov</gco:CharacterString>
+              </gmd:electronicMailAddress>
+            </gmd:CI_Address>
+          </gmd:address>
+          <gmd:onlineResource>
+            <gmd:CI_OnlineResource>
+              <gmd:linkage>
+                <gmd:URL>https://lpdaac.usgs.gov/</gmd:URL>
+              </gmd:linkage>
+            </gmd:CI_OnlineResource>
+          </gmd:onlineResource>
+        </gmd:CI_Contact>
+      </gmd:contactInfo>
+      <gmd:role>
+        <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode"
+                         codeListValue="pointOfContact" codeSpace="007">pointOfContact
+        </gmd:CI_RoleCode>
+      </gmd:role>
+    </gmd:CI_ResponsibleParty>
+  </gmd:contact>
+
+  <!-- METADATA DATE -->
+  <gmd:dateStamp>
+    <gco:Date>2026-08-13</gco:Date>
+  </gmd:dateStamp>
+
+  <!-- METADATA STANDARD NAME -->
+  <gmd:metadataStandardName>
+    <gco:CharacterString>ISO 19115-2 Geographic Information - Metadata Part 2 Extensions for imagery and gridded data
+    </gco:CharacterString>
+  </gmd:metadataStandardName>
+
+  <!-- METADATA VERSION -->
+  <gmd:metadataStandardVersion>
+    <gco:CharacterString>ISO 19115-2:2009</gco:CharacterString>
+  </gmd:metadataStandardVersion>
+
+  <!-- SPATIAL REPRESENTATION -->
+  <gmd:spatialRepresentationInfo>
+    <gmd:MD_VectorSpatialRepresentation>
+      <gmd:topologyLevel>
+        <gmd:MD_TopologyLevelCode
+          codeList="http://www.ngdc.noaa.gov/metadata/published/xsd/schema/resources/Codelist/gmxCodelists.xml#MD_TopologyLevelCode"
+          codeListValue="geometryOnly">geometryOnly
+        </gmd:MD_TopologyLevelCode>
+      </gmd:topologyLevel>
+      <gmd:geometricObjects>
+        <gmd:MD_GeometricObjects>
+          <gmd:geometricObjectType>
+            <gmd:MD_GeometricObjectTypeCode
+              codeList="http://www.ngdc.noaa.gov/metadata/published/xsd/schema/resources/Codelist/gmxCodelists.xml#MD_GeometricObjectTypeCode"
+              codeListValue="point">point
+            </gmd:MD_GeometricObjectTypeCode>
+          </gmd:geometricObjectType>
+          <gmd:geometricObjectCount>
+            <gco:Integer>45</gco:Integer>
+          </gmd:geometricObjectCount>
+        </gmd:MD_GeometricObjects>
+      </gmd:geometricObjects>
+    </gmd:MD_VectorSpatialRepresentation>
+  </gmd:spatialRepresentationInfo>
+
+  <!-- DATA INFORMATION -->
+  <gmd:identificationInfo>
+    <gmd:MD_DataIdentification>
+      <gmd:citation>
+        <gmd:CI_Citation>
+          <gmd:title>
+            <gco:CharacterString>MOD13Q1.061</gco:CharacterString>
+          </gmd:title>
+          <gmd:alternateTitle>
+            <gco:CharacterString>Vegetation Indices (NDVI & EVI)</gco:CharacterString>
+          </gmd:alternateTitle>
+          <gmd:date>
+            <gmd:CI_Date>
+              <gmd:date>
+                <gco:Date>2026-08-13</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+                <gmd:CI_DateTypeCode
+                  codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode"
+                  codeListValue="creation">creation
+                </gmd:CI_DateTypeCode>
+              </gmd:dateType>
+            </gmd:CI_Date>
+          </gmd:date>
+          <gmd:identifier>
+            <gmd:MD_Identifier>
+              <gmd:code>
+                <gmx:Anchor
+                  xlink:href="https://doi.org/10.5067/MODIS/MOD13Q1.061"
+                  xlink:title="DOI"
+                  xlink:actuate="onRequest">
+                    10.5067/MODIS/MOD13Q1.061
+                </gmx:Anchor>
+              </gmd:code>
+             </gmd:MD_Identifier>
+          </gmd:identifier>
+        </gmd:CI_Citation>
+      </gmd:citation>
+      <gmd:abstract>
+        <gco:CharacterString>
+          The Application for Extracting and Exploring Analysis Ready Samples (AppEEARS) offers a simple and efficient
+          way to access and transform geospatial data from a variety of federal data archives. AppEEARS enables users
+          to subset geospatial datasets using spatial, temporal, and band/layer parameters. Two types of sample
+          requests are available: point samples for geographic coordinates and area samples for spatial areas via
+          vector polygons. Sample requests submitted to AppEEARS provide users not only with data values, but also
+          associated quality data values. Interactive visualizations with summary statistics are provided for each
+          sample within the application, which allow users to preview and interact with their samples before
+          downloading their data.
+        </gco:CharacterString>
+      </gmd:abstract>
+      <gmd:resourceConstraints>
+        <gmd:MD_LegalConstraints>
+          <gmd:useLimitation>
+            <gco:CharacterString>Disclaimer - While every effort has been made to ensure that these data are accurate
+              and reliable within the limits of the current state of the art, NASA cannot assume liability for any
+              damages caused by any errors or omissions in the data, nor as a result of the failure of the data to
+              function on a particular system. NASA makes no warranty, expressed or implied, nor does the fact of
+              distribution constitute such a warranty.
+            </gco:CharacterString>
+          </gmd:useLimitation>
+        </gmd:MD_LegalConstraints>
+      </gmd:resourceConstraints>
+      <gmd:spatialResolution>
+        <gmd:MD_Resolution>
+          <gmd:distance>
+            <gco:Distance uom="meters">250</gco:Distance>
+          </gmd:distance>
+        </gmd:MD_Resolution>
+      </gmd:spatialResolution>
+      <gmd:language>
+        <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/php/code_list.php" codeListValue="eng">eng
+        </gmd:LanguageCode>
+      </gmd:language>
+      <gmd:extent>
+        <gmd:EX_Extent>
+          <gmd:temporalElement>
+            <gmd:EX_TemporalExtent>
+              <gmd:extent>
+                <gml:TimeNode gml:id="TemporalGranularity">
+                  <gml:description>16 day</gml:description>
+                </gml:TimeNode>
+              </gmd:extent>
+            </gmd:EX_TemporalExtent>
+          </gmd:temporalElement>
+        </gmd:EX_Extent>
+      </gmd:extent>
+      <gmd:supplementalInformation>
+        <gco:CharacterString>Possantti, I. (2026). Monthly and Annual EVI Maps Supporting Hydrological Analysis in the State of Rio Grande do Sul - Brazil (Version v1.0.1). Zenodo. https://doi.org/10.5281/ZENODO.21463228
+
+Possantti, I. (2026). Monthly and Annual EVI Maps Supporting Hydrological Analysis in the State of Rio Grande do Sul - Brazil (Version v1.0.1). Zenodo. https://doi.org/10.5281/ZENODO.21463227
+
+Possantti, I. (2026). Monthly and Annual NDVI Maps Supporting Hydrological Analysis in the State of Rio Grande do Sul - Brazil (Version v1.0.1). Zenodo. https://doi.org/10.5281/ZENODO.21462443
+
+Possantti, I. (2026). Monthly and Annual NDVI Maps Supporting Hydrological Analysis in the State of Rio Grande do Sul - Brazil (Version v1.0.1). Zenodo. https://doi.org/10.5281/ZENODO.21463200
+
+Possantti, I. (2026). Monthly and Annual NDVI Maps Supporting Hydrological Analysis in the State of Rio Grande do Sul - Brazil (Version v1.0.0). Zenodo. https://doi.org/10.5281/ZENODO.21462444
+
+Didan, K. (2021). MODIS/Terra Vegetation Indices 16-Day L3 Global 250m SIN Grid V061. NASA Land Processes Distributed Active Archive Center. https://doi.org/10.5067/MODIS/MOD13Q1.061
+
+Matougui, Z. (2024). Jijel province dataset for wildfire susceptibility assessment. PANGAEA. https://doi.org/10.1594/PANGAEA.973698
+
+Dobson, R., Willis, S. G., Jennings, S., Cheke, R. A., Challinor, A. J., & Dallimer, M. (2024). r-a-dobson/seasonal-forecasting-quelea: v2.0.1 (Version V2.0.1) [Computer software]. Zenodo. https://doi.org/10.5281/ZENODO.10617237
+
+Dobson, R., Willis, S. G., Jennings, S., Cheke, R. A., Challinor, A. J., & Dallimer, M. (2024). r-a-dobson/seasonal-forecasting-quelea: v2.0.1 (Version V2.0.1) [Computer software]. Zenodo. https://doi.org/10.5281/ZENODO.14001408. Accessed August 13, 2026.</gco:CharacterString>
+      </gmd:supplementalInformation>
+      <gmd:supplementalInformation>
+        <gco:CharacterString>AppEEARS Team. (2026). Application for Extracting and Exploring Analysis Ready Samples (AppEEARS). Ver. 3.125. NASA EOSDIS Land Processes Distributed Active Archive Center (LP DAAC), USGS/Earth Resources Observation and Science (EROS) Center, Sioux Falls, South Dakota, USA. Accessed August 13, 2026. https://appeears.earthdatacloud.nasa.gov</gco:CharacterString>
+      </gmd:supplementalInformation>
+    </gmd:MD_DataIdentification>
+  </gmd:identificationInfo>
+
+  <!-- SOURCE AND PROCESSING INFORMATION -->
+  <gmd:dataQualityInfo>
+    <gmd:DQ_DataQuality>
+      <gmd:scope>
+        <gmd:DQ_Scope>
+          <gmd:level>
+            <gmd:MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode"
+                              codeListValue="dataset">dataset
+            </gmd:MD_ScopeCode>
+          </gmd:level>
+          <gmd:extent>
+            <gmd:EX_Extent>
+              <gmd:description>
+                <gco:CharacterString>Extracted points</gco:CharacterString>
+              </gmd:description>
+              <gmd:geographicElement>
+                <gmd:EX_BoundingPolygon>
+                  <gmd:polygon>
+                    <gml:MultiPoint gml:id="ID">
+                      <gml:pointMembers>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0000
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>-0.351559 34.481704</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0011
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>-0.351551 34.531115</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0020
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>0.09613 34.531088</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0033
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>0.046387 34.580495</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0039
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>-0.451014 34.629952</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0046
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>-0.102834 34.629905</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0047
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>-0.053095 34.629903</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0053
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>-0.55048 34.679386</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0057
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>-0.351525 34.67934</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0065
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>0.046384 34.679309</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0072
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>-0.500729 34.728779</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0081
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>-0.053092 34.728714</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0101
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>-0.003354 34.778118</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0106
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>0.245326 34.778134</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0107
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>0.295062 34.778141</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0119
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>-0.053089 34.827521</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0124
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>0.195585 34.827531</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0126
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>0.295054 34.827544</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0130
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>-0.450954 34.876979</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0137
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>-0.102821 34.876924</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0141
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>0.096113 34.876924</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0160
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>0.046378 34.926321</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0175
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>-0.202276 34.975731</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0181
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>0.096107 34.975722</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0182
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>0.145837 34.975725</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0184
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>0.245298 34.975737</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0194
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>-0.251998 35.025135</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0199
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>-0.003354 35.025116</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0201
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>0.096104 35.025119</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0203
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>0.195562 35.025128</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0205
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>0.29502 35.025143</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0216
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>-0.152536 35.074518</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0223
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>0.195556 35.074523</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0240
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>0.096098 35.123908</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0241
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>0.145824 35.123912</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0242
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>0.19555 35.123917</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0243
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>0.245275 35.123924</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0251
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>-0.251974 35.173318</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0253
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>-0.152526 35.173305</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0260
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>0.195543 35.17331</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0265
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>-0.450856 35.222756</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0278
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>0.195537 35.2227</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0279
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>0.245259 35.222708</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0289
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>-0.053074 35.272077</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">cell_0297
+                          </gml:identifier>
+                          <gml:name>QueleaGuard pseudo-absence v2 grid cell</gml:name>
+                          <gml:pos>-0.401106 35.32152</gml:pos>
+                        </gml:Point>
+                      </gml:pointMembers>
+                    </gml:MultiPoint>
+                  </gmd:polygon>
+                </gmd:EX_BoundingPolygon>
+              </gmd:geographicElement>
+              <gmd:temporalElement>
+                <gmd:EX_TemporalExtent>
+                  <gmd:extent>
+                    <gml:TimeInstant gml:id="StartDate">
+                      <gml:name>Start Date</gml:name>
+                      <gml:timePosition>2000-01-01</gml:timePosition>
+                    </gml:TimeInstant>
+                  </gmd:extent>
+                </gmd:EX_TemporalExtent>
+              </gmd:temporalElement>
+              <gmd:temporalElement>
+                <gmd:EX_TemporalExtent>
+                  <gmd:extent>
+                    <gml:TimeInstant gml:id="EndDate">
+                      <gml:timePosition>2026-12-31</gml:timePosition>
+                    </gml:TimeInstant>
+                  </gmd:extent>
+                </gmd:EX_TemporalExtent>
+              </gmd:temporalElement>
+            </gmd:EX_Extent>
+          </gmd:extent>
+        </gmd:DQ_Scope>
+      </gmd:scope>
+      <gmd:lineage>
+        <gmd:LI_Lineage>
+          <gmd:processStep>
+            <gmi:LE_ProcessStep>
+              <gmd:description>
+                <gco:CharacterString>Software Information</gco:CharacterString>
+              </gmd:description>
+              <gmi:processingInformation>
+                <gmi:LE_Processing>
+                  <gmi:identifier>
+                    <gmd:MD_Identifier>
+                      <gmd:code>
+                        <gmx:Anchor
+                          xlink:href="https://appeears.earthdatacloud.nasa.gov/"
+                          xlink:title="AppEEARS"
+                          xlink:actuate="onRequest">
+                            Application for Extracting and Exploring Analysis Ready Samples
+                        </gmx:Anchor>
+                      </gmd:code>
+                    </gmd:MD_Identifier>
+                  </gmi:identifier>
+                  <gmi:softwareReference>
+                    <gmd:CI_Citation>
+                      <gmd:title>
+                        <gco:CharacterString>Application for Extracting and Exploring Analysis Ready Samples</gco:CharacterString>
+                      </gmd:title>
+                      <gmd:alternateTitle>
+                        <gco:CharacterString>AppEEARS</gco:CharacterString>
+                      </gmd:alternateTitle>
+                      <gmd:date>
+                        <gmd:CI_Date>
+                          <gmd:date>
+                            <gco:Date>2026-08-13</gco:Date>
+                          </gmd:date>
+                          <gmd:dateType>
+                            <gmd:CI_DateTypeCode
+                              codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode"
+                              codeListValue="creation">creation
+                            </gmd:CI_DateTypeCode>
+                          </gmd:dateType>
+                        </gmd:CI_Date>
+                      </gmd:date>
+                      <gmd:edition>
+                        <gco:CharacterString>3.125</gco:CharacterString>
+                      </gmd:edition>
+                    </gmd:CI_Citation>
+                  </gmi:softwareReference>
+                </gmi:LE_Processing>
+              </gmi:processingInformation>
+            </gmi:LE_ProcessStep>
+          </gmd:processStep>
+          <gmd:source>
+            <gmi:LE_Source>
+              <gmd:sourceCitation>
+                <gmd:CI_Citation>
+                  <gmd:title>
+                    <gmx:FileName src="queleaguard-ndvi-pa-v2-gap-45cells-granule-list.txt">Text file with data pool URLs for all source granules used in the extraction</gmx:FileName>
+                  </gmd:title>
+                  <gmd:date>
+                    <gmd:CI_Date>
+                      <gmd:date>
+                        <gco:Date>2026-08-13</gco:Date>
+                      </gmd:date>
+                      <gmd:dateType>
+                        <gmd:CI_DateTypeCode
+                          codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode"
+                          codeListValue="creation">creation
+                        </gmd:CI_DateTypeCode>
+                      </gmd:dateType>
+                    </gmd:CI_Date>
+                  </gmd:date>
+                </gmd:CI_Citation>
+              </gmd:sourceCitation>
+            </gmi:LE_Source>
+          </gmd:source>
+        </gmd:LI_Lineage>
+      </gmd:lineage>
+    </gmd:DQ_DataQuality>
+  </gmd:dataQualityInfo>
+
+  <!-- RESOURCE AND METADATA CONSTRAINTS -->
+  <gmd:metadataConstraints>
+    <gmd:MD_LegalConstraints>
+      <gmd:useLimitation>
+        <gco:CharacterString>Disclaimer - While every effort has been made to ensure that these data are accurate
+          and reliable within the limits of the current state of the art, NASA cannot assume liability for any
+          damages caused by any errors or omissions in the data, nor as a result of the failure of the data to
+          function on a particular system. NASA makes no warranty, expressed or implied, nor does the fact of
+          distribution constitute such a warranty.
+        </gco:CharacterString>
+      </gmd:useLimitation>
+    </gmd:MD_LegalConstraints>
+  </gmd:metadataConstraints>
+
+</gmi:MI_Metadata>
