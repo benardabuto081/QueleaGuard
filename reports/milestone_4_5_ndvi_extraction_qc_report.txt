@@ -1,0 +1,37 @@
+=== MILESTONE 4.5 NDVI EXTRACTION QC REPORT ===
+
+Loaded data/external/appeears_ndvi_full_history.csv: 12160 rows, 20 unique cells
+Loaded data/external/appeears_ndvi_pseudo_absence_gap.csv: 26144 rows, 43 unique cells
+Loaded data/external/appeears_ndvi_pa_v2_gap_45cells.csv: 27360 rows, 45 unique cells
+
+Combined raw catalog: 65664 rows, 108 unique cells
+Snapshot saved to data/external/appeears_ndvi_combined_sources_snapshot.csv (raw sources untouched)
+
+Good-quality composites: 59268 / 65664 (90.3%)
+Records with MODIS fill value (-3000) in raw data: 1807 (all must be excluded by the quality filter above - verifying...)
+Confirmed: zero fill-value records present in the good-quality subset.
+
+Pseudo-absence records to process: 133 (expected 133)
+Date parsing failures: 0
+
+Grid cells needed: 81
+Grid cells with NDVI data available: 81 / 81
+
+=== EXTRACTION ACCOUNTING (all 133 records) ===
+  success: 133
+  missing_no_prior_composite: 0
+  missing_no_cell_coverage: 0
+  date_parse_failure: 0
+  TOTAL ACCOUNTED: 133 (must equal 133: True)
+
+=== RANGE VALIDATION ===
+Successful extractions: 133
+Out-of-range values (outside -1 to 1): 0
+Valid range observed: -0.1932 to 0.9045
+
+Saved to data/processed/ndvi_features_pseudo_absence.csv
+
+*** This file has 133 rows (all 133 pseudo-absence records, including any
+    marked MISSING - nothing was dropped or silently imputed). Downstream assembly must
+    explicitly decide how to handle non-SUCCESS rows before this enters the modelling
+    dataset, not treat this file as already model-ready. ***

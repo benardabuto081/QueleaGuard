@@ -1,0 +1,345 @@
+================================================================================
+QUELEAGUARD ENVIRONMENTAL FEATURE STACK — GROUND-TRUTH AUDIT
+================================================================================
+Audit timestamp: 2026-08-14T10:43:27.375342
+READ-ONLY: NO FILES/DATASETS WILL BE MODIFIED
+
+================================================================================
+PART 1 — GIT WORKTREE STATE
+================================================================================
+Working-tree changes:
+ M data/processed/ndvi_features_pseudo_absence.csv
+ M data/processed/rainfall_features_pseudo_absence.csv
+ M reports/milestone_4_4_final_sampling_v2_summary.txt
+ M src/diagnose_pa_date_parsing.py
+ M src/sample_pseudo_absences_v2.py
+?? data/external/appeears_ndvi_combined_sources_snapshot.csv
+?? data/external/appeears_ndvi_pa_v2_gap_45cells.csv
+?? data/external/appeears_ndvi_pa_v2_gap_45cells/
+?? data/processed/appeears_ndvi_second_task_spec.csv
+?? data/processed/appeears_to_grid_mapping.csv
+?? data/processed/corrected_ndvi_missing_cells.csv
+?? data/processed/ndvi_missing_cells_manifest.csv
+?? data/processed/ndvi_second_task_spec.csv
+?? data/processed/pseudo_absence_record_lineage_audit.csv
+?? data/processed/true_ndvi_missing_cells.csv
+?? reports/environmental_data_integrity_audit.txt
+?? reports/milestone_4_5_ndvi_extraction_qc_report.txt
+?? reports/temporal_provenance_audit.txt
+?? src/align_ndvi_pa_events.py
+?? src/audit_environmental_feature_stack.py
+?? src/audit_environmental_integrity.py
+?? src/audit_pseudo_absence_record_lineage.py
+?? src/audit_pseudo_loss.py
+?? src/build_appeears_second_task_spec.py
+?? src/build_final_ndvi_gap_task.py
+?? src/build_ndvi_missing_cell_manifest.py
+?? src/check_raw_ndvi_scale.py
+?? src/diagnose_45cell_shortfall.py
+?? src/diagnose_appeears_auth.py
+?? src/diagnose_appeears_id_mapping.py
+?? src/diagnose_ndvi_duplicates.py
+?? src/diagnose_ndvi_pa_v2_alignment.py
+?? src/diagnose_ndvi_pa_v2_alignment_v2.py
+?? src/diagnose_ndvi_pa_v2_alignment_v3.py
+?? src/diagnose_ndvi_pa_v2_raw.py
+?? src/diagnose_ndvi_temporal_neighbors.py
+?? src/download_ndvi_pa_v2_bundle.py
+?? src/download_ndvi_pa_v2_results.py
+?? src/emergency_restore_and_verify.py
+?? src/extract_ndvi_pseudo_absence_v2.py
+?? src/forensic_ground_truth_check.py
+?? src/inspect_appeears_ndvi_range.py
+?? src/inspect_ndvi_v2_bundle.py
+?? src/inventory_environmental_data.py
+?? src/qc_ndvi_coverage.py
+?? src/qc_ndvi_output_scale.py
+?? src/reconcile_ndvi_coverage.py
+?? src/submit_final_ndvi_gap_task.py
+?? src/submit_ndvi_pa_v2_task.py
+?? src/validate_pa_duplicate_events.py
+Current branch: main
+
+================================================================================
+PART 2 — PSEUDO-ABSENCE DATASET
+================================================================================
+[FOUND]   PA candidate: data\processed\pseudo_absences_final.csv
+          rows=133, columns=10
+[FOUND]   PA candidate: data\processed\pseudo_absences_final_v1_month_skewed.csv
+          rows=133, columns=10
+
+CURRENT PA FILE: data/processed/pseudo_absences_final.csv
+CURRENT PA ROW COUNT: 133
+[PASS] Current PA dataset contains expected 133 records.
+
+--- CURRENT PA KEY AUDIT ---
+Key column: key
+Rows: 133
+Unique keys: 133
+Null keys: 0
+Duplicate rows by key: 0
+Duplicate keys: NONE
+
+================================================================================
+PART 3 — ENVIRONMENTAL FEATURE FILE DISCOVERY
+================================================================================
+
+data\processed\appeears_ndvi_second_task_spec.csv
+  rows: 36
+  columns: 8
+  columns: ['grid_cell_id', 'latitude', 'longitude', 'start_date', 'end_date', 'product', 'layer', 'scale_factor']
+
+data\processed\corrected_ndvi_missing_cells.csv
+  rows: 45
+  columns: 1
+  columns: ['grid_cell_id']
+
+data\processed\hydrology_features.csv
+  rows: 328
+  columns: 2
+  columns: ['grid_cell_id', 'dist_to_water_m']
+
+data\processed\meteorology_features.csv
+  rows: 133
+  columns: 10
+  columns: ['record_key', 'grid_cell_id', 'observation_date', 'temp_mean_7d', 'dewpoint_mean_7d', 'wind_mean_7d', 'temp_same_day', 'dewpoint_same_day', 'wind_same_day', 'days_with_data']
+
+data\processed\meteorology_features_pseudo_absence.csv
+  rows: 133
+  columns: 10
+  columns: ['record_key', 'grid_cell_id', 'observation_date', 'temp_mean_7d', 'dewpoint_mean_7d', 'wind_mean_7d', 'temp_same_day', 'dewpoint_same_day', 'wind_same_day', 'days_with_data']
+
+data\processed\ndvi_features.csv
+  rows: 133
+  columns: 8
+  columns: ['record_key', 'grid_cell_id', 'observation_date', 'ndvi_nearest_composite', 'ndvi_composite_date', 'ndvi_days_gap', 'ndvi_seasonal_baseline', 'ndvi_anomaly']
+
+data\processed\ndvi_features_pseudo_absence.csv
+  rows: 133
+  columns: 9
+  columns: ['record_key', 'grid_cell_id', 'observation_date', 'ndvi_nearest_composite', 'ndvi_composite_date', 'ndvi_days_gap', 'ndvi_seasonal_baseline', 'ndvi_anomaly', 'extraction_status']
+
+data\processed\ndvi_missing_cells_manifest.csv
+  rows: 36
+  columns: 6
+  columns: ['grid_cell_id', 'pa_record_count', 'first_event_date', 'last_event_date', 'latitude', 'longitude']
+
+data\processed\ndvi_second_task_spec.csv
+  rows: 36
+  columns: 3
+  columns: ['grid_cell_id', 'latitude', 'longitude']
+
+data\processed\rainfall_features.csv
+  rows: 133
+  columns: 7
+  columns: ['record_key', 'grid_cell_id', 'observation_date', 'rainfall_7d', 'rainfall_30d', 'rainfall_90d', 'days_with_data']
+
+data\processed\rainfall_features_pseudo_absence.csv
+  rows: 131
+  columns: 7
+  columns: ['record_key', 'grid_cell_id', 'observation_date', 'rainfall_7d', 'rainfall_30d', 'rainfall_90d', 'days_with_data']
+
+data\processed\terrain_features.csv
+  rows: 328
+  columns: 3
+  columns: ['grid_cell_id', 'elevation_m', 'slope_deg']
+
+data\processed\true_ndvi_missing_cells.csv
+  rows: 36
+  columns: 1
+  columns: ['grid_cell_id']
+
+data\external\appeears_ahero_ndvi_pilot.csv
+  rows: 3
+  columns: 29
+  columns: ['Category', 'ID', 'Latitude', 'Longitude', 'Date', 'MODIS_Tile', 'MOD13Q1_061_Line_Y_250m', 'MOD13Q1_061_Sample_X_250m', 'MOD13Q1_061__250m_16_days_NDVI', 'MOD13Q1_061__250m_16_days_VI_Quality', 'MOD13Q1_061__250m_16_days_VI_Quality_bitmask', 'MOD13Q1_061__250m_16_days_VI_Quality_MODLAND', 'MOD13Q1_061__250m_16_days_VI_Quality_MODLAND_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_VI_Usefulness', 'MOD13Q1_061__250m_16_days_VI_Quality_VI_Usefulness_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Aerosol_Quantity', 'MOD13Q1_061__250m_16_days_VI_Quality_Aerosol_Quantity_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Adjacent_cloud_detected', 'MOD13Q1_061__250m_16_days_VI_Quality_Adjacent_cloud_detected_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Atmosphere_BRDF_Correction', 'MOD13Q1_061__250m_16_days_VI_Quality_Atmosphere_BRDF_Correction_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Mixed_Clouds', 'MOD13Q1_061__250m_16_days_VI_Quality_Mixed_Clouds_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Land/Water_Mask', 'MOD13Q1_061__250m_16_days_VI_Quality_Land/Water_Mask_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Possible_snow/ice', 'MOD13Q1_061__250m_16_days_VI_Quality_Possible_snow/ice_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Possible_shadow', 'MOD13Q1_061__250m_16_days_VI_Quality_Possible_shadow_Description']
+
+data\external\appeears_ndvi_combined_sources_snapshot.csv
+  rows: 65,664
+  columns: 30
+  columns: ['Category', 'ID', 'Latitude', 'Longitude', 'Date', 'MODIS_Tile', 'MOD13Q1_061_Line_Y_250m', 'MOD13Q1_061_Sample_X_250m', 'MOD13Q1_061__250m_16_days_NDVI', 'MOD13Q1_061__250m_16_days_VI_Quality', 'MOD13Q1_061__250m_16_days_VI_Quality_bitmask', 'MOD13Q1_061__250m_16_days_VI_Quality_MODLAND', 'MOD13Q1_061__250m_16_days_VI_Quality_MODLAND_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_VI_Usefulness', 'MOD13Q1_061__250m_16_days_VI_Quality_VI_Usefulness_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Aerosol_Quantity', 'MOD13Q1_061__250m_16_days_VI_Quality_Aerosol_Quantity_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Adjacent_cloud_detected', 'MOD13Q1_061__250m_16_days_VI_Quality_Adjacent_cloud_detected_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Atmosphere_BRDF_Correction', 'MOD13Q1_061__250m_16_days_VI_Quality_Atmosphere_BRDF_Correction_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Mixed_Clouds', 'MOD13Q1_061__250m_16_days_VI_Quality_Mixed_Clouds_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Land/Water_Mask', 'MOD13Q1_061__250m_16_days_VI_Quality_Land/Water_Mask_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Possible_snow/ice', 'MOD13Q1_061__250m_16_days_VI_Quality_Possible_snow/ice_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Possible_shadow', 'MOD13Q1_061__250m_16_days_VI_Quality_Possible_shadow_Description', '_source_file']
+
+data\external\appeears_ndvi_full_history.csv
+  rows: 12,160
+  columns: 29
+  columns: ['Category', 'ID', 'Latitude', 'Longitude', 'Date', 'MODIS_Tile', 'MOD13Q1_061_Line_Y_250m', 'MOD13Q1_061_Sample_X_250m', 'MOD13Q1_061__250m_16_days_NDVI', 'MOD13Q1_061__250m_16_days_VI_Quality', 'MOD13Q1_061__250m_16_days_VI_Quality_bitmask', 'MOD13Q1_061__250m_16_days_VI_Quality_MODLAND', 'MOD13Q1_061__250m_16_days_VI_Quality_MODLAND_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_VI_Usefulness', 'MOD13Q1_061__250m_16_days_VI_Quality_VI_Usefulness_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Aerosol_Quantity', 'MOD13Q1_061__250m_16_days_VI_Quality_Aerosol_Quantity_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Adjacent_cloud_detected', 'MOD13Q1_061__250m_16_days_VI_Quality_Adjacent_cloud_detected_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Atmosphere_BRDF_Correction', 'MOD13Q1_061__250m_16_days_VI_Quality_Atmosphere_BRDF_Correction_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Mixed_Clouds', 'MOD13Q1_061__250m_16_days_VI_Quality_Mixed_Clouds_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Land/Water_Mask', 'MOD13Q1_061__250m_16_days_VI_Quality_Land/Water_Mask_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Possible_snow/ice', 'MOD13Q1_061__250m_16_days_VI_Quality_Possible_snow/ice_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Possible_shadow', 'MOD13Q1_061__250m_16_days_VI_Quality_Possible_shadow_Description']
+
+data\external\appeears_ndvi_pa_v2_gap_45cells.csv
+  rows: 27,360
+  columns: 29
+  columns: ['Category', 'ID', 'Latitude', 'Longitude', 'Date', 'MODIS_Tile', 'MOD13Q1_061_Line_Y_250m', 'MOD13Q1_061_Sample_X_250m', 'MOD13Q1_061__250m_16_days_NDVI', 'MOD13Q1_061__250m_16_days_VI_Quality', 'MOD13Q1_061__250m_16_days_VI_Quality_bitmask', 'MOD13Q1_061__250m_16_days_VI_Quality_MODLAND', 'MOD13Q1_061__250m_16_days_VI_Quality_MODLAND_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_VI_Usefulness', 'MOD13Q1_061__250m_16_days_VI_Quality_VI_Usefulness_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Aerosol_Quantity', 'MOD13Q1_061__250m_16_days_VI_Quality_Aerosol_Quantity_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Adjacent_cloud_detected', 'MOD13Q1_061__250m_16_days_VI_Quality_Adjacent_cloud_detected_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Atmosphere_BRDF_Correction', 'MOD13Q1_061__250m_16_days_VI_Quality_Atmosphere_BRDF_Correction_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Mixed_Clouds', 'MOD13Q1_061__250m_16_days_VI_Quality_Mixed_Clouds_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Land/Water_Mask', 'MOD13Q1_061__250m_16_days_VI_Quality_Land/Water_Mask_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Possible_snow/ice', 'MOD13Q1_061__250m_16_days_VI_Quality_Possible_snow/ice_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Possible_shadow', 'MOD13Q1_061__250m_16_days_VI_Quality_Possible_shadow_Description']
+
+data\external\appeears_ndvi_pseudo_absence_gap.csv
+  rows: 26,144
+  columns: 29
+  columns: ['Category', 'ID', 'Latitude', 'Longitude', 'Date', 'MODIS_Tile', 'MOD13Q1_061_Line_Y_250m', 'MOD13Q1_061_Sample_X_250m', 'MOD13Q1_061__250m_16_days_NDVI', 'MOD13Q1_061__250m_16_days_VI_Quality', 'MOD13Q1_061__250m_16_days_VI_Quality_bitmask', 'MOD13Q1_061__250m_16_days_VI_Quality_MODLAND', 'MOD13Q1_061__250m_16_days_VI_Quality_MODLAND_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_VI_Usefulness', 'MOD13Q1_061__250m_16_days_VI_Quality_VI_Usefulness_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Aerosol_Quantity', 'MOD13Q1_061__250m_16_days_VI_Quality_Aerosol_Quantity_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Adjacent_cloud_detected', 'MOD13Q1_061__250m_16_days_VI_Quality_Adjacent_cloud_detected_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Atmosphere_BRDF_Correction', 'MOD13Q1_061__250m_16_days_VI_Quality_Atmosphere_BRDF_Correction_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Mixed_Clouds', 'MOD13Q1_061__250m_16_days_VI_Quality_Mixed_Clouds_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Land/Water_Mask', 'MOD13Q1_061__250m_16_days_VI_Quality_Land/Water_Mask_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Possible_snow/ice', 'MOD13Q1_061__250m_16_days_VI_Quality_Possible_snow/ice_Description', 'MOD13Q1_061__250m_16_days_VI_Quality_Possible_shadow', 'MOD13Q1_061__250m_16_days_VI_Quality_Possible_shadow_Description']
+
+data\external\chirps_ahero_pilot_jan2024.csv
+  [ERROR] ParserError: Error tokenizing data. C error: Expected 1 fields in line 5, saw 3
+
+
+================================================================================
+PART 4 — KNOWN FEATURE ARTIFACTS
+================================================================================
+[FOUND]   NDVI PA v2: data\processed\ndvi_features_pseudo_absence.csv
+          rows=133, columns=9
+[FOUND]   ERA5 PA: data\processed\meteorology_features_pseudo_absence.csv
+          rows=133, columns=10
+[FOUND]   CHIRPS PA: data\processed\rainfall_features_pseudo_absence.csv
+          rows=131, columns=7
+[FOUND]   Modelling dataset: data\processed\modelling_dataset_final.csv
+          rows=259, columns=20
+[FOUND]   NDVI raw combined snapshot: data\external\appeears_ndvi_combined_sources_snapshot.csv
+          rows=65,664, columns=30
+[FOUND]   NDVI v2 raw 45-cell: data\external\appeears_ndvi_pa_v2_gap_45cells.csv
+          rows=27,360, columns=29
+[FOUND]   NDVI full history: data\external\appeears_ndvi_full_history.csv
+          rows=12,160, columns=29
+[FOUND]   NDVI old PA gap: data\external\appeears_ndvi_pseudo_absence_gap.csv
+          rows=26,144, columns=29
+
+================================================================================
+PART 5 — NDVI PA FEATURE AUDIT
+================================================================================
+
+--- NDVI PA FEATURES KEY AUDIT ---
+Key column: record_key
+Rows: 133
+Unique keys: 133
+Null keys: 0
+Duplicate rows by key: 0
+Duplicate keys: NONE
+
+NDVI columns:
+['record_key', 'grid_cell_id', 'observation_date', 'ndvi_nearest_composite', 'ndvi_composite_date', 'ndvi_days_gap', 'ndvi_seasonal_baseline', 'ndvi_anomaly', 'extraction_status']
+
+Extraction status:
+extraction_status
+SUCCESS    133
+[PASS] NDVI SUCCESS count = 133
+
+NDVI value range: -0.1932 -> 0.9045
+NDVI null values: 0
+NDVI out-of-range values: 0
+
+================================================================================
+PART 6 — ERA5-LAND METEOROLOGY AUDIT
+================================================================================
+ERA5 rows: 133
+
+--- ERA5 PA KEY AUDIT ---
+Key column: record_key
+Rows: 133
+Unique keys: 133
+Null keys: 0
+Duplicate rows by key: 0
+Duplicate keys: NONE
+
+ERA5 columns:
+['record_key', 'grid_cell_id', 'observation_date', 'temp_mean_7d', 'dewpoint_mean_7d', 'wind_mean_7d', 'temp_same_day', 'dewpoint_same_day', 'wind_same_day', 'days_with_data']
+
+================================================================================
+PART 7 — CHIRPS RAINFALL AUDIT
+================================================================================
+CHIRPS rows: 131
+
+--- CHIRPS PA KEY AUDIT ---
+Key column: record_key
+Rows: 131
+Unique keys: 131
+Null keys: 0
+Duplicate rows by key: 0
+Duplicate keys: NONE
+
+CHIRPS columns:
+['record_key', 'grid_cell_id', 'observation_date', 'rainfall_7d', 'rainfall_30d', 'rainfall_90d', 'days_with_data']
+
+================================================================================
+PART 8 — CROSS-FEATURE RECORD-KEY RECONCILIATION
+================================================================================
+PA: 133 unique keys
+NDVI: 133 unique keys
+ERA5: 133 unique keys
+CHIRPS: 131 unique keys
+
+PA vs NDVI
+  PA keys missing from NDVI: 0
+  NDVI keys not present in PA: 0
+
+PA vs ERA5
+  PA keys missing from ERA5: 0
+  ERA5 keys not present in PA: 0
+
+PA vs CHIRPS
+  PA keys missing from CHIRPS: 2
+  CHIRPS keys not present in PA: 0
+  Missing examples: ['3030315394', '3030714769']
+
+================================================================================
+PART 9 — EXISTING MODELLING DATASET
+================================================================================
+Rows: 259
+Columns: 20
+
+Class distribution:
+presence
+1    133
+0    126
+
+--- MODELLING DATASET KEY AUDIT ---
+Key column: record_key
+Rows: 259
+Unique keys: 259
+Null keys: 0
+Duplicate rows by key: 0
+Duplicate keys: NONE
+
+Modelling dataset columns:
+['record_key', 'grid_cell_id', 'observation_date', 'presence', 'record_type', 'within_scheme_boundary', 'rainfall_7d', 'rainfall_30d', 'rainfall_90d', 'temp_mean_7d', 'dewpoint_mean_7d', 'wind_mean_7d', 'temp_same_day', 'dewpoint_same_day', 'wind_same_day', 'ndvi_nearest_composite', 'ndvi_anomaly', 'elevation_m', 'slope_deg', 'dist_to_water_m']
+
+================================================================================
+PART 10 — PA PROVENANCE AGAINST EXISTING MODELLING DATASET
+================================================================================
+Current v2 PA keys: 133
+Existing modelling-dataset PA keys: 126
+Current v2 PA keys already in modelling dataset: 4
+Current v2 PA keys NOT in modelling dataset: 129
+Modelling PA keys not in current v2 PA set: 122
+
+================================================================================
+PART 11 — GIT PROVENANCE
+================================================================================
+
+--- GIT HISTORY: data/processed/pseudo_absences_final.csv ---
+22151ff | 2026-08-13 13:12:34 +0300 | Milestone 4.4: Fix severe month-concentration bug in pseudo-absence effort pool (Log Entry 014)
+91fd82f | 2026-08-10 22:02:04 +0300 | Complete pseudo-absence rainfall extraction (Milestone 3.10): all 133 records, date precision fix (Log Entry 011), assembly pipeline validated
+5795792 | 2026-08-04 12:26:52 +0300 | Finalize pseudo-absence dataset (Log Entry 010): 133 pseudo-absences via approximate TGB, scheme-boundary coverage gap evaluated and documented
+
+--- GIT HISTORY: data/processed/meteorology_features_pseudo_absence.csv ---
+22151ff | 2026-08-13 13:12:34 +0300 | Milestone 4.4: Fix severe month-concentration bug in pseudo-absence effort pool (Log Entry 014)
+196d33e | 2026-08-11 10:15:31 +0300 | Complete ERA5-Land meteorology extraction for pseudo-absence records (Milestone 3.10): 133/133, all environmental variables now complete for full modelling dataset
+
+--- GIT HISTORY: data/processed/rainfall_features_pseudo_absence.csv ---
+91fd82f | 2026-08-10 22:02:04 +0300 | Complete pseudo-absence rainfall extraction (Milestone 3.10): all 133 records, date precision fix (Log Entry 011), assembly pipeline validated
+
+--- GIT HISTORY: data/processed/ndvi_features_pseudo_absence.csv ---
+4728c6b | 2026-08-12 14:31:43 +0300 | Milestone 3.10-3.11: Fix NDVI quality-filter bug, resolve pseudo-absence TGB contradiction, close Milestone 3
+69e9dff | 2026-08-10 22:18:09 +0300 | Complete NDVI feature extraction for pseudo-absence records (Milestone 3.9/3.10): 129/133, 4 missing explained by MODIS 2000 boundary
+
+--- GIT HISTORY: data/processed/modelling_dataset_final.csv ---
+4728c6b | 2026-08-12 14:31:43 +0300 | Milestone 3.10-3.11: Fix NDVI quality-filter bug, resolve pseudo-absence TGB contradiction, close Milestone 3
+f83dc6d | 2026-08-11 10:19:26 +0300 | Assemble final modelling dataset (Milestone 3.10): 266 records (133/133 balanced), all environmental features joined, 20 columns
+
+================================================================================
+PART 12 — AUDIT SUMMARY
+================================================================================
+
+PASS — Current PA count = 133
+PASS — NDVI rows = 133
+PASS — NDVI SUCCESS = 133
+PASS — ERA5 rows = 133
+FAIL — CHIRPS rows = 133
+
+IMPORTANT:
+This audit does NOT assemble or modify the modelling dataset.
+Any FAIL/WARNING must be resolved before final assembly.

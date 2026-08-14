@@ -1,0 +1,326 @@
+QUELEAGUARD — TEMPORAL PROVENANCE AUDIT
+========================================================================
+
+Final rows audited: 259
+Exact source→final date matches: 2
+Source date missing: 257
+Final date missing: 0
+Potentially reconstructed/changed final dates: 257
+
+SOURCE DATE COMPLETENESS BY CLASS
+------------------------------------------------------------------------
+presence: 2/161 valid
+pseudo_absence: 15/133 valid
+
+POTENTIAL DATE PROVENANCE FAILURES
+------------------------------------------------------------------------
+ record_key    record_type source_date final_date
+ 5376050849       presence         NaN 2024-01-17
+ 5580178158       presence         NaN 2024-01-17
+ 5338820371       presence         NaN 2024-02-18
+ 5417085992       presence         NaN 2024-02-03
+ 5490940071       presence         NaN 2024-02-04
+ 5514014985       presence         NaN 2024-02-11
+ 5577743313       presence         NaN 2024-02-03
+ 5595027229       presence         NaN 2024-02-11
+ 5658505906       presence         NaN 2024-02-11
+ 5318947857       presence         NaN 2024-03-10
+ 5303793392       presence         NaN 2024-06-27
+ 5323893090       presence         NaN 2024-06-27
+ 5357465670       presence         NaN 2024-06-28
+ 5381374791       presence         NaN 2024-06-28
+ 5391318149       presence         NaN 2024-06-09
+ 5423787159       presence         NaN 2024-06-28
+ 5443753791       presence         NaN 2024-06-27
+ 5489192820       presence         NaN 2024-06-27
+ 5496191178       presence         NaN 2024-06-28
+ 5553436558       presence         NaN 2024-06-28
+ 5696190217       presence         NaN 2024-06-27
+ 5360295923       presence         NaN 2024-07-31
+ 5422597303       presence         NaN 2024-07-31
+ 5548513902       presence         NaN 2024-07-31
+ 5566723304       presence         NaN 2024-07-31
+ 5632412764       presence         NaN 2024-07-31
+ 6118048856       presence         NaN 2024-09-20
+ 5652265546       presence         NaN 2024-11-23
+ 5709233409       presence         NaN 2023-02-13
+ 4663069541       presence         NaN 2023-03-16
+ 4717316280       presence         NaN 2023-04-26
+ 4722119248       presence         NaN 2023-04-06
+ 4735730773       presence         NaN 2023-04-26
+ 4695453503       presence         NaN 2023-05-25
+ 4700911548       presence         NaN 2023-05-25
+ 4754113701       presence         NaN 2023-05-25
+ 4811662973       presence         NaN 2023-05-25
+ 4827236586       presence         NaN 2023-05-25
+ 4828270078       presence         NaN 2023-05-13
+ 4765455329       presence         NaN 2023-07-22
+ 4736033351       presence         NaN 2023-08-28
+ 4730479913       presence         NaN 2023-11-07
+ 4748163227       presence         NaN 2023-11-09
+ 4767042292       presence         NaN 2023-11-09
+ 4800183157       presence         NaN 2023-11-26
+ 4844263198       presence         NaN 2023-11-26
+ 6117827340       presence         NaN 2022-01-19
+ 6118105595       presence         NaN 2022-01-19
+ 6118124085       presence         NaN 2022-01-31
+ 3735146145       presence         NaN 2022-02-23
+ 4216298308       presence         NaN 2022-02-16
+ 4347715562       presence         NaN 2022-02-26
+ 4234868393       presence         NaN 2022-03-13
+ 4289832734       presence         NaN 2022-03-15
+ 4324413775       presence         NaN 2022-03-08
+ 4337919136       presence         NaN 2022-03-07
+ 4356606769       presence         NaN 2022-03-15
+ 6117833365       presence         NaN 2022-03-11
+ 6118052231       presence         NaN 2022-03-15
+ 4253140802       presence         NaN 2022-04-10
+ 4231451488       presence         NaN 2022-05-18
+ 4224741914       presence         NaN 2022-06-14
+ 4239175629       presence         NaN 2022-06-11
+ 4258105373       presence         NaN 2022-06-23
+ 4354386692       presence         NaN 2022-06-23
+ 6117435559       presence         NaN 2022-07-11
+ 6117702564       presence         NaN 2022-07-11
+ 6117723835       presence         NaN 2022-07-12
+ 4302180451       presence         NaN 2022-10-04
+ 3661053477       presence         NaN 2021-01-30
+ 3398775036       presence         NaN 2021-03-12
+ 3513369538       presence         NaN 2021-03-12
+ 3512422074       presence         NaN 2021-04-14
+ 3566046458       presence         NaN 2021-04-14
+ 3673725938       presence         NaN 2021-04-29
+ 3524046373       presence         NaN 2021-05-12
+ 3624978398       presence         NaN 2021-05-12
+ 3618841837       presence         NaN 2021-06-27
+ 3684372783       presence         NaN 2021-06-27
+ 3622440735       presence         NaN 2021-07-11
+ 3623426341       presence         NaN 2021-07-11
+ 3631800274       presence         NaN 2021-07-11
+ 3531639037       presence         NaN 2021-10-09
+ 3637987919       presence         NaN 2021-11-16
+ 3679662467       presence         NaN 2021-11-06
+ 3687560721       presence         NaN 2021-11-27
+ 3692379681       presence         NaN 2021-11-16
+ 6117655535       presence         NaN 2021-11-16
+ 6117817426       presence         NaN 2021-11-18
+ 6117914827       presence         NaN 2021-11-06
+ 6118058288       presence         NaN 2021-11-16
+ 3576485683       presence         NaN 2021-12-01
+ 3135632894       presence         NaN 2020-02-03
+ 3217824194       presence         NaN 2020-02-03
+ 3218419753       presence         NaN 2020-02-03
+ 5348600657       presence         NaN 2020-02-03
+ 6117886263       presence         NaN 2020-02-03
+ 3264752366       presence         NaN 2020-03-23
+ 3306894111       presence         NaN 2019-11-28
+ 3306933987       presence         NaN 2019-11-28
+ 3735137736       presence         NaN 2019-11-27
+ 2711946809       presence         NaN 2019-12-04
+ 2722726895       presence         NaN 2019-12-04
+ 2788207315       presence         NaN 2019-12-04
+ 2800571008       presence         NaN 2019-12-04
+ 4398767660       presence         NaN 2019-12-31
+ 5546225529       presence         NaN 2018-08-22
+ 5651041917       presence         NaN 2018-08-22
+ 2208089283       presence         NaN 2018-11-13
+ 2216033104       presence         NaN 2018-11-13
+ 2064388718       presence         NaN 2017-05-13
+ 2108533325       presence         NaN 2017-12-03
+ 2108565787       presence         NaN 2017-12-03
+ 1710848647       presence         NaN 2016-01-17
+ 1729510904       presence         NaN 2016-04-21
+ 1747296371       presence         NaN 2016-06-26
+ 1772994004       presence         NaN 2015-04-13
+ 1381153006       presence         NaN 2015-08-09
+  942114052       presence         NaN 2013-02-28
+  968394930       presence         NaN 2013-02-28
+ 1384365983       presence         NaN 2013-12-02
+ 1793149710       presence         NaN 2012-02-04
+ 2220731768       presence         NaN 2012-02-04
+ 5627933111       presence         NaN 2011-03-26
+  597992631       presence         NaN 2011-07-14
+  598027247       presence         NaN 2011-07-14
+  598278413       presence         NaN 2011-07-14
+ 1793148965       presence         NaN 2011-07-14
+ 4657510312       presence         NaN 2011-11-14
+ 5456593608       presence         NaN 2001-11-02
+ 5498365434       presence         NaN 2000-11-03
+ 1711646769 pseudo_absence         NaN 2016-01-23
+ 1711646671 pseudo_absence         NaN 2016-01-23
+  942037076 pseudo_absence         NaN 2013-02-25
+ 6170162136 pseudo_absence         NaN 2013-01-29
+ 6178407918 pseudo_absence         NaN 2026-02-22
+  142745592 pseudo_absence         NaN 2001-02-20
+ 3306695615 pseudo_absence         NaN 2021-01-01
+ 1346515117 pseudo_absence         NaN 2015-01-12
+ 2656818554 pseudo_absence         NaN 2019-01-24
+ 1711646655 pseudo_absence         NaN 2016-01-23
+ 4029736024 pseudo_absence         NaN 2023-01-21
+ 4993874825 pseudo_absence         NaN 2024-01-20
+  580835276 pseudo_absence         NaN 2011-01-21
+ 1986760729 pseudo_absence         NaN 2018-01-17
+ 6178501449 pseudo_absence         NaN 2026-02-21
+  600468654 pseudo_absence         NaN 2011-01-21
+ 3498788705 pseudo_absence         NaN 2022-01-26
+ 6179019374 pseudo_absence         NaN 2026-02-25
+ 1270009311 pseudo_absence         NaN 2001-02-20
+ 3542727705 pseudo_absence         NaN 2021-01-04
+ 3498794698 pseudo_absence         NaN 2022-01-27
+ 3349923764 pseudo_absence         NaN 2001-04-28
+  604842431 pseudo_absence         NaN 2011-01-20
+ 1416041287 pseudo_absence         NaN 2001-02-20
+ 3132827398 pseudo_absence         NaN 2020-01-12
+  604267549 pseudo_absence         NaN 2011-01-22
+ 6178408290 pseudo_absence         NaN 2026-02-20
+ 1346515118 pseudo_absence         NaN 2015-01-12
+ 6178394223 pseudo_absence         NaN 2026-02-22
+ 4532703709 pseudo_absence         NaN 2013-01-24
+ 4516352174 pseudo_absence         NaN 2024-01-08
+ 1986783265 pseudo_absence         NaN 2018-01-04
+ 3498797692 pseudo_absence         NaN 2022-01-26
+ 1986741612 pseudo_absence         NaN 2018-01-02
+ 1986746824 pseudo_absence         NaN 2018-01-17
+ 5305248497 pseudo_absence         NaN 2024-01-10
+ 3306926563 pseudo_absence         NaN 2021-01-01
+ 3517071630 pseudo_absence         NaN 2021-01-31
+ 6163157536 pseudo_absence         NaN 2026-02-19
+ 1270009190 pseudo_absence         NaN 2001-02-20
+ 6171038409 pseudo_absence         NaN 2026-02-27
+ 1711646871 pseudo_absence         NaN 2016-01-23
+ 2657380655 pseudo_absence         NaN 2019-01-24
+ 2029936031 pseudo_absence         NaN 2017-01-07
+  942031671 pseudo_absence         NaN 2013-02-27
+ 3306694708 pseudo_absence         NaN 2021-01-01
+  596869610 pseudo_absence         NaN 2011-01-21
+ 5298375144 pseudo_absence         NaN 2024-01-18
+ 6171315365 pseudo_absence         NaN 2026-02-24
+ 1270011356 pseudo_absence         NaN 2001-02-20
+ 5300062888 pseudo_absence         NaN 2024-01-16
+ 3306711448 pseudo_absence         NaN 2021-01-04
+ 6162782062 pseudo_absence         NaN 2026-02-22
+ 5295710505 pseudo_absence         NaN 2024-01-10
+  586371387 pseudo_absence         NaN 2011-01-20
+ 6178557094 pseudo_absence         NaN 2026-02-26
+ 1986755948 pseudo_absence         NaN 2018-01-04
+ 6178537994 pseudo_absence         NaN 2026-02-18
+   46831396 pseudo_absence         NaN 2001-02-21
+ 3030837070 pseudo_absence         NaN 2020-01-01
+  598138173 pseudo_absence         NaN 2011-01-20
+ 5085200190 pseudo_absence         NaN 2013-01-24
+   46826030 pseudo_absence         NaN 2001-02-21
+ 1413928907 pseudo_absence         NaN 2001-02-19
+  942031626 pseudo_absence         NaN 2013-02-27
+ 2656093688 pseudo_absence         NaN 2019-01-24
+ 6170890785 pseudo_absence         NaN 2026-02-28
+ 2658389354 pseudo_absence         NaN 2019-01-04
+ 4029736981 pseudo_absence         NaN 2023-01-19
+ 1416041583 pseudo_absence         NaN 2001-02-20
+ 1986781113 pseudo_absence         NaN 2018-01-17
+ 3132750267 pseudo_absence         NaN 2020-01-12
+ 1986766057 pseudo_absence         NaN 2018-01-17
+ 4905289680 pseudo_absence         NaN 2013-01-07
+ 3520666362 pseudo_absence         NaN 2021-01-02
+ 3030479318 pseudo_absence         NaN 2020-01-01
+ 3306958504 pseudo_absence         NaN 2021-01-04
+ 6118045877 pseudo_absence         NaN 2026-01-15
+ 4029740024 pseudo_absence         NaN 2023-01-21
+ 1711646770 pseudo_absence         NaN 2016-01-23
+ 5304272336 pseudo_absence         NaN 2024-01-18
+  600528492 pseudo_absence         NaN 2011-01-22
+ 6117573823 pseudo_absence         NaN 2026-01-14
+ 3306695515 pseudo_absence         NaN 2021-01-04
+ 5302480412 pseudo_absence         NaN 2024-01-15
+ 4029736951 pseudo_absence         NaN 2023-01-18
+ 3538569984 pseudo_absence         NaN 2021-01-04
+ 3498785680 pseudo_absence         NaN 2022-01-26
+ 1986779527 pseudo_absence         NaN 2018-01-17
+ 3132637734 pseudo_absence         NaN 2020-01-14
+  821983212 pseudo_absence         NaN 2011-01-21
+ 1413928624 pseudo_absence         NaN 2001-04-28
+ 3506669041 pseudo_absence         NaN 2021-01-31
+ 5085199864 pseudo_absence         NaN 2013-01-26
+  942031694 pseudo_absence         NaN 2013-02-27
+  605073429 pseudo_absence         NaN 2011-01-20
+ 5300131681 pseudo_absence         NaN 2024-01-17
+ 1416041564 pseudo_absence         NaN 2001-02-20
+ 1503319869 pseudo_absence         NaN 2001-04-24
+ 6178630961 pseudo_absence         NaN 2026-02-26
+ 3417843140 pseudo_absence         NaN 2001-03-15
+ 1986742072 pseudo_absence         NaN 2018-01-17
+ 5285046303 pseudo_absence         NaN 2024-01-30
+ 6170983143 pseudo_absence         NaN 2026-02-26
+ 2656422684 pseudo_absence         NaN 2019-01-24
+ 1986741901 pseudo_absence         NaN 2018-01-02
+ 1986776230 pseudo_absence         NaN 2018-01-17
+ 4994106280 pseudo_absence         NaN 2024-01-20
+ 1270009162 pseudo_absence         NaN 2001-02-20
+ 1346512904 pseudo_absence         NaN 2015-01-12
+ 1270009193 pseudo_absence         NaN 2001-02-19
+  942034958 pseudo_absence         NaN 2013-02-25
+  821840667 pseudo_absence         NaN 2011-01-21
+ 3132834492 pseudo_absence         NaN 2020-01-14
+ 1346515146 pseudo_absence         NaN 2015-01-12
+ 4905266816 pseudo_absence         NaN 2013-01-07
+ 3530647589 pseudo_absence         NaN 2021-01-02
+ 6178510477 pseudo_absence         NaN 2026-02-26
+ 6182779924 pseudo_absence         NaN 2026-01-06
+ 2661524565 pseudo_absence         NaN 2019-01-24
+ 3306934672 pseudo_absence         NaN 2021-01-01
+ 5308371897 pseudo_absence         NaN 2024-01-17
+  942031673 pseudo_absence         NaN 2013-02-27
+ 6118089025 pseudo_absence         NaN 2026-01-14
+ 4167963336 pseudo_absence         NaN 2013-01-26
+ 6178656802 pseudo_absence         NaN 2026-02-22
+
+FINAL DATE DISTRIBUTION BY CLASS
+------------------------------------------------------------------------
+record_type     _year
+presence        2000      1
+                2001      1
+                2011      6
+                2012      2
+                2013      3
+                2015      2
+                2016      3
+                2017      3
+                2018      4
+                2019      8
+                2020      6
+                2021     23
+                2022     23
+                2023     18
+                2024     28
+                2026      2
+pseudo_absence  2001     16
+                2011     11
+                2013     13
+                2015      4
+                2016      5
+                2017      1
+                2018     11
+                2019      6
+                2020      6
+                2021     13
+                2022      4
+                2023      4
+                2024     12
+                2026     20
+
+record_type     _month
+presence        1          7
+                2         20
+                3         15
+                4          9
+                5         10
+                6         18
+                7         16
+                8          4
+                9          1
+                10         2
+                11        22
+                12         9
+pseudo_absence  1         88
+                2         34
+                3          1
+                4          3

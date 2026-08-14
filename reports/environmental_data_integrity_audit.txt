@@ -1,0 +1,36 @@
+QueleaGuard Environmental Data Integrity Audit
+================================================================================
+
+Final modelling rows: 259
+
+Record type distribution:
+record_type
+presence          133
+pseudo_absence    126
+
+Missingness:
+record_key                0
+grid_cell_id              0
+observation_date          0
+presence                  0
+record_type               0
+within_scheme_boundary    0
+rainfall_7d               0
+rainfall_30d              0
+rainfall_90d              0
+temp_mean_7d              0
+dewpoint_mean_7d          0
+wind_mean_7d              0
+temp_same_day             0
+dewpoint_same_day         0
+wind_same_day             0
+ndvi_nearest_composite    0
+ndvi_anomaly              0
+elevation_m               0
+slope_deg                 0
+dist_to_water_m           0
+
+Spatial cells:
+62
+
+Audit completed.
