@@ -270,19 +270,6 @@ Primary Responsibilities
 
 ---
 
-## Faith Kipruto
-
-Primary Responsibilities
-
-- Literature review
-- Data validation
-- Exploratory data analysis
-- Model evaluation
-- Responsible AI documentation
-- Presentation preparation
-
----
-
 ## Shared Responsibilities
 
 - Dataset construction

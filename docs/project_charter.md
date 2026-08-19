@@ -14,7 +14,6 @@
 
 **Team:**
 - Bernard Abuto
-- Faith Kipruto
 
 **Group:** Group 3
 
