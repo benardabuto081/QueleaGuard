@@ -9,7 +9,7 @@ Total records (pre-filter): 266
 Total records (post-filter): 266
 Presence: 133
 Pseudo-absence: 133
-Columns: 23
+Columns: 25
 
 NDVI completeness filter (Task 190 fix; generalizes Log Entry 006's
 pre-2000 exclusion rule to any record missing a valid MODIS composite):

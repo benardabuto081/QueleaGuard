@@ -51,13 +51,15 @@ def main():
     presences["presence"] = 1
     presences["record_type"] = "presence"
     presences["observation_date"] = presences["eventDate"].str[:10]
-    presences = presences[["record_key", "grid_cell_id", "observation_date", "presence", "record_type", "within_scheme_boundary"]]
+    presences = presences[["record_key", "grid_cell_id", "observation_date", "presence", "record_type", "within_scheme_boundary", "decimalLatitude", "decimalLongitude"]]
+    presences = presences.rename(columns={"decimalLatitude": "latitude", "decimalLongitude": "longitude"})
 
     # --- Pseudo-absence records ---
     pa = pd.read_csv(PSEUDO_ABSENCES_PATH)
     pa = pa.rename(columns={"key": "record_key", "eventDate": "observation_date"})
     pa["observation_date"] = pa["observation_date"].astype(str).str[:10]
-    pa = pa[["record_key", "grid_cell_id", "observation_date", "presence", "within_scheme_boundary"]]
+    pa = pa[["record_key", "grid_cell_id", "observation_date", "presence", "within_scheme_boundary", "decimalLatitude", "decimalLongitude"]]
+    pa = pa.rename(columns={"decimalLatitude": "latitude", "decimalLongitude": "longitude"})
     pa["record_type"] = "pseudo_absence"
 
     combined = pd.concat([presences, pa], ignore_index=True)
