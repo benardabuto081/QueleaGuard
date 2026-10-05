@@ -385,3 +385,25 @@ Pseudo-absence dataset (data/processed/pseudo_absences_final.csv, 133 records) i
 **Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
 
 ---
+
+## Log Entry 015 — Ahero/West Kano Rice-Landscape Footprint Investigation; Habitat Predictor Design Decision
+
+**Date:** 2026-10-05 (Phase 5, Level 2 data acquisition)
+
+**Context:** Milestone 2.1's OSM `landuse=farmland` polygons for Ahero (12.33 km2) and West Kano (10.97 km2) were investigated against the Jiang et al. 2025 20m Africa rice distribution raster (Kenya.tif, Zenodo DOI 10.5281/zenodo.13729353, measured pixel size ~10m rather than the paper's documented 20m - a separate, non-blocking discrepancy noted for future documentation). Connected-component analysis of classified rice pixels within a 50km buffer around the Ahero centroid found 451,604 rice pixels (45.16 km2 total), of which only 105,537 (23.4%) fall inside the two named OSM polygons combined. A 3km ring immediately surrounding the Ahero polygon showed rice density dropping sharply (11.12% inside the polygon vs. 4.08% in the adjacent ring), ruling out a simple "polygon is uniformly undersized" explanation. Satellite basemap overlay showed the unclaimed rice mass is largely contiguous with, not disconnected from, the area around both polygons. Reverse-geocoding the ten largest unclaimed patches found most sit within "Ahero Irrigation Scheme sublocation" (an administrative unit distinct from and apparently larger than the small digitized OSM polygon) or Kabonyo Kanyagwal ward (West Kano's own ward); a small residual (~2.3 km2, Kobura ward patches) remains unidentified. An Overpass query for all `landuse=farmland` polygons tagged `operator~"National Irrigation"` within the full buffer returned only the same two polygons already on file; the Overpass query returned only the same two NIA-operated farmland polygons in OSM within the search buffer; therefore, no additional NIA-operated polygon was identified in OSM by this query.
+
+**Evidence summary:**
+- *Established:* The OSM scheme polygons for Ahero and West Kano substantially underrepresent the classified rice footprint in their surrounding area.
+- *Supported interpretation:* The classified rice footprint substantially exceeds the available OSM farmland polygons for Ahero and West Kano and is predominantly located within areas geographically associated with the broader Ahero-West Kano agricultural landscape. Reverse-geocoding and OSM administrative context support this interpretation, but do not establish authoritative scheme boundaries.
+- *Not established:* The authoritative administrative boundary of either scheme. The low rice-fraction inside both named polygons (11.1% Ahero, 18.8% West Kano) is itself unexplained and may indicate incomplete/outdated OSM digitization - flagged, not resolved. The ~2.3 km2 residual in Kobura ward is unattributed to any named scheme.
+- *Modeling implication:* Scheme polygons should not be treated as ground-truth habitat boundaries.
+
+**Decision:** For Level 2/3 ecological modeling, do not use binary scheme-membership (inside/outside a named polygon) as a habitat predictor. Instead, represent rice availability continuously using rice proportion/density at multiple spatial scales and distance to nearest rice. Retain the OSM scheme polygons as contextual/geographic metadata for stratification, interpretation and reporting, not as model inputs.
+
+**Candidate predictors (not finalized):** Rice proportion within 500m, 1km, and 2km buffers of each point, and distance to nearest rice pixel, computed directly from the Jiang et al. 2025 raster. These are recorded as candidates for correlation/redundancy and performance assessment during feature engineering, not an assumption that all three scales enter the final model simultaneously.
+
+**Impact:** Supersedes the research_protocol_v2.md framing (already partially retracted by `level2_agricultural_datagap_analysis.md`, Log Entry prior to this one) that treated grid-cell or scheme-boundary membership as a candidate L2-RQ7 predictor. The `within_scheme_boundary` field already present in `analysis_grid.geojson` (Milestone 2/3, 4 of 328 cells flagged) should be treated as contextual/legacy only going forward, not as an ecological predictor, pending any future documentation update.
+
+**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+
+---
