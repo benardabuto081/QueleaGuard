@@ -407,3 +407,21 @@ Pseudo-absence dataset (data/processed/pseudo_absences_final.csv, 133 records) i
 **Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
 
 ---
+
+## Log Entry 016 — Rice-Density Predictor Extraction (500m/1km/2km + distance-to-nearest-rice); Pseudo-Absence Representativeness Validation
+
+**Date:** 2026-10-05 (Phase 5, Level 2 data acquisition)
+
+**Context:** Following Entry 015's decision to use continuous rice-landscape variables rather than binary scheme-membership, extracted rice proportion within 500m/1km/2km buffers and distance-to-nearest-rice-pixel for all 266 records (133 presence, 133 pseudo-absence) against the Jiang et al. 2025 raster. Required a prior fix: `modelling_dataset_final.csv` had never carried latitude/longitude through from source files (now fixed; see coordinate-passthrough commit, same session). A spot check (record near Ahero's OSM bbox edge: 14.1% rice at 500m, 259m to nearest rice pixel) and aggregate presence-vs-pseudo-absence contrast (5.78% vs 0.28% mean rice at 2km; ~20x) both support the extraction logic working correctly and a real ecological signal being present.
+
+Per Section 8's required check (deferred from Level 1): compared pseudo-absence rice-density distribution against an independently generated, uniformly-random 266-point spatial sample across the same analysis extent. The pseudo-absence and spatially random samples showed broadly similar rice-exposure distributions, with no strong evidence of systematic background bias. Pseudo-absence was marginally more rice-exposed than the spatially random sample across all four metrics (e.g. 77.4% vs 84.6% with zero rice within 2km, a 7.2 percentage-point difference) - a real, non-negligible divergence, though small relative to the ~20x presence/background contrast.
+
+**Decision:** Proceed with the Entry 015 candidate rice-landscape predictors without additional background-resampling correction. The comparison provides no strong evidence that the pseudo-absence sample has materially different rice exposure from the spatially random background. The modest divergence is retained as a limitation rather than treated as sufficient evidence for correction.
+
+**Candidate predictors (not finalized):** rice_pct_500m, rice_pct_1000m, rice_pct_2000m, dist_to_nearest_rice_m, all extracted and saved (`data/processed/rice_density_features.csv`). As in Entry 015, this validation supports their use as candidates; it does not establish that all spatial scales should enter the final model simultaneously. Correlation/redundancy and model performance to be assessed during feature engineering.
+
+**Limitation:** The pseudo-absence-vs-random comparison is a single random draw (seed=42, n=266) against a single pseudo-absence draw, not a formal bootstrap/distributional test. The conclusion is "no strong evidence of bias," not "proven unbiased." The 7.2 percentage-point zero-rice divergence is unexplained - no observer-accessibility or road-proximity variable was tested, and no causal explanation should be inferred from this analysis alone.
+
+**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+
+---
