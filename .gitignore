@@ -238,3 +238,6 @@ data/external/srtm_mosaic.tif
 # HydroSHEDS/HydroRIVERS cache - regenerate via
 # src/download_hydrosheds_data.py rather than storing in version control
 data/external/hydrosheds_cache/
+
+data/external/rice_raster/
+data/processed/rice_raster/
