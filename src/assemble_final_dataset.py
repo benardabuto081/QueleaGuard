@@ -21,6 +21,7 @@ MET_PRESENCE = "data/processed/meteorology_features.csv"
 MET_PA = "data/processed/meteorology_features_pseudo_absence.csv"
 NDVI_PRESENCE = "data/processed/ndvi_features.csv"
 NDVI_PA = "data/processed/ndvi_features_pseudo_absence.csv"
+RICE_DENSITY_PATH = "data/processed/rice_density_features.csv"
 TERRAIN_PATH = "data/processed/terrain_features.csv"
 HYDROLOGY_PATH = "data/processed/hydrology_features.csv"
 OUTPUT_PATH = "data/processed/modelling_dataset_final.csv"
@@ -90,6 +91,11 @@ def main():
     ], ignore_index=True)
     combined = combined.merge(ndvi, on="record_key", how="left")
 
+    # --- Rice-landscape density (Log Entry 015/016 candidate predictors) ---
+    rice = pd.read_csv(RICE_DENSITY_PATH)
+    rice_cols = ["record_key", "rice_pct_500m", "rice_pct_1000m", "rice_pct_2000m", "dist_to_nearest_rice_m"]
+    combined = combined.merge(rice[rice_cols], on="record_key", how="left")
+
     # --- Terrain (static, per grid cell) ---
     terrain = pd.read_csv(TERRAIN_PATH)
     combined = combined.merge(terrain, on="grid_cell_id", how="left")
@@ -97,6 +103,16 @@ def main():
     # --- Hydrology (static, per grid cell) ---
     hydrology = pd.read_csv(HYDROLOGY_PATH)
     combined = combined.merge(hydrology, on="grid_cell_id", how="left")
+
+    # --- Rice-density null check (non-blocking) ---
+    # Unlike NDVI, rice density has no known temporal-availability gap for
+    # this point set (validated 0/266 nulls at extraction time, Log Entry
+    # 016). A null here after merge would indicate a record_key mismatch
+    # bug, not an expected data constraint - flag loudly, do not silently drop.
+    rice_nulls = combined["rice_pct_2000m"].isna().sum()
+    if rice_nulls > 0:
+        print(f"\nWARNING: {rice_nulls} record(s) have no rice-density features after merge - "
+              f"investigate record_key mismatch, do not assume this is expected.")
 
     # --- Post-merge completeness filter (generalizes Log Entry 006) ---
     # NDVI is a required, non-optional core feature. Any record - presence
