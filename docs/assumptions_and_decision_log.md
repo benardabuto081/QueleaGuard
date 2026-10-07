@@ -441,3 +441,35 @@ Per Section 8's required check (deferred from Level 1): compared pseudo-absence 
 **Logged by:** Project owner
 
 ---
+
+## Log Entry 018 — Spatial Cross-Validation Fold Design
+
+**Date:** 2026-10-05 (Phase 5, Level 2 data acquisition)
+
+**Context:** Random k-fold cross-validation is inappropriate for this dataset given spatial autocorrelation in ecological point data (Roberts et al. 2017, Ecography 40(8):913-929, DOI 10.1111/ecog.02881; Valavi et al. 2019, Methods in Ecology and Evolution 10(2):225-232, DOI 10.1111/2041-210X.13107) - both establish that block/spatially-separated cross-validation is required to avoid underestimating predictive error when nearby points are split across train/test. This requirement was flagged as outstanding since the original project priority list.
+
+The existing 5.5km grid (328 cells, matched to CHIRPS resolution) was not used as the blocking unit: only 93 of 328 cells are occupied by the 266-record dataset, and occupancy is highly uneven (one cell, `cell_0080`, holds 62 of 266 records - the persistent Winam Gulf site identified in Log Entry 004). Grid-cell blocking at this occupancy pattern risked producing degenerate folds.
+
+**Method:** K-means clustering (k=5, seed=42) was fit on presence-only coordinates to derive 5 geographically meaningful cluster centroids, then every record (presence and pseudo-absence) was assigned to its nearest centroid. This differs from clustering on all points: an initial attempt (v1) clustering on the full point set produced a fold with zero presence records (pure background, unusable for evaluation - precision/recall/F1 undefined), because pseudo-absence points are spread across the full 50km buffer while presence concentrates near rice-scheme and persistent-site locations; whole-dataset clustering could therefore isolate a presence-free geographic region. Anchoring cluster centroids on presence locations specifically eliminates this failure mode by construction.
+
+**Result:**
+
+| Fold | Presence | Pseudo-absence | Total |
+|---|---|---|---|
+| 0 | 8 | 42 | 50 |
+| 1 | 9 | 5 | 14 |
+| 2 | 11 | 20 | 31 |
+| 3 | 36 | 22 | 58 |
+| 4 | 69 | 44 | 113 |
+
+No fold has zero of either class. Fold sizes are uneven (Fold 4 at 113, anchored on the `cell_0080` persistent-site cluster; Fold 1 at 14) - this is treated as an expected consequence of genuine spatial blocking, not corrected toward artificial balance, consistent with both cited sources treatment of block CV.
+
+**Verification:** All 62 records from `cell_0080` were assigned to Fold 4 and therefore were not split across folds. One grid cell (`cell_0098`, 2 pseudo-absence records) was split across two folds; the two records are separated by 4.622km, which exceeds the maximum 2km radius of the current rice-density features (Entry 016), so the two records do not share the same rice-density feature neighbourhood at the largest extraction scale. This does not rule out other forms of spatial autocorrelation. Separately, `data/processed/spatial_cv_folds.csv` was verified against the current 266-record `modelling_dataset_final.csv`: exact 1:1 record coverage with no duplicates or omissions, exactly 5 fold IDs, every fold containing at least one record of each class, and zero mismatches on an independent re-run using the same dataset and KMeans configuration, confirming reproducibility.
+
+**Decision:** Use these presence-anchored k-means folds (`data/processed/spatial_cv_folds.csv`) for all model evaluation going forward. Do not use random k-fold cross-validation for this dataset.
+
+**Limitation:** Fold 1 is small (n=14); performance estimates on this fold specifically will be high-variance. Fold sizes reflect genuine spatial structure rather than a deliberately balanced design, and this should be disclosed alongside any cross-validated metric reported from this scheme.
+
+**Logged by:** Project owner
+
+---
