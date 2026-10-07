@@ -473,3 +473,37 @@ No fold has zero of either class. Fold sizes are uneven (Fold 4 at 113, anchored
 **Logged by:** Project owner
 
 ---
+
+## Log Entry 019 — Baseline Predictor Selection
+
+**Date:** 2026-10-05 (Phase 5, Level 2 data acquisition)
+
+**Context:** Before training the baseline model, checked pairwise correlation across candidate predictor groups to inform feature selection rather than including all 29 columns by default, given the dataset's limited size (266 records, 133 presence) and uneven spatial fold structure (Entry 018; Fold 1 at n=14, with only 9 presence and 5 pseudo-absence).
+
+**Correlation findings:**
+- Rice-density buffer scales are highly collinear: 500m/1000m/2000m pairwise correlations 0.94-0.98. `dist_to_nearest_rice_m` is comparatively distinct (-0.42 to -0.50 vs. the density measures).
+- Meteorology same-day and 7-day-mean variables are near-duplicates for temp (r=0.90) and dewpoint (r=0.89); wind is more moderate (r=0.64).
+- Rainfall windows are partially redundant: 7d-30d at r=0.72, but 90d is comparatively distinct from both (r=0.30, 0.52).
+- NDVI composite and anomaly are correlated (r=0.79) but conceptually distinct (absolute greenness vs. deviation from seasonal norm).
+- Terrain/hydrology variables (elevation, slope, distance-to-water) are at most moderately correlated (r<=0.62); no redundancy concern.
+
+**Decision - baseline predictor set (10 numeric + season categorical):**
+
+| Category | Included | Deferred |
+|---|---|---|
+| Rice-landscape | `rice_pct_1000m` (intermediate scale), `dist_to_nearest_rice_m` (distinct proximity signal) | `rice_pct_500m`, `rice_pct_2000m` |
+| Rainfall | `rainfall_30d` | `rainfall_7d`, `rainfall_90d` |
+| Meteorology | `temp_mean_7d`, `dewpoint_mean_7d`, `wind_mean_7d` | same-day equivalents |
+| Vegetation | `ndvi_nearest_composite` | `ndvi_anomaly` |
+| Terrain/hydrology | `elevation_m`, `slope_deg`, `dist_to_water_m` | - |
+| Temporal | `season` (categorical) | `month`, `day_of_year` |
+
+`ndvi_anomaly` is deferred as a deliberate parsimony choice, not because its correlation with `ndvi_nearest_composite` (r=0.79) by itself proves redundancy. Deferred features (`rice_pct_500m`, `rice_pct_2000m`, same-day meteorology, `ndvi_anomaly`) remain candidates for a later advanced/regularized model where collinearity is less consequential - they are not permanently rejected.
+
+**Deliberately excluded (not deferred):** `latitude`/`longitude` - including raw coordinates would let the model learn spatial position directly rather than environmental association, undermining the purpose of testing environmental predictors, and risks the model memorizing fold-specific spatial clusters given how concentrated this dataset is. `within_scheme_boundary` remains excluded per Entry 015.
+
+**Limitation:** The compact 10-predictor baseline is a deliberate parsimony choice given the dataset's size and structure, not a claim that sample size is demonstrably adequate for this predictor count. The dataset's effective independence is constrained by both its small total size (133 presence records) and its spatial fold structure (Entry 018); Fold 1 in particular (9 presence, 5 pseudo-absence) will yield high-variance per-fold estimates regardless of predictor count. This should be disclosed alongside any baseline performance metric, not treated as resolved by the feature-selection choices made here.
+
+**Logged by:** Project owner
+
+---
