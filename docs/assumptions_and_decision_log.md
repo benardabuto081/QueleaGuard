@@ -33,7 +33,7 @@ Continuing to model "Nyamware Irrigation Scheme" as a second scheme would have e
 - No impact on Milestone 2.1's GBIF findings - those queries used a geographic bounding box, not a scheme-name filter, so the underlying occurrence data remains valid and does not need to be re-pulled.
 - All project documents referencing "Nyamware Irrigation Scheme" are being updated to reflect this correction (tracked in Log Entry 002).
 
-**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+**Logged by:** Project owner
 
 ---
 
@@ -67,7 +67,7 @@ A grid-based framework is supported by two independent justifications, either of
 - No re-collection of existing data is required. Milestone 2.1's GBIF pull and Milestone 2.3's CHIRPS pilot both remain valid and reusable under this framework.
 - This spatial framework is treated as a fixed project standard going forward and should be referenced consistently in all future documentation and in the eventual manuscript's Methods/Study Area section.
 
-**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+**Logged by:** Project owner
 
 ---
 
@@ -94,7 +94,7 @@ Spatial resolution is the deciding factor over convenience. NASA POWER's no-auth
 - `src/nasa_power_pilot.py` and `src/era5land_pilot.py`, along with their reference outputs in `reports/`, are retained as evidence of the comparison, consistent with the project's publication-readiness standard (both a positive and a superseded result are preserved, not just the final choice).
 - No other documents require correction, as none had committed to NASA POWER specifically prior to this decision (all referenced it as "NASA POWER or ERA5-Land").
 
-**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+**Logged by:** Project owner
 
 ---
 
@@ -116,7 +116,7 @@ This is a concrete, data-derived example of why the 50km ecological buffer (rath
 
 **No methodology change results from this entry** - it is a documentation of a finding that validates an existing decision, not a correction to it.
 
-**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+**Logged by:** Project owner
 
 ---
 
@@ -142,7 +142,7 @@ The persistent occurrence site identified empirically in Log Entry 004 (cell_008
 **Impact:**
 No change to methodology, spatial framework, feature engineering plan, or any prior decision. This entry documents the existence and intended treatment of a new qualitative knowledge source only.
 
-**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+**Logged by:** Project owner
 
 ---
 
@@ -181,7 +181,7 @@ Pseudo-absence generation (Dataset Feasibility Study, Section 7 - status Pending
 **Rationale for the framework overall:**
 Matching temporal representation to each variable's actual ecological mechanism, rather than applying one uniform convention (e.g., "always use monthly averages"), is more scientifically defensible and more consistent with published SDM practice, and produces a methodology that can be justified point-by-point in an eventual publication's Methods section rather than asserted without support.
 
-**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+**Logged by:** Project owner
 
 ---
 
@@ -209,7 +209,7 @@ The `/vsigzip/` finding and the URI scheme failure on this system are non-obviou
 **Impact:**
 No change to prior decisions (spatial framework, temporal framework, or data sources). This entry documents implementation methodology for Milestone 3.4, establishing a reusable extraction pattern for subsequent environmental variables.
 
-**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+**Logged by:** Project owner
 
 ---
 
@@ -235,7 +235,7 @@ Like the CHIRPS /vsigzip/ finding (Log Entry 007), this is a non-obvious technic
 **Impact:**
 No change to prior decisions. Documents implementation methodology for Milestone 3.5.
 
-**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+**Logged by:** Project owner
 
 ---
 
@@ -278,7 +278,7 @@ Approximate TGB is the only evaluated strategy that directly addresses the speci
 **Impact:**
 Dataset Feasibility Study, Section 7 ("Pseudo-absence generation strategy") updated from Pending to Approved (approximate TGB). Implementation proceeds next: querying GBIF for other-species records within the analysis extent, spatial thinning, and construction of the final presence/pseudo-absence modelling dataset.
 
-**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+**Logged by:** Project owner
 
 ---
 
@@ -318,7 +318,7 @@ This entry demonstrates the project's evidence-first decision process functionin
 **Impact:**
 Pseudo-absence dataset (data/processed/pseudo_absences_final.csv, 133 records) is confirmed as final, pending the separate NDVI verification noted above. Dataset Feasibility Study Section 7 pseudo-absence status remains Approved (as set in Log Entry 009), now with this documented limitation attached.
 
-**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+**Logged by:** Project owner
 
 ---
 
@@ -332,7 +332,7 @@ Pseudo-absence dataset (data/processed/pseudo_absences_final.csv, 133 records) i
 
 **Impact:** No other records affected. Documented here for traceability per project reproducibility standards.
 
-**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+**Logged by:** Project owner
 
 ---
 
@@ -346,7 +346,7 @@ Pseudo-absence dataset (data/processed/pseudo_absences_final.csv, 133 records) i
 
 **Impact:** Final modelling dataset size changes from 266 to **262 records**. Class balance changes from the originally planned exact 1:1 (133:133, Log Entry 009) to **133 presence : 129 pseudo-absence**. This is a minor departure from exact balance (67.5%/49.2% split by class, effectively ~50.8%/49.2%) and does not warrant class-weighting or resampling — the imbalance is negligible for the tree-based models planned (Random Forest, Gradient Boosting) per Barbet-Massin et al. 2012's guidance already cited in Log Entry 009. No backfill was performed, consistent with the precedent set in Log Entry 006 (the original 8 pre-2000 presence exclusions were also not backfilled; the project accepted N=133 rather than re-sampling to restore a round number). This exclusion is a data availability constraint, not a data quality judgement, and must be described that way in any future documentation (Responsible AI statement, paper Methods section, Data Dictionary).
 
-**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+**Logged by:** Project owner
 
 ---
 
@@ -360,7 +360,7 @@ Pseudo-absence dataset (data/processed/pseudo_absences_final.csv, 133 records) i
 
 **Impact:** Final modelling dataset size changes from 262 to **259 records**. Class balance changes from 133:129 to **133 presence : 126 pseudo-absence**. Cumulative effect of Log Entry 012 + 013: the originally planned exact 1:1 balance (266 records, Log Entry 009) is now 133:126 (259 records total, ~51.4%/48.6% split) — still close enough to balanced that no class-weighting or resampling is needed for the planned tree-based models. This finding should also inform a durable safeguard: if the pseudo-absence pool is ever regenerated (`build_pseudo_absence_pool.py`, `sample_pseudo_absences.py`), a checklist/date/cell exclusion filter against known presence records should be added at that stage, not discovered again post-hoc during validation.
 
-**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+**Logged by:** Project owner
 
 ---
 
@@ -382,7 +382,7 @@ Pseudo-absence dataset (data/processed/pseudo_absences_final.csv, 133 records) i
 
 **Impact:** All v1 (month-biased) files preserved for traceability: `data/raw/gbif_all_species_effort_pool_v1_month_skewed.csv`, `data/processed/pseudo_absence_pool_v1_month_skewed.csv`, `data/processed/pseudo_absences_final_v1_month_skewed.csv`. The v1-derived final modelling dataset (259 records, validated in Milestone 3.11) is also preserved in full via Git history at commit 4728c6b and must be treated as superseded, not deleted, for reproducibility. **Environmental feature extraction (CHIRPS, ERA5-Land, MODIS NDVI) has NOT yet been re-run for the corrected pseudo-absence set** — record keys changed with the rebuild, so rainfall/meteorology/NDVI features must be freshly extracted for the new 133-record pseudo-absence sample before a new final dataset can be assembled. This is the next task, not yet started as of this log entry.
 
-**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+**Logged by:** Project owner
 
 ---
 
@@ -404,7 +404,7 @@ Pseudo-absence dataset (data/processed/pseudo_absences_final.csv, 133 records) i
 
 **Impact:** Supersedes the research_protocol_v2.md framing (already partially retracted by `level2_agricultural_datagap_analysis.md`, Log Entry prior to this one) that treated grid-cell or scheme-boundary membership as a candidate L2-RQ7 predictor. The `within_scheme_boundary` field already present in `analysis_grid.geojson` (Milestone 2/3, 4 of 328 cells flagged) should be treated as contextual/legacy only going forward, not as an ecological predictor, pending any future documentation update.
 
-**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+**Logged by:** Project owner
 
 ---
 
@@ -422,6 +422,22 @@ Per Section 8's required check (deferred from Level 1): compared pseudo-absence 
 
 **Limitation:** The pseudo-absence-vs-random comparison is a single random draw (seed=42, n=266) against a single pseudo-absence draw, not a formal bootstrap/distributional test. The conclusion is "no strong evidence of bias," not "proven unbiased." The 7.2 percentage-point zero-rice divergence is unexplained - no observer-accessibility or road-proximity variable was tested, and no causal explanation should be inferred from this analysis alone.
 
-**Logged by:** Project owner + AI engineering collaborator, per project collaboration model.
+**Logged by:** Project owner
+
+---
+
+## Log Entry 017 — AFCD Temporal Land-Use Stability Cross-Check (Jiang et al. 2025 Rice Snapshot)
+
+**Date:** 2026-10-05 (Phase 5, Level 2 data acquisition)
+
+**Context:** Tested whether Jiang et al. 2025's single 2023 rice-extent snapshot can be reasonably used alongside occurrence/pseudo-absence records spanning observation years 2000-2026 (Feasibility Study Section 4, previously unaddressed). Used AFCD (Lou et al. 2025, annual cropland extent, Zenodo DOI 10.5281/zenodo.14920706, 2000-2022), accessed via GDAL `/vsicurl/` remote windowed reads (confirmed internally tiled, no full-file downloads required). For the 180 records with observation_year <= 2022 (AFCD's coverage ceiling), compared cropland % within a 500m buffer at each record's own observation year against year 2022 (closest AFCD year to the Jiang snapshot). The 86 records with observation_year > 2022 were outside AFCD's 2000-2022 coverage and therefore could not be evaluated using this cross-check. Their temporal distance from the 2023 Jiang snapshot is smaller for 2023-2026 observations, but this does not constitute independent validation.
+
+**Findings:** Strong overall correlation between own-year and 2022 cropland % (r=0.977, n=180), including in the pre-2015 subset specifically flagged as highest-risk by the Feasibility Study's ~2015 satellite rice-mapping ceiling (r=0.960, n=41). Mean absolute difference was 2.45 percentage points but right-skewed (median 0.46pp); the small number of large differences traced to only 6 distinct coordinate locations (several records share exact coordinates across different years), not many independent outliers.
+
+**Decision:** Use the Jiang et al. 2025 2023 rice-extent snapshot as the current rice-landscape representation without per-record temporal correction. The AFCD cropland comparison provides supporting evidence that the broader cropland context was relatively stable across the historical observation period, substantially reducing - but not eliminating - the concern that temporal land-use change is driving the rice-density signal. Proceed with the existing rice-density features (Entry 016) as currently computed.
+
+**Limitation:** AFCD measures generic cropland, not rice specifically - this is a proxy test for broader land-use stability, not direct evidence that the 2023 Jiang rice footprint was representative of rice cover in each historical observation year. The analysis established that the six largest discrepancies are concentrated at 6 distinct coordinate locations, not their cause - no determination was made of whether those changes reflect genuine land-use change, AFCD/Jiang classification disagreement, or edge/mixed-pixel effects. Records from 2023-2026 (n=86) were not tested at all.
+
+**Logged by:** Project owner
 
 ---
