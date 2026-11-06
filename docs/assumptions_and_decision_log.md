@@ -507,3 +507,135 @@ No fold has zero of either class. Fold sizes are uneven (Fold 4 at 113, anchored
 **Logged by:** Project owner
 
 ---
+
+## Log Entry 020 — Baseline Logistic Regression: Spatial-CV Results, Diagnostics and Evidential Limits
+
+**Date:** 2026-11-02 (document date; the Git commit timestamp is the verifiable record). The baseline run preceded this entry and its own date is not recorded in the repository.
+
+**Context:** First model training on the 266-record modelling dataset (`data/processed/modelling_dataset_final.csv`, Git blob 60e1fd7654bc20322fdc2c00c32a2ef95d117a87), using the predictor set from Entry 019 (10 numeric predictors plus `season`, one-hot encoded with `dry_cool` as the reference level; 13 model columns) and leave-one-fold-out evaluation on the five spatial folds from Entry 018 (`data/processed/spatial_cv_folds.csv`). Model: scikit-learn `LogisticRegression` (`max_iter=1000`, `random_state=42`, otherwise default settings: L2 penalty, C=1.0, no class weighting, 0.5 decision threshold). Numeric predictors were standardised with a `StandardScaler` fit on the training folds only in each iteration. This is a benchmark model; no hyperparameter or threshold tuning was performed. Library versions were not recorded for this run. Artefacts: `src/train_baseline_logistic_regression.py`, `src/diagnose_baseline_calibration.py`, `src/diagnose_fold4_persistent_site.py`, `reports/baseline_logistic_regression_cv_results.csv`. Before they were committed the artefacts were verified: the script byte counts were reproduced exactly from their contents, and the per-fold results file matches the printed metrics at three decimals (`n_test` sums to 266 and `n_presence_test` to 133).
+
+**Results (held-out fold):**
+
+| Test fold | n | Presence | Precision | Recall | F1 | ROC-AUC | Confusion matrix [[TN, FP], [FN, TP]] |
+|---|---|---|---|---|---|---|---|
+| 0 | 50 | 8 | 1.000 | 0.125 | 0.222 | 0.961 | [[42, 0], [7, 1]] |
+| 1 | 14 | 9 | 0.700 | 0.778 | 0.737 | 0.867 | [[2, 3], [2, 7]] |
+| 2 | 31 | 11 | 0.500 | 0.909 | 0.645 | 0.718 | [[10, 10], [1, 10]] |
+| 3 | 58 | 36 | 0.882 | 0.833 | 0.857 | 0.886 | [[18, 4], [6, 30]] |
+| 4 | 113 | 69 | 0.833 | 0.362 | 0.505 | 0.839 | [[39, 5], [44, 25]] |
+
+Unweighted mean (sample SD) across the five folds: precision 0.783 (0.191), recall 0.602 (0.340), F1 0.593 (0.244), ROC-AUC 0.854 (0.089). Fold sizes range from 14 to 113 records, so the unweighted mean gives Fold 1 the same weight as Fold 4. Fold 0's precision of 1.000 rests on a single positive prediction.
+
+**Effective sample size by test fold:**
+
+| Test fold | Presence records | Distinct presence coordinates | Presence-bearing cells | Distinct presence (coordinate, date) vectors | Background records | Distinct background (coordinate, date) vectors |
+|---|---|---|---|---|---|---|
+| 0 | 8 | 5 | 4 | 5 | 42 | 37 |
+| 1 | 9 | 2 | 2 | 6 | 5 | 4 |
+| 2 | 11 | 6 | 5 | 10 | 20 | 15 |
+| 3 | 36 | 9 | 6 | 24 | 22 | 16 |
+| 4 | 69 | 7 | 3 | 41 | 44 | 37 |
+| All | 133 | 29 | 20 | 86 | 133 | 109 |
+
+Two cells hold 87 of the 133 presences (65.4%): `cell_0080` (60 presences, all in Fold 4) and `cell_0156` (27, all in Fold 3). Fold 4's presences are 87% `cell_0080` and Fold 3's are 75% `cell_0156`. Forty-seven presence records repeat another presence record's coordinate and date and so have identical baseline predictor values.
+
+**Diagnostics.** Predicted-probability level by test fold (`src/diagnose_baseline_calibration.py`). The "test presence rate" is a property of the sampling design (1:1 background, nearest-centroid fold assignment), not an estimate of prevalence:
+
+| Test fold | Training-fold presence rate | Test-fold presence rate | Mean predicted probability (test) | Fraction predicted positive at 0.5 |
+|---|---|---|---|---|
+| 0 | 0.579 | 0.160 | 0.053 | 0.020 |
+| 1 | 0.492 | 0.643 | 0.750 | 0.714 |
+| 2 | 0.519 | 0.355 | 0.517 | 0.645 |
+| 3 | 0.466 | 0.621 | 0.539 | 0.586 |
+| 4 | 0.418 | 0.611 | 0.341 | 0.265 |
+
+Threshold-dependent metrics vary widely across folds (recall 0.125-0.909) and the level of predicted probabilities departs from each fold's sample presence rate in different directions (lower in Folds 0 and 4, higher in Folds 1 and 2). A simple training/test base-rate mismatch does not account for the direction of the error: Fold 0 was trained on a presence-heavy set (57.9%) yet predicts low probabilities on its test fold.
+
+Fold 4 follow-up (`src/diagnose_fold4_persistent_site.py`): 60 of Fold 4's 113 test records are presences from `cell_0080`. In that fold 35.0% of those 60 presences were predicted positive at 0.5 (mean predicted probability 0.431), against 44.4% of the 9 other presences (mean 0.508); 39 of the fold's 44 false negatives (derived from the reported fractions) are `cell_0080` presences. The 42 non-`cell_0080` background records had a mean predicted probability of 0.164 and 9.5% predicted positive. The two `cell_0080` background records averaged 0.568, which is not interpretable at n=2.
+
+**ROC-AUC.** ROC-AUC (0.718-0.961 across folds) varied less than recall (0.125-0.909). That is a descriptive observation and not evidence that ROC-AUC is the preferred or more trustworthy metric here: it is rank-based and ignores predicted-probability level (Lobo et al. 2008, Global Ecology and Biogeography 17(2):145-151); per-fold values rest on few independent sites (Folds 3 and 4 are dominated by one cell each); the negatives are pseudo-absences, so what ROC-AUC measures depends on the background design and the extent evaluated (Jimenez-Valverde 2012, Global Ecology and Biogeography 21(4):498-507; Lobo et al. 2008); and the cross-fold SD is not a standard error because the five fits share most of their training data and the folds are very unequal. The metric designation in Technical Architecture Section 9 (F1, precision and recall primary; ROC-AUC secondary) is unchanged.
+
+**Status of findings:**
+- *Established:* the per-fold metrics, confusion matrices and probability-level figures above; the concentration of presences in two cells; most of Fold 4's false negatives come from a single grid cell.
+- *Not established:* why predicted-probability levels differ by region; whether the 60 `cell_0080` presences in the training data influence the fits used for the other folds; whether predictor-presence relationships differ regionally. None of these was tested.
+
+**Decision:** Treat this model as a benchmark only. No threshold tuning, class weighting or other change is made to it. Threshold-dependent metrics from this scheme are reported per fold, with fold sizes and distinct-site counts, and not as a single pooled figure. No headline metric is designated. The audit of what this evaluation can and cannot support is pre-specified in Entry 023; it is not intended to improve the scores.
+
+**Limitation:** The folds are contiguous regions of one landscape and share years; the results cannot support claims about other regions, forecasting over time, site-level generality, absolute probability, or infestation. The background is a single draw of other-species records, so "absence" is never observed absence. Fold sizes are small and uneven, and the unweighted fold mean is not a pooled estimate.
+
+**Logged by:** Project owner
+
+---
+
+## Log Entry 021 — Entry 009 Presence-Thinning Statement: Decision-History Review (Original Intent Unresolved)
+
+**Date:** 2026-11-02 (document date; the Git commit timestamp is the verifiable record)
+
+**Context:** Entry 009 (Git timestamp 2026-08-03T22:30:54+03:00, commit 651b520) lists spatial thinning of presences as adopted and names `cell_0080` and `cell_0156`. The modelling dataset retains all 133 presences, including 60 in `cell_0080` and 27 in `cell_0156`. The decision history was reviewed from repository contents (files, history and commit messages) to establish whether thinning was intended, revised or abandoned.
+
+**Established from the repository:**
+- Entry 009 contains three relevant statements, unchanged since commit 651b520: (a) a strategy-table row "Spatial thinning of presences (STSP)" with the rationale "directly relevant to cell_0080/cell_0156 concentration" and the verdict "Yes (combined with TGB, not standalone)"; (b) a decision sentence combining approximate TGB sampling with "light spatial thinning to avoid over-concentration at known hotspots (cell_0080, cell_0156)"; (c) a next-steps sentence listing "spatial thinning" among the implementation steps. No thinning rule (distance or per-cell cap) and no pipeline stage is specified for presences.
+- Thinning code (`MAX_PER_CELL = 5`) first appears in commit 5795792 (2026-08-04) and is applied to the effort-proxy background pool. The Milestone 3.9 report records "After spatial thinning (max 5 per grid cell): 196" for that pool. No script in the current repository, and none in its history (no file under `src/` was ever deleted), thins the presence set.
+- Entry 006 states that the 161-record raw and 145-record grid-matched datasets are retained in full, and defines the 133 presences on or after January 2000 as "feature-complete modelling dataset candidates". Entry 004 states "No methodology change results from this entry". Entry 010 describes the pseudo-absence set as 133 records at a 1:1 ratio with presences and does not mention presence thinning.
+- No later entry, commit message, document or report records presence thinning being applied, revised or abandoned. `docs/engineering_log.md` (commit 1b868ba, 2026-08-14T01:22:27+03:00) restates "light spatial thinning" without saying what was thinned, and separately lists the `cell_0080`/`cell_0156` concentration as an open warning ("Random record-level splitting could leak site-specific information across train/test partitions"). Entry 018 addressed leakage through spatial folds, not thinning.
+
+**Not established:** whether Entry 009's statement was intended to apply to presences, to the background pool, or to both; whether it was later revised or abandoned. The original intent is recorded as unresolved unless further evidence emerges. This entry does not interpret or rewrite the historical decision.
+
+**Decision:** No change is made to the dataset. The current dataset contains no presence thinning. Any future thinning, weighting or grouped-validation change would be a separate logged decision with its own scientific justification. The CV audit pre-specified in Entry 023 examines how the baseline results depend on the concentrated cells without altering the dataset.
+
+**Limitation:** The review covers the repository only; material outside it (for example earlier working notes) was not available.
+
+**Logged by:** Project owner
+
+---
+
+## Log Entry 022 — Document Dates Versus Git Timestamps (Entries 014-019 and Phase Labels)
+
+**Date:** 2026-11-02 (document date; the Git commit timestamp is the verifiable record)
+
+**Context:** A mismatch was found between the `Date:` lines of some entries and the Git timestamps of the commits that introduced them. This entry records the facts. It does not alter past entries and does not infer authoring dates.
+
+| Entry | Document `Date:` line | Commit | Git timestamp (author = committer) |
+|---|---|---|---|
+| 014 | 2026-08-12 | 22151ff | 2026-08-13T13:12:34+03:00 |
+| 015 | 2026-10-05 | ca133e4 | 2026-10-05T04:03:18+03:00 |
+| 016 | 2026-10-05 | ca3b72e | 2026-10-05T11:58:56+03:00 |
+| 017 | 2026-10-05 | aafefad | 2026-10-07T08:46:24+03:00 |
+| 018 | 2026-10-05 | cdf2819 | 2026-10-07T09:34:33+03:00 |
+| 019 | 2026-10-05 | 9e89f89 | 2026-10-07T10:00:06+03:00 |
+
+**Observations:**
+- The document date precedes the commit date by one day for Entry 014 and by two days for Entries 017-019; Entries 015 and 016 were committed on their stated date. Whether the text was written on the stated dates cannot be verified from the repository, because a Git timestamp shows when text was committed, not when it was written.
+- Author and committer timestamps are identical in all six commits, so there is no sign of amendment or rebase.
+- Entry 017 was committed together with the attribution-wording cleanup of the decision log (commit aafefad).
+- The `Date:` lines of Entries 015-019 carry the label "(Phase 5, Level 2 data acquisition)". `docs/implementation_roadmap.md` defines Phase 5 as "Evaluation", and "Level 2 data acquisition" is not a defined phase label, so the parenthetical does not correspond to a documented project phase. Entries 009-014 use roadmap labels (for example "Phase 3, Milestone 3.9").
+
+**Decision:** Past `Date:` lines and labels are left unedited. From Entry 020 onward, `Date:` lines are labelled as document dates and the Git commit timestamp is treated as the verifiable record. If the original dates can later be established from evidence outside the repository (for example local file timestamps), the correction will be made in a separate logged entry.
+
+**Logged by:** Project owner
+
+---
+
+## Log Entry 023 — Pre-Specification: CV Audit Protocol v1.2 (Frozen)
+
+**Date:** 2026-11-02 (document date; the Git commit timestamp is the verifiable record)
+
+**Context:** An audit of the baseline spatial-CV evaluation (Entries 018-020) was designed to establish what the existing analysis can and cannot support. It is not intended to improve scores or to select a model. The frozen protocol is stored as `docs/cv_audit_protocol_v1_2.md` (Git blob b569741912a4bc20465bdb031cf68de60bfe1494, 31,772 bytes; an ASCII rendering of the approved text with symbols spelled out). It is not edited in place; any change requires a new logged version.
+
+**Predeclared elements (summary; the protocol file is authoritative):**
+- Four analysis classes kept separate: D (data-only descriptive, D1-D7), M0 (re-execution of the baseline with an identical specification and a reproduction gate), R (re-scoring of fixed M0 predictions, R1-R5) and M1 (training-composition refits: exact-repeat weighting V1, cell-balanced weighting V2, ablation V3 of all records in a cell, and four reference ablations). Order: D, M0, R, M1.
+- Banded Moran's I: bands 0-1, 1-2, 2-5, 5-10, 10-20, 20-40, 40-80 and 80-120 km; global binary weights; a minimum of 30 pairs per band as an operational threshold, not a statistical standard; all band counts printed whether or not the minimum is met.
+- D6 Mahalanobis distance to the training-distribution centroid is "not estimable" if a predictor has zero variance among the distinct training vectors, if there are fewer than 11 such vectors, or if the condition number of their correlation matrix exceeds 1e8; no regularisation and no dropped predictors.
+- M0 identity gates: dataset blob 60e1fd7654bc20322fdc2c00c32a2ef95d117a87, fold file blob 67d8fec7c2b7aab6e98035cc8c916baf826338d0, pseudo-absence source blob 0b617c9f90d42c692c711a5d95a700cb585396ab, the exact 29-column list, an explicit `dry_cool` reference encoding, and numerical tolerances (counts exact; precision, recall and F1 within 1e-12; AUC within 1e-9) with a stop rule on any discrepancy.
+- Outputs are write-once under `reports/cv_audit/` with per-run manifests, and no existing artefact is modified.
+- No hypothesis tests, no required confidence intervals and no headline metric. All predeclared results are reported, including null, adverse and not-estimable results. Weighting is not treated as a correction for sampling bias or dependence.
+
+**Information available when the protocol was frozen (disclosure):** The protocol was written after the baseline results and the Fold 4 diagnostics (Entry 020) were known, so it pre-specifies the audit analyses and not the baseline. During design, descriptive tabulations were computed in an exploratory scratch environment: per-fold records, distinct coordinates, grid cells and distinct (coordinate, date) vectors; the composition of `cell_0080` and `cell_0156`; year-by-fold counts and dates shared across folds; and the fold membership of the cells used in the ablations. These counts informed the design and are recomputed formally in D1, D5 and D7. No D2, D3, D4 or D6 statistic, no output of an M0 re-execution, and no R or M1 result existed when the protocol was frozen; in particular no Moran's I value and no condition number had been computed.
+
+**Decision:** Execute the audit exactly as specified and in the stated order. Any deviation, including any change to a predeclared threshold, will be logged as a deviation with its reason.
+
+**Limitation:** The audit describes the evidential strength of the existing analysis. It cannot establish that the fold design is adequate, correct sampling bias, or create independent information, and it makes no claim beyond the scope stated in Section 2 of the protocol.
+
+**Logged by:** Project owner
+
+---
