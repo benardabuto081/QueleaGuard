@@ -1,0 +1,4 @@
+unit,groups_with_multiple_records_same_date,groups_spanning_multiple_analysis_cells,groups_with_any_differing_value,columns_compared
+analysis_cell,48,0,0,"rainfall_7d,rainfall_30d,rainfall_90d,temp_mean_7d,dewpoint_mean_7d,wind_mean_7d,temp_same_day,dewpoint_same_day,wind_same_day,rainfall_30d,temp_mean_7d,dewpoint_mean_7d,wind_mean_7d,ndvi_nearest_composite"
+chirps_pixel,48,0,0,"rainfall_7d,rainfall_30d,rainfall_90d"
+era5_point,49,2,0,"temp_mean_7d,dewpoint_mean_7d,wind_mean_7d,temp_same_day,dewpoint_same_day,wind_same_day"

@@ -1,0 +1,35 @@
+CV audit D run D_20261112T084903Z_05b7a93
+HEAD 05b7a935353447eb5e2834c56e2473cdc72be2bf
+
+D1: 20 presence-bearing cells; cell_0080 presence dates=34, years 2011-2024, presences in 2023-2024=32; exact repeated coordinate-date presence records=47.
+
+D2: nearest-training-record distance (km), record unit, presence class: fold n/min/median/max
+  fold 0: n=8 min=9.266 p50=14.193 max=25.258
+  fold 1: n=9 min=6.121 p50=6.121 max=13.198
+  fold 2: n=11 min=10.020 p50=25.602 max=29.686
+  fold 3: n=36 min=6.733 p50=10.979 max=13.919
+  fold 4: n=69 min=3.785 p50=6.454 max=6.456
+
+D3a: 240 predictor x stratum x band rows; 80 computed under the predeclared rule, 160 not estimable (all rows are in d3a_banded_morans_i.csv).
+
+D3b: 29 presence sites; nearest-neighbour km min=0.063 p50=2.267 max=22.264; same-fold neighbours=25, other-fold=4.
+
+D4: analysis-cell centroid used for dynamic extraction; mapping source for CHIRPS: no cached CHIRPS raster available; documented CHIRPS global 0.05 degree grid, origin (-180, 50).
+D4 validation (groups sharing a unit and date; differing values flag a mapping or extraction discrepancy):
+  analysis_cell: groups=48, spanning cells=0, groups with differing values=0
+  chirps_pixel: groups=48, spanning cells=0, groups with differing values=0
+  era5_point: groups=49, spanning cells=2, groups with differing values=0
+
+D5: 180 distinct dates, 6 occur in more than one fold; years per fold: fold 0=2001-2026; fold 1=2012-2024; fold 2=2012-2026; fold 3=2000-2026; fold 4=2001-2026.
+
+D6 Mahalanobis distance to the training-distribution centroid, by fold:
+  fold 0: distinct training vectors=153, k=10, kappa2(R)=38.7, estimable
+  fold 1: distinct training vectors=185, k=10, kappa2(R)=49.19, estimable
+  fold 2: distinct training vectors=170, k=10, kappa2(R)=53.29, estimable
+  fold 3: distinct training vectors=155, k=10, kappa2(R)=49.8, estimable
+  fold 4: distinct training vectors=117, k=10, kappa2(R)=60.78, estimable
+D6 univariate: share of test records outside the training range on at least one predictor: fold 0=0.280, fold 1=0.500, fold 2=0.065, fold 3=0.276, fold 4=0.062
+
+D7: background records per fold [42, 5, 20, 22, 44], distinct vectors [37, 4, 15, 16, 37], distinct coordinates [34, 4, 15, 14, 36], cells [26, 4, 11, 13, 28].
+
+Failed non-fatal checks: none

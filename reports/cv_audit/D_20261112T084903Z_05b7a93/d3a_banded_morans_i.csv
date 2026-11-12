@@ -1,0 +1,241 @@
+kind,predictor,stratum,unit,band_lo_km,band_hi_km,n_units,pairs,participating_points,max_point_pair_share,pairs_same_cell,expected_I,morans_I,status
+static,rice_pct_1000m,all,coord,0,1,127,24,25,0.16666666666666666,18,-0.007936507936507936,,not estimable: fewer than 30 pairs
+static,rice_pct_1000m,all,coord,1,2,127,19,26,0.21052631578947367,15,-0.007936507936507936,,not estimable: fewer than 30 pairs
+static,rice_pct_1000m,all,coord,2,5,127,113,83,0.10619469026548672,18,-0.007936507936507936,0.660023999372695,computed under the predeclared rule
+static,rice_pct_1000m,all,coord,5,10,127,279,119,0.05017921146953405,0,-0.007936507936507936,0.37631220394468046,computed under the predeclared rule
+static,rice_pct_1000m,all,coord,10,20,127,774,126,0.037467700258397935,0,-0.007936507936507936,0.088656690850002,computed under the predeclared rule
+static,rice_pct_1000m,all,coord,20,40,127,2222,127,0.03285328532853286,0,-0.007936507936507936,-0.08408949922524489,computed under the predeclared rule
+static,rice_pct_1000m,all,coord,40,80,127,3839,127,0.023183120604324044,0,-0.007936507936507936,-0.06146172334992574,computed under the predeclared rule
+static,rice_pct_1000m,all,coord,80,120,127,731,83,0.060191518467852256,0,-0.007936507936507936,0.07055490091466869,computed under the predeclared rule
+static,dist_to_nearest_rice_m,all,coord,0,1,127,24,25,0.16666666666666666,18,-0.007936507936507936,,not estimable: fewer than 30 pairs
+static,dist_to_nearest_rice_m,all,coord,1,2,127,19,26,0.21052631578947367,15,-0.007936507936507936,,not estimable: fewer than 30 pairs
+static,dist_to_nearest_rice_m,all,coord,2,5,127,113,83,0.10619469026548672,18,-0.007936507936507936,0.6193274307987593,computed under the predeclared rule
+static,dist_to_nearest_rice_m,all,coord,5,10,127,279,119,0.05017921146953405,0,-0.007936507936507936,0.5944876673598399,computed under the predeclared rule
+static,dist_to_nearest_rice_m,all,coord,10,20,127,774,126,0.037467700258397935,0,-0.007936507936507936,0.4121903269171437,computed under the predeclared rule
+static,dist_to_nearest_rice_m,all,coord,20,40,127,2222,127,0.03285328532853286,0,-0.007936507936507936,-0.12119481500434166,computed under the predeclared rule
+static,dist_to_nearest_rice_m,all,coord,40,80,127,3839,127,0.023183120604324044,0,-0.007936507936507936,-0.10828512907203271,computed under the predeclared rule
+static,dist_to_nearest_rice_m,all,coord,80,120,127,731,83,0.060191518467852256,0,-0.007936507936507936,0.054390527721494844,computed under the predeclared rule
+static,elevation_m,all,coord,0,1,127,24,25,0.16666666666666666,18,-0.007936507936507936,,not estimable: fewer than 30 pairs
+static,elevation_m,all,coord,1,2,127,19,26,0.21052631578947367,15,-0.007936507936507936,,not estimable: fewer than 30 pairs
+static,elevation_m,all,coord,2,5,127,113,83,0.10619469026548672,18,-0.007936507936507936,1.0839615005993868,computed under the predeclared rule
+static,elevation_m,all,coord,5,10,127,279,119,0.05017921146953405,0,-0.007936507936507936,0.9766266904172214,computed under the predeclared rule
+static,elevation_m,all,coord,10,20,127,774,126,0.037467700258397935,0,-0.007936507936507936,0.7556659477129545,computed under the predeclared rule
+static,elevation_m,all,coord,20,40,127,2222,127,0.03285328532853286,0,-0.007936507936507936,0.16514160588833962,computed under the predeclared rule
+static,elevation_m,all,coord,40,80,127,3839,127,0.023183120604324044,0,-0.007936507936507936,-0.3111234364440242,computed under the predeclared rule
+static,elevation_m,all,coord,80,120,127,731,83,0.060191518467852256,0,-0.007936507936507936,-0.35709915354161503,computed under the predeclared rule
+static,slope_deg,all,coord,0,1,127,24,25,0.16666666666666666,18,-0.007936507936507936,,not estimable: fewer than 30 pairs
+static,slope_deg,all,coord,1,2,127,19,26,0.21052631578947367,15,-0.007936507936507936,,not estimable: fewer than 30 pairs
+static,slope_deg,all,coord,2,5,127,113,83,0.10619469026548672,18,-0.007936507936507936,0.4640689964591777,computed under the predeclared rule
+static,slope_deg,all,coord,5,10,127,279,119,0.05017921146953405,0,-0.007936507936507936,0.23501649957396986,computed under the predeclared rule
+static,slope_deg,all,coord,10,20,127,774,126,0.037467700258397935,0,-0.007936507936507936,0.22917602998272188,computed under the predeclared rule
+static,slope_deg,all,coord,20,40,127,2222,127,0.03285328532853286,0,-0.007936507936507936,-0.0004909261809876092,computed under the predeclared rule
+static,slope_deg,all,coord,40,80,127,3839,127,0.023183120604324044,0,-0.007936507936507936,-0.1079765669543248,computed under the predeclared rule
+static,slope_deg,all,coord,80,120,127,731,83,0.060191518467852256,0,-0.007936507936507936,0.04367012894314773,computed under the predeclared rule
+static,dist_to_water_m,all,coord,0,1,127,24,25,0.16666666666666666,18,-0.007936507936507936,,not estimable: fewer than 30 pairs
+static,dist_to_water_m,all,coord,1,2,127,19,26,0.21052631578947367,15,-0.007936507936507936,,not estimable: fewer than 30 pairs
+static,dist_to_water_m,all,coord,2,5,127,113,83,0.10619469026548672,18,-0.007936507936507936,0.4623513449488566,computed under the predeclared rule
+static,dist_to_water_m,all,coord,5,10,127,279,119,0.05017921146953405,0,-0.007936507936507936,0.09042083324311276,computed under the predeclared rule
+static,dist_to_water_m,all,coord,10,20,127,774,126,0.037467700258397935,0,-0.007936507936507936,0.17429913193607088,computed under the predeclared rule
+static,dist_to_water_m,all,coord,20,40,127,2222,127,0.03285328532853286,0,-0.007936507936507936,-0.042161570800444394,computed under the predeclared rule
+static,dist_to_water_m,all,coord,40,80,127,3839,127,0.023183120604324044,0,-0.007936507936507936,-0.05796918551253694,computed under the predeclared rule
+static,dist_to_water_m,all,coord,80,120,127,731,83,0.060191518467852256,0,-0.007936507936507936,-0.008454985726412617,computed under the predeclared rule
+static,rice_pct_1000m,presence,coord,0,1,29,9,7,0.3333333333333333,7,-0.03571428571428571,,not estimable: fewer than 30 pairs
+static,rice_pct_1000m,presence,coord,1,2,29,5,8,0.4,4,-0.03571428571428571,,not estimable: fewer than 30 pairs
+static,rice_pct_1000m,presence,coord,2,5,29,21,19,0.23809523809523808,2,-0.03571428571428571,,not estimable: fewer than 30 pairs
+static,rice_pct_1000m,presence,coord,5,10,29,32,22,0.28125,0,-0.03571428571428571,0.098967380637361,computed under the predeclared rule
+static,rice_pct_1000m,presence,coord,10,20,29,83,28,0.13253012048192772,0,-0.03571428571428571,-0.1674236837321111,computed under the predeclared rule
+static,rice_pct_1000m,presence,coord,20,40,29,155,29,0.11612903225806452,0,-0.03571428571428571,-0.1808677977934985,computed under the predeclared rule
+static,rice_pct_1000m,presence,coord,40,80,29,100,29,0.21,0,-0.03571428571428571,0.008302035509251576,computed under the predeclared rule
+static,rice_pct_1000m,presence,coord,80,120,29,1,2,1.0,0,-0.03571428571428571,,not estimable: fewer than 30 pairs
+static,dist_to_nearest_rice_m,presence,coord,0,1,29,9,7,0.3333333333333333,7,-0.03571428571428571,,not estimable: fewer than 30 pairs
+static,dist_to_nearest_rice_m,presence,coord,1,2,29,5,8,0.4,4,-0.03571428571428571,,not estimable: fewer than 30 pairs
+static,dist_to_nearest_rice_m,presence,coord,2,5,29,21,19,0.23809523809523808,2,-0.03571428571428571,,not estimable: fewer than 30 pairs
+static,dist_to_nearest_rice_m,presence,coord,5,10,29,32,22,0.28125,0,-0.03571428571428571,0.2732236718180713,computed under the predeclared rule
+static,dist_to_nearest_rice_m,presence,coord,10,20,29,83,28,0.13253012048192772,0,-0.03571428571428571,0.09269206114006016,computed under the predeclared rule
+static,dist_to_nearest_rice_m,presence,coord,20,40,29,155,29,0.11612903225806452,0,-0.03571428571428571,-0.2115791451299638,computed under the predeclared rule
+static,dist_to_nearest_rice_m,presence,coord,40,80,29,100,29,0.21,0,-0.03571428571428571,-0.2721555650754756,computed under the predeclared rule
+static,dist_to_nearest_rice_m,presence,coord,80,120,29,1,2,1.0,0,-0.03571428571428571,,not estimable: fewer than 30 pairs
+static,elevation_m,presence,coord,0,1,29,9,7,0.3333333333333333,7,-0.03571428571428571,,not estimable: fewer than 30 pairs
+static,elevation_m,presence,coord,1,2,29,5,8,0.4,4,-0.03571428571428571,,not estimable: fewer than 30 pairs
+static,elevation_m,presence,coord,2,5,29,21,19,0.23809523809523808,2,-0.03571428571428571,,not estimable: fewer than 30 pairs
+static,elevation_m,presence,coord,5,10,29,32,22,0.28125,0,-0.03571428571428571,0.1934563608374211,computed under the predeclared rule
+static,elevation_m,presence,coord,10,20,29,83,28,0.13253012048192772,0,-0.03571428571428571,0.30472519119677355,computed under the predeclared rule
+static,elevation_m,presence,coord,20,40,29,155,29,0.11612903225806452,0,-0.03571428571428571,-0.06263803547785135,computed under the predeclared rule
+static,elevation_m,presence,coord,40,80,29,100,29,0.21,0,-0.03571428571428571,-0.456000071263232,computed under the predeclared rule
+static,elevation_m,presence,coord,80,120,29,1,2,1.0,0,-0.03571428571428571,,not estimable: fewer than 30 pairs
+static,slope_deg,presence,coord,0,1,29,9,7,0.3333333333333333,7,-0.03571428571428571,,not estimable: fewer than 30 pairs
+static,slope_deg,presence,coord,1,2,29,5,8,0.4,4,-0.03571428571428571,,not estimable: fewer than 30 pairs
+static,slope_deg,presence,coord,2,5,29,21,19,0.23809523809523808,2,-0.03571428571428571,,not estimable: fewer than 30 pairs
+static,slope_deg,presence,coord,5,10,29,32,22,0.28125,0,-0.03571428571428571,0.16769878786546602,computed under the predeclared rule
+static,slope_deg,presence,coord,10,20,29,83,28,0.13253012048192772,0,-0.03571428571428571,0.10201237595170465,computed under the predeclared rule
+static,slope_deg,presence,coord,20,40,29,155,29,0.11612903225806452,0,-0.03571428571428571,-0.050509794861090494,computed under the predeclared rule
+static,slope_deg,presence,coord,40,80,29,100,29,0.21,0,-0.03571428571428571,-0.2187305576727785,computed under the predeclared rule
+static,slope_deg,presence,coord,80,120,29,1,2,1.0,0,-0.03571428571428571,,not estimable: fewer than 30 pairs
+static,dist_to_water_m,presence,coord,0,1,29,9,7,0.3333333333333333,7,-0.03571428571428571,,not estimable: fewer than 30 pairs
+static,dist_to_water_m,presence,coord,1,2,29,5,8,0.4,4,-0.03571428571428571,,not estimable: fewer than 30 pairs
+static,dist_to_water_m,presence,coord,2,5,29,21,19,0.23809523809523808,2,-0.03571428571428571,,not estimable: fewer than 30 pairs
+static,dist_to_water_m,presence,coord,5,10,29,32,22,0.28125,0,-0.03571428571428571,-0.06234285391010414,computed under the predeclared rule
+static,dist_to_water_m,presence,coord,10,20,29,83,28,0.13253012048192772,0,-0.03571428571428571,-0.18179684770046234,computed under the predeclared rule
+static,dist_to_water_m,presence,coord,20,40,29,155,29,0.11612903225806452,0,-0.03571428571428571,-0.09961212875239385,computed under the predeclared rule
+static,dist_to_water_m,presence,coord,40,80,29,100,29,0.21,0,-0.03571428571428571,0.09908891868993666,computed under the predeclared rule
+static,dist_to_water_m,presence,coord,80,120,29,1,2,1.0,0,-0.03571428571428571,,not estimable: fewer than 30 pairs
+static,rice_pct_1000m,background,coord,0,1,103,10,17,0.2,8,-0.00980392156862745,,not estimable: fewer than 30 pairs
+static,rice_pct_1000m,background,coord,1,2,103,10,16,0.2,8,-0.00980392156862745,,not estimable: fewer than 30 pairs
+static,rice_pct_1000m,background,coord,2,5,103,65,58,0.1076923076923077,9,-0.00980392156862745,0.136799165348615,computed under the predeclared rule
+static,rice_pct_1000m,background,coord,5,10,103,190,96,0.05789473684210526,0,-0.00980392156862745,0.25399444449743447,computed under the predeclared rule
+static,rice_pct_1000m,background,coord,10,20,103,488,102,0.055327868852459015,0,-0.00980392156862745,0.0038569051275462204,computed under the predeclared rule
+static,rice_pct_1000m,background,coord,20,40,103,1343,103,0.04169769173492182,0,-0.00980392156862745,-0.03613011038231131,computed under the predeclared rule
+static,rice_pct_1000m,background,coord,40,80,103,2513,103,0.03103859928372463,0,-0.00980392156862745,-0.03180094206021562,computed under the predeclared rule
+static,rice_pct_1000m,background,coord,80,120,103,634,78,0.0694006309148265,0,-0.00980392156862745,0.02665360795068304,computed under the predeclared rule
+static,dist_to_nearest_rice_m,background,coord,0,1,103,10,17,0.2,8,-0.00980392156862745,,not estimable: fewer than 30 pairs
+static,dist_to_nearest_rice_m,background,coord,1,2,103,10,16,0.2,8,-0.00980392156862745,,not estimable: fewer than 30 pairs
+static,dist_to_nearest_rice_m,background,coord,2,5,103,65,58,0.1076923076923077,9,-0.00980392156862745,0.5967881314290107,computed under the predeclared rule
+static,dist_to_nearest_rice_m,background,coord,5,10,103,190,96,0.05789473684210526,0,-0.00980392156862745,0.48798516050910345,computed under the predeclared rule
+static,dist_to_nearest_rice_m,background,coord,10,20,103,488,102,0.055327868852459015,0,-0.00980392156862745,0.21935470897816337,computed under the predeclared rule
+static,dist_to_nearest_rice_m,background,coord,20,40,103,1343,103,0.04169769173492182,0,-0.00980392156862745,-0.06172066320980163,computed under the predeclared rule
+static,dist_to_nearest_rice_m,background,coord,40,80,103,2513,103,0.03103859928372463,0,-0.00980392156862745,-0.09477158323923156,computed under the predeclared rule
+static,dist_to_nearest_rice_m,background,coord,80,120,103,634,78,0.0694006309148265,0,-0.00980392156862745,0.027742574132569656,computed under the predeclared rule
+static,elevation_m,background,coord,0,1,103,10,17,0.2,8,-0.00980392156862745,,not estimable: fewer than 30 pairs
+static,elevation_m,background,coord,1,2,103,10,16,0.2,8,-0.00980392156862745,,not estimable: fewer than 30 pairs
+static,elevation_m,background,coord,2,5,103,65,58,0.1076923076923077,9,-0.00980392156862745,1.0736979339058845,computed under the predeclared rule
+static,elevation_m,background,coord,5,10,103,190,96,0.05789473684210526,0,-0.00980392156862745,0.9629504299813508,computed under the predeclared rule
+static,elevation_m,background,coord,10,20,103,488,102,0.055327868852459015,0,-0.00980392156862745,0.6675937315456512,computed under the predeclared rule
+static,elevation_m,background,coord,20,40,103,1343,103,0.04169769173492182,0,-0.00980392156862745,0.1720799868387049,computed under the predeclared rule
+static,elevation_m,background,coord,40,80,103,2513,103,0.03103859928372463,0,-0.00980392156862745,-0.24968791898400397,computed under the predeclared rule
+static,elevation_m,background,coord,80,120,103,634,78,0.0694006309148265,0,-0.00980392156862745,-0.4042431306377469,computed under the predeclared rule
+static,slope_deg,background,coord,0,1,103,10,17,0.2,8,-0.00980392156862745,,not estimable: fewer than 30 pairs
+static,slope_deg,background,coord,1,2,103,10,16,0.2,8,-0.00980392156862745,,not estimable: fewer than 30 pairs
+static,slope_deg,background,coord,2,5,103,65,58,0.1076923076923077,9,-0.00980392156862745,0.3029680195562959,computed under the predeclared rule
+static,slope_deg,background,coord,5,10,103,190,96,0.05789473684210526,0,-0.00980392156862745,0.10011277488252689,computed under the predeclared rule
+static,slope_deg,background,coord,10,20,103,488,102,0.055327868852459015,0,-0.00980392156862745,0.0563431204014463,computed under the predeclared rule
+static,slope_deg,background,coord,20,40,103,1343,103,0.04169769173492182,0,-0.00980392156862745,0.01083204679692726,computed under the predeclared rule
+static,slope_deg,background,coord,40,80,103,2513,103,0.03103859928372463,0,-0.00980392156862745,-0.060821250975864306,computed under the predeclared rule
+static,slope_deg,background,coord,80,120,103,634,78,0.0694006309148265,0,-0.00980392156862745,0.014600002887297906,computed under the predeclared rule
+static,dist_to_water_m,background,coord,0,1,103,10,17,0.2,8,-0.00980392156862745,,not estimable: fewer than 30 pairs
+static,dist_to_water_m,background,coord,1,2,103,10,16,0.2,8,-0.00980392156862745,,not estimable: fewer than 30 pairs
+static,dist_to_water_m,background,coord,2,5,103,65,58,0.1076923076923077,9,-0.00980392156862745,0.5545251944864487,computed under the predeclared rule
+static,dist_to_water_m,background,coord,5,10,103,190,96,0.05789473684210526,0,-0.00980392156862745,0.11321183365421646,computed under the predeclared rule
+static,dist_to_water_m,background,coord,10,20,103,488,102,0.055327868852459015,0,-0.00980392156862745,0.21256919781548292,computed under the predeclared rule
+static,dist_to_water_m,background,coord,20,40,103,1343,103,0.04169769173492182,0,-0.00980392156862745,-0.06686239366588462,computed under the predeclared rule
+static,dist_to_water_m,background,coord,40,80,103,2513,103,0.03103859928372463,0,-0.00980392156862745,-0.05527833399580484,computed under the predeclared rule
+static,dist_to_water_m,background,coord,80,120,103,634,78,0.0694006309148265,0,-0.00980392156862745,-0.011882630554256843,computed under the predeclared rule
+dynamic,rainfall_30d,all,coord_date,0,1,195,3,6,0.3333333333333333,2,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,rainfall_30d,all,coord_date,1,2,195,2,4,0.5,2,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,rainfall_30d,all,coord_date,2,5,195,1,2,1.0,1,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,rainfall_30d,all,coord_date,5,10,195,3,6,0.3333333333333333,0,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,rainfall_30d,all,coord_date,10,20,195,3,6,0.3333333333333333,0,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,rainfall_30d,all,coord_date,20,40,195,0,0,,0,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,rainfall_30d,all,coord_date,40,80,195,3,6,0.3333333333333333,0,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,rainfall_30d,all,coord_date,80,120,195,0,0,,0,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,temp_mean_7d,all,coord_date,0,1,195,3,6,0.3333333333333333,2,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,temp_mean_7d,all,coord_date,1,2,195,2,4,0.5,2,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,temp_mean_7d,all,coord_date,2,5,195,1,2,1.0,1,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,temp_mean_7d,all,coord_date,5,10,195,3,6,0.3333333333333333,0,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,temp_mean_7d,all,coord_date,10,20,195,3,6,0.3333333333333333,0,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,temp_mean_7d,all,coord_date,20,40,195,0,0,,0,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,temp_mean_7d,all,coord_date,40,80,195,3,6,0.3333333333333333,0,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,temp_mean_7d,all,coord_date,80,120,195,0,0,,0,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,dewpoint_mean_7d,all,coord_date,0,1,195,3,6,0.3333333333333333,2,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,dewpoint_mean_7d,all,coord_date,1,2,195,2,4,0.5,2,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,dewpoint_mean_7d,all,coord_date,2,5,195,1,2,1.0,1,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,dewpoint_mean_7d,all,coord_date,5,10,195,3,6,0.3333333333333333,0,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,dewpoint_mean_7d,all,coord_date,10,20,195,3,6,0.3333333333333333,0,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,dewpoint_mean_7d,all,coord_date,20,40,195,0,0,,0,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,dewpoint_mean_7d,all,coord_date,40,80,195,3,6,0.3333333333333333,0,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,dewpoint_mean_7d,all,coord_date,80,120,195,0,0,,0,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,wind_mean_7d,all,coord_date,0,1,195,3,6,0.3333333333333333,2,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,wind_mean_7d,all,coord_date,1,2,195,2,4,0.5,2,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,wind_mean_7d,all,coord_date,2,5,195,1,2,1.0,1,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,wind_mean_7d,all,coord_date,5,10,195,3,6,0.3333333333333333,0,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,wind_mean_7d,all,coord_date,10,20,195,3,6,0.3333333333333333,0,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,wind_mean_7d,all,coord_date,20,40,195,0,0,,0,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,wind_mean_7d,all,coord_date,40,80,195,3,6,0.3333333333333333,0,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,wind_mean_7d,all,coord_date,80,120,195,0,0,,0,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,ndvi_nearest_composite,all,coord_date,0,1,195,3,6,0.3333333333333333,2,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,ndvi_nearest_composite,all,coord_date,1,2,195,2,4,0.5,2,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,ndvi_nearest_composite,all,coord_date,2,5,195,1,2,1.0,1,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,ndvi_nearest_composite,all,coord_date,5,10,195,3,6,0.3333333333333333,0,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,ndvi_nearest_composite,all,coord_date,10,20,195,3,6,0.3333333333333333,0,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,ndvi_nearest_composite,all,coord_date,20,40,195,0,0,,0,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,ndvi_nearest_composite,all,coord_date,40,80,195,3,6,0.3333333333333333,0,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,ndvi_nearest_composite,all,coord_date,80,120,195,0,0,,0,-0.005154639175257732,,not estimable: fewer than 30 pairs
+dynamic,rainfall_30d,presence,coord_date,0,1,86,2,4,0.5,1,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,rainfall_30d,presence,coord_date,1,2,86,1,2,1.0,1,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,rainfall_30d,presence,coord_date,2,5,86,1,2,1.0,1,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,rainfall_30d,presence,coord_date,5,10,86,2,4,0.5,0,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,rainfall_30d,presence,coord_date,10,20,86,2,4,0.5,0,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,rainfall_30d,presence,coord_date,20,40,86,0,0,,0,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,rainfall_30d,presence,coord_date,40,80,86,0,0,,0,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,rainfall_30d,presence,coord_date,80,120,86,0,0,,0,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,temp_mean_7d,presence,coord_date,0,1,86,2,4,0.5,1,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,temp_mean_7d,presence,coord_date,1,2,86,1,2,1.0,1,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,temp_mean_7d,presence,coord_date,2,5,86,1,2,1.0,1,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,temp_mean_7d,presence,coord_date,5,10,86,2,4,0.5,0,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,temp_mean_7d,presence,coord_date,10,20,86,2,4,0.5,0,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,temp_mean_7d,presence,coord_date,20,40,86,0,0,,0,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,temp_mean_7d,presence,coord_date,40,80,86,0,0,,0,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,temp_mean_7d,presence,coord_date,80,120,86,0,0,,0,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,dewpoint_mean_7d,presence,coord_date,0,1,86,2,4,0.5,1,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,dewpoint_mean_7d,presence,coord_date,1,2,86,1,2,1.0,1,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,dewpoint_mean_7d,presence,coord_date,2,5,86,1,2,1.0,1,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,dewpoint_mean_7d,presence,coord_date,5,10,86,2,4,0.5,0,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,dewpoint_mean_7d,presence,coord_date,10,20,86,2,4,0.5,0,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,dewpoint_mean_7d,presence,coord_date,20,40,86,0,0,,0,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,dewpoint_mean_7d,presence,coord_date,40,80,86,0,0,,0,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,dewpoint_mean_7d,presence,coord_date,80,120,86,0,0,,0,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,wind_mean_7d,presence,coord_date,0,1,86,2,4,0.5,1,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,wind_mean_7d,presence,coord_date,1,2,86,1,2,1.0,1,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,wind_mean_7d,presence,coord_date,2,5,86,1,2,1.0,1,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,wind_mean_7d,presence,coord_date,5,10,86,2,4,0.5,0,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,wind_mean_7d,presence,coord_date,10,20,86,2,4,0.5,0,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,wind_mean_7d,presence,coord_date,20,40,86,0,0,,0,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,wind_mean_7d,presence,coord_date,40,80,86,0,0,,0,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,wind_mean_7d,presence,coord_date,80,120,86,0,0,,0,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,ndvi_nearest_composite,presence,coord_date,0,1,86,2,4,0.5,1,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,ndvi_nearest_composite,presence,coord_date,1,2,86,1,2,1.0,1,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,ndvi_nearest_composite,presence,coord_date,2,5,86,1,2,1.0,1,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,ndvi_nearest_composite,presence,coord_date,5,10,86,2,4,0.5,0,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,ndvi_nearest_composite,presence,coord_date,10,20,86,2,4,0.5,0,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,ndvi_nearest_composite,presence,coord_date,20,40,86,0,0,,0,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,ndvi_nearest_composite,presence,coord_date,40,80,86,0,0,,0,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,ndvi_nearest_composite,presence,coord_date,80,120,86,0,0,,0,-0.011764705882352941,,not estimable: fewer than 30 pairs
+dynamic,rainfall_30d,background,coord_date,0,1,109,1,2,1.0,1,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,rainfall_30d,background,coord_date,1,2,109,1,2,1.0,1,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,rainfall_30d,background,coord_date,2,5,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,rainfall_30d,background,coord_date,5,10,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,rainfall_30d,background,coord_date,10,20,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,rainfall_30d,background,coord_date,20,40,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,rainfall_30d,background,coord_date,40,80,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,rainfall_30d,background,coord_date,80,120,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,temp_mean_7d,background,coord_date,0,1,109,1,2,1.0,1,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,temp_mean_7d,background,coord_date,1,2,109,1,2,1.0,1,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,temp_mean_7d,background,coord_date,2,5,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,temp_mean_7d,background,coord_date,5,10,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,temp_mean_7d,background,coord_date,10,20,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,temp_mean_7d,background,coord_date,20,40,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,temp_mean_7d,background,coord_date,40,80,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,temp_mean_7d,background,coord_date,80,120,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,dewpoint_mean_7d,background,coord_date,0,1,109,1,2,1.0,1,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,dewpoint_mean_7d,background,coord_date,1,2,109,1,2,1.0,1,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,dewpoint_mean_7d,background,coord_date,2,5,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,dewpoint_mean_7d,background,coord_date,5,10,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,dewpoint_mean_7d,background,coord_date,10,20,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,dewpoint_mean_7d,background,coord_date,20,40,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,dewpoint_mean_7d,background,coord_date,40,80,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,dewpoint_mean_7d,background,coord_date,80,120,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,wind_mean_7d,background,coord_date,0,1,109,1,2,1.0,1,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,wind_mean_7d,background,coord_date,1,2,109,1,2,1.0,1,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,wind_mean_7d,background,coord_date,2,5,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,wind_mean_7d,background,coord_date,5,10,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,wind_mean_7d,background,coord_date,10,20,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,wind_mean_7d,background,coord_date,20,40,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,wind_mean_7d,background,coord_date,40,80,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,wind_mean_7d,background,coord_date,80,120,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,ndvi_nearest_composite,background,coord_date,0,1,109,1,2,1.0,1,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,ndvi_nearest_composite,background,coord_date,1,2,109,1,2,1.0,1,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,ndvi_nearest_composite,background,coord_date,2,5,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,ndvi_nearest_composite,background,coord_date,5,10,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,ndvi_nearest_composite,background,coord_date,10,20,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,ndvi_nearest_composite,background,coord_date,20,40,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,ndvi_nearest_composite,background,coord_date,40,80,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs
+dynamic,ndvi_nearest_composite,background,coord_date,80,120,109,0,0,,0,-0.009259259259259259,,not estimable: fewer than 30 pairs

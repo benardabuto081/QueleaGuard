@@ -1,0 +1,487 @@
+{
+  "analysis_id": "D",
+  "assertions": [
+    {
+      "detail": "60e1fd7654bc20322fdc2c00c32a2ef95d117a87",
+      "fatal": true,
+      "name": "gated_blob:data/processed/modelling_dataset_final.csv",
+      "passed": true
+    },
+    {
+      "detail": "67d8fec7c2b7aab6e98035cc8c916baf826338d0",
+      "fatal": true,
+      "name": "gated_blob:data/processed/spatial_cv_folds.csv",
+      "passed": true
+    },
+    {
+      "detail": "0b617c9f90d42c692c711a5d95a700cb585396ab",
+      "fatal": true,
+      "name": "gated_blob:data/processed/pseudo_absences_final.csv",
+      "passed": true
+    },
+    {
+      "detail": "b569741912a4bc20465bdb031cf68de60bfe1494",
+      "fatal": true,
+      "name": "protocol_blob_at_HEAD",
+      "passed": true
+    },
+    {
+      "detail": "b569741912a4bc20465bdb031cf68de60bfe1494",
+      "fatal": false,
+      "name": "protocol_blob_in_working_copy",
+      "passed": true
+    },
+    {
+      "detail": "['record_key', 'grid_cell_id', 'observation_date', 'presence', 'record_type', 'within_scheme_boundary', 'latitude', 'longitude', 'month', 'day_of_year', 'season', 'rainfall_7d', 'rainfall_30d', 'rainfall_90d', 'temp_mean_7d', 'dewpoint_mean_7d', 'wind_mean_7d', 'temp_same_day', 'dewpoint_same_day', 'wind_same_day', 'ndvi_nearest_composite', 'ndvi_anomaly', 'rice_pct_500m', 'rice_pct_1000m', 'rice_pct_2000m', 'dist_to_nearest_rice_m', 'elevation_m', 'slope_deg', 'dist_to_water_m']",
+      "fatal": true,
+      "name": "dataset_columns_exact_29",
+      "passed": true
+    },
+    {
+      "detail": "266",
+      "fatal": true,
+      "name": "dataset_rows_266",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "fatal": true,
+      "name": "record_keys_unique",
+      "passed": true
+    },
+    {
+      "detail": "{1: 133, 0: 133}",
+      "fatal": true,
+      "name": "classes_133_133",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "fatal": true,
+      "name": "no_missing_cells",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "fatal": true,
+      "name": "fold_keys_match_dataset",
+      "passed": true
+    },
+    {
+      "detail": "{0: (8, 42), 1: (9, 5), 2: (11, 20), 3: (36, 22), 4: (69, 44)}",
+      "fatal": true,
+      "name": "per_fold_class_counts",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "fatal": true,
+      "name": "background_keys_equal_pseudo_absences_final",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "fatal": true,
+      "name": "presence_keys_in_occurrences",
+      "passed": true
+    },
+    {
+      "detail": "[8, 9, 11, 36, 69]",
+      "fatal": false,
+      "name": "D1_presence_records_per_fold",
+      "passed": true
+    },
+    {
+      "detail": "[5, 2, 6, 9, 7]",
+      "fatal": false,
+      "name": "D1_presence_coordinates_per_fold",
+      "passed": true
+    },
+    {
+      "detail": "[4, 2, 5, 6, 3]",
+      "fatal": false,
+      "name": "D1_presence_cells_per_fold",
+      "passed": true
+    },
+    {
+      "detail": "[5, 6, 10, 24, 41]",
+      "fatal": false,
+      "name": "D1_presence_vectors_per_fold",
+      "passed": true
+    },
+    {
+      "detail": "(133, 29, 20, 86)",
+      "fatal": false,
+      "name": "D1_presence_totals_133_29_20_86",
+      "passed": true
+    },
+    {
+      "detail": "{'fold': np.int64(4), 'records': np.int64(62), 'cells': np.int64(1), 'coords': np.int64(3), 'dates': np.int64(36), 'coord_dates': np.int64(36), 'vectors': np.int64(36), 'year_min': np.int64(2011), 'year_max': np.int64(2024), 'presences': np.int64(60), 'presence_coords': np.int64(2), 'presence_dates': np.int64(34), 'presence_year_min': np.int64(2011), 'presence_year_max': np.int64(2024), 'background': np.int64(2)}",
+      "fatal": false,
+      "name": "D1_cell_0080_60_presences_2_background_fold4",
+      "passed": true
+    },
+    {
+      "detail": "{'fold': np.int64(3), 'records': np.int64(27), 'cells': np.int64(1), 'coords': np.int64(4), 'dates': np.int64(17), 'coord_dates': np.int64(18), 'vectors': np.int64(18), 'year_min': np.int64(2000), 'year_max': np.int64(2026), 'presences': np.int64(27), 'presence_coords': np.int64(4), 'presence_dates': np.int64(17), 'presence_year_min': np.int64(2000), 'presence_year_max': np.int64(2026), 'background': np.int64(0)}",
+      "fatal": false,
+      "name": "D1_cell_0156_27_presences_0_background_fold3",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "fatal": false,
+      "name": "D1_two_cells_hold_87_presences",
+      "passed": true
+    },
+    {
+      "detail": "47",
+      "fatal": false,
+      "name": "D1_47_presence_records_repeat_a_coordinate_and_date",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "fatal": false,
+      "name": "D3a_predictors_constant_within_unit",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "fatal": false,
+      "name": "D3b_each_presence_coordinate_in_one_fold",
+      "passed": true
+    },
+    {
+      "detail": "(406, 83, 323)",
+      "fatal": false,
+      "name": "D3b_pair_counts_406_83_323",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "fatal": true,
+      "name": "D4_every_record_cell_found_in_analysis_grid",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "fatal": false,
+      "name": "D4_centroids_inside_era5_download_area",
+      "passed": true
+    },
+    {
+      "detail": "0",
+      "fatal": false,
+      "name": "D4_no_era5_nearest_point_ties",
+      "passed": true
+    },
+    {
+      "detail": "[42, 5, 20, 22, 44]",
+      "fatal": false,
+      "name": "D7_background_records_per_fold",
+      "passed": true
+    },
+    {
+      "detail": "[37, 4, 15, 16, 37]",
+      "fatal": false,
+      "name": "D7_background_vectors_per_fold",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "fatal": false,
+      "name": "protected_inputs_and_existing_audit_files_unchanged",
+      "passed": true
+    }
+  ],
+  "finished_utc": "2026-11-12T08:49:13Z",
+  "git_status_short": "?? reports/cv_audit/",
+  "hashes_after": {
+    "data/processed/modelling_dataset_final.csv": {
+      "blob": "60e1fd7654bc20322fdc2c00c32a2ef95d117a87",
+      "sha256": "bab0e34a30b97d7e0211d5e7f0c5b2bbf191e62a798495ebf4e15c0f86ebe7f1"
+    },
+    "data/processed/pseudo_absences_final.csv": {
+      "blob": "0b617c9f90d42c692c711a5d95a700cb585396ab",
+      "sha256": "6f012e1f84ddab0d0f11f99bd2c2bab3a5677f73baf4db7a7adc1156580d4a63"
+    },
+    "data/processed/spatial_cv_folds.csv": {
+      "blob": "67d8fec7c2b7aab6e98035cc8c916baf826338d0",
+      "sha256": "d2b305b5e7ab66fe818376eefd85e340698dd6ecb3ad616c85082b597d25bd0b"
+    },
+    "docs/cv_audit_protocol_v1_2.md": {
+      "blob": "b569741912a4bc20465bdb031cf68de60bfe1494",
+      "sha256": "9261b14afffb438775767a4fc21df7fcfe40a5cfb43b401ac40fe646cf1495b2"
+    },
+    "reports/baseline_logistic_regression_cv_results.csv": {
+      "blob": "2501d2aaa53b21e36ae0c996141367a181806b1f",
+      "sha256": "72a45fce02df7e935e6d8ed2c7926412676194777f7a66470fea81787fdf657a"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d1_site_inventory.csv": {
+      "sha256": "151491f9fd8839ad66946afc0047fc5b61100f188ef3f84d829c9b0b7f683f1b"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d2_cross_fold_distance_summary.csv": {
+      "sha256": "bd06d32e1c1fa3363a47266b5cf23b3ecd88c21691c53cc0504ed098d163f1c2"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d2_cross_fold_distance_vectors.csv": {
+      "sha256": "31ebdbbd7a5326e6c1b4592eeae454a9e0216711b04e11876101f81732b92032"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d3a_banded_morans_i.csv": {
+      "sha256": "fed39e7bc5ffee5453f9956336a8b42fcbc7acb6638125a2c673144027ec997c"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d3b_nearest_neighbour_per_site.csv": {
+      "sha256": "c1efd7276b4de4ec645d00790fcd8183a37d1daf8e51a424e98d14854d05e2d1"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d3b_nearest_neighbour_sorted.csv": {
+      "sha256": "613322b00d1e7e25f955dc955ff42828c2c0bc3529d57bce555a1ad758a1b104"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d3b_nearest_neighbour_summary.json": {
+      "sha256": "e27a4a0781c2602bc5ba363c7b9f47354ab2bc583f1bde2bc782e7d671f9b679"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d3b_pairwise_band_counts.csv": {
+      "sha256": "9f8273eda8e2628ac1c850cc2e19adaa38596abf89771dce944526e62e246a27"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d4_analysis_cell_mapping.csv": {
+      "sha256": "b50d6a9656031e939b6d850720f65dc136f3d95d798691fa10b8476c492fced2"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d4_mapping_validation.csv": {
+      "sha256": "8ba6a75b028c2b299c2ddc290d1844df6be218a692af5110912ca8ff5159a74d"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d4_shared_inputs_per_test_record.csv": {
+      "sha256": "fdd000a9eec4462ebb01122400e4102985bbadc91441b1abe7d765570040bb06"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d4_shared_inputs_summary.csv": {
+      "sha256": "8015718b056dbfdf1f5896f8262f9cb9f829c378a2c9a5000370c182c49855d2"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d5_dates_shared_across_folds.csv": {
+      "sha256": "e3d2a7bb9c7459b0e910509b9e587807a4f195e2e7536922d41d88a371c5fe5e"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d5_month_by_year_by_fold.csv": {
+      "sha256": "f2457bb0eb69801c8abf9692c50bf8356870f01e7914d4b48e3a364ff6119929"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d5_season_by_year_by_fold.csv": {
+      "sha256": "70c3f6d30025dc4ad06a11d9b4d1afac4e6fa018a0d29c6145707d80f487c3db"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d6_mahalanobis_fold_summary.csv": {
+      "sha256": "fc989084f5ca813f380470fafff619b7933be91b3e3a455c11829c672ba6bd38"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d6_mahalanobis_per_distinct_vector.csv": {
+      "sha256": "6cbd25d80e5202415e6fefdc7175c9fcf92cfea6c5e37654a846f4fb30f222b0"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d6_mahalanobis_per_record.csv": {
+      "sha256": "5c9f789c0090796c53e34949f4a1f5cdb2fe5e2fdbf5e61a3db5b1d210ff10ac"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d6_univariate_range.csv": {
+      "sha256": "48bd51ed2e6c0700fa8c3d7218f80709840a3d24fb12be2473f021b333608dc4"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d7_composition_by_fold_and_class.csv": {
+      "sha256": "746fe61c496b9576122733d86d36d2b9e3aaf597d1c67e9c95e32973cb582bcc"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/manifest.json": {
+      "sha256": "787ab0b4d183b519023900f490be9bdb19b1a470a69aa03d6817c07426a281f8"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/run_summary.txt": {
+      "sha256": "1c9e09d01160965b0ac4b6a78a6b2b6e8a22724e82a2113a2b653c28488172bc"
+    },
+    "src/diagnose_baseline_calibration.py": {
+      "blob": "21cbaa037df20ca41023a94be5c4d0b1505b82de",
+      "sha256": "8073d776b134fc438284b90c34b43236a970736c84f8494450d2625f3ec0324b"
+    },
+    "src/diagnose_fold4_persistent_site.py": {
+      "blob": "09a3c155cbe416e3a8335750a8252b0acb282544",
+      "sha256": "fc6d49c1b00bc3536fc3101f015268c29aa35e4bca52b31588bf5988f65403f4"
+    },
+    "src/train_baseline_logistic_regression.py": {
+      "blob": "fefea508c3271a95ea78bc89f4f21539cbae72db",
+      "sha256": "aea00ff6d05dbcea8698dc8541d598e44cd656f98a329611e9e3698debecbec0"
+    }
+  },
+  "hashes_before": {
+    "data/processed/modelling_dataset_final.csv": {
+      "blob": "60e1fd7654bc20322fdc2c00c32a2ef95d117a87",
+      "sha256": "bab0e34a30b97d7e0211d5e7f0c5b2bbf191e62a798495ebf4e15c0f86ebe7f1"
+    },
+    "data/processed/pseudo_absences_final.csv": {
+      "blob": "0b617c9f90d42c692c711a5d95a700cb585396ab",
+      "sha256": "6f012e1f84ddab0d0f11f99bd2c2bab3a5677f73baf4db7a7adc1156580d4a63"
+    },
+    "data/processed/spatial_cv_folds.csv": {
+      "blob": "67d8fec7c2b7aab6e98035cc8c916baf826338d0",
+      "sha256": "d2b305b5e7ab66fe818376eefd85e340698dd6ecb3ad616c85082b597d25bd0b"
+    },
+    "docs/cv_audit_protocol_v1_2.md": {
+      "blob": "b569741912a4bc20465bdb031cf68de60bfe1494",
+      "sha256": "9261b14afffb438775767a4fc21df7fcfe40a5cfb43b401ac40fe646cf1495b2"
+    },
+    "reports/baseline_logistic_regression_cv_results.csv": {
+      "blob": "2501d2aaa53b21e36ae0c996141367a181806b1f",
+      "sha256": "72a45fce02df7e935e6d8ed2c7926412676194777f7a66470fea81787fdf657a"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d1_site_inventory.csv": {
+      "sha256": "151491f9fd8839ad66946afc0047fc5b61100f188ef3f84d829c9b0b7f683f1b"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d2_cross_fold_distance_summary.csv": {
+      "sha256": "bd06d32e1c1fa3363a47266b5cf23b3ecd88c21691c53cc0504ed098d163f1c2"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d2_cross_fold_distance_vectors.csv": {
+      "sha256": "31ebdbbd7a5326e6c1b4592eeae454a9e0216711b04e11876101f81732b92032"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d3a_banded_morans_i.csv": {
+      "sha256": "fed39e7bc5ffee5453f9956336a8b42fcbc7acb6638125a2c673144027ec997c"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d3b_nearest_neighbour_per_site.csv": {
+      "sha256": "c1efd7276b4de4ec645d00790fcd8183a37d1daf8e51a424e98d14854d05e2d1"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d3b_nearest_neighbour_sorted.csv": {
+      "sha256": "613322b00d1e7e25f955dc955ff42828c2c0bc3529d57bce555a1ad758a1b104"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d3b_nearest_neighbour_summary.json": {
+      "sha256": "e27a4a0781c2602bc5ba363c7b9f47354ab2bc583f1bde2bc782e7d671f9b679"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d3b_pairwise_band_counts.csv": {
+      "sha256": "9f8273eda8e2628ac1c850cc2e19adaa38596abf89771dce944526e62e246a27"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d4_analysis_cell_mapping.csv": {
+      "sha256": "b50d6a9656031e939b6d850720f65dc136f3d95d798691fa10b8476c492fced2"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d4_mapping_validation.csv": {
+      "sha256": "8ba6a75b028c2b299c2ddc290d1844df6be218a692af5110912ca8ff5159a74d"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d4_shared_inputs_per_test_record.csv": {
+      "sha256": "fdd000a9eec4462ebb01122400e4102985bbadc91441b1abe7d765570040bb06"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d4_shared_inputs_summary.csv": {
+      "sha256": "8015718b056dbfdf1f5896f8262f9cb9f829c378a2c9a5000370c182c49855d2"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d5_dates_shared_across_folds.csv": {
+      "sha256": "e3d2a7bb9c7459b0e910509b9e587807a4f195e2e7536922d41d88a371c5fe5e"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d5_month_by_year_by_fold.csv": {
+      "sha256": "f2457bb0eb69801c8abf9692c50bf8356870f01e7914d4b48e3a364ff6119929"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d5_season_by_year_by_fold.csv": {
+      "sha256": "70c3f6d30025dc4ad06a11d9b4d1afac4e6fa018a0d29c6145707d80f487c3db"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d6_mahalanobis_fold_summary.csv": {
+      "sha256": "fc989084f5ca813f380470fafff619b7933be91b3e3a455c11829c672ba6bd38"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d6_mahalanobis_per_distinct_vector.csv": {
+      "sha256": "6cbd25d80e5202415e6fefdc7175c9fcf92cfea6c5e37654a846f4fb30f222b0"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d6_mahalanobis_per_record.csv": {
+      "sha256": "5c9f789c0090796c53e34949f4a1f5cdb2fe5e2fdbf5e61a3db5b1d210ff10ac"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d6_univariate_range.csv": {
+      "sha256": "48bd51ed2e6c0700fa8c3d7218f80709840a3d24fb12be2473f021b333608dc4"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/d7_composition_by_fold_and_class.csv": {
+      "sha256": "746fe61c496b9576122733d86d36d2b9e3aaf597d1c67e9c95e32973cb582bcc"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/manifest.json": {
+      "sha256": "787ab0b4d183b519023900f490be9bdb19b1a470a69aa03d6817c07426a281f8"
+    },
+    "reports/cv_audit/D_20261111T201804Z_05b7a93/run_summary.txt": {
+      "sha256": "1c9e09d01160965b0ac4b6a78a6b2b6e8a22724e82a2113a2b653c28488172bc"
+    },
+    "src/diagnose_baseline_calibration.py": {
+      "blob": "21cbaa037df20ca41023a94be5c4d0b1505b82de",
+      "sha256": "8073d776b134fc438284b90c34b43236a970736c84f8494450d2625f3ec0324b"
+    },
+    "src/diagnose_fold4_persistent_site.py": {
+      "blob": "09a3c155cbe416e3a8335750a8252b0acb282544",
+      "sha256": "fc6d49c1b00bc3536fc3101f015268c29aa35e4bca52b31588bf5988f65403f4"
+    },
+    "src/train_baseline_logistic_regression.py": {
+      "blob": "fefea508c3271a95ea78bc89f4f21539cbae72db",
+      "sha256": "aea00ff6d05dbcea8698dc8541d598e44cd656f98a329611e9e3698debecbec0"
+    }
+  },
+  "head": "05b7a935353447eb5e2834c56e2473cdc72be2bf",
+  "library_versions": {
+    "geopandas": "1.1.4",
+    "netCDF4": "1.7.4",
+    "numpy": "2.5.1",
+    "pandas": "3.0.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "pyproj": "3.7.2",
+    "python": "3.14.3",
+    "rasterio": "1.5.0",
+    "scipy": "1.18.0",
+    "shapely": "2.1.2",
+    "sklearn": "1.9.0"
+  },
+  "parameters": {
+    "D4_chirps_grid": {
+      "origin_lat": 50.0,
+      "origin_lon": -180.0,
+      "pixel_h": 0.05,
+      "pixel_w": 0.05,
+      "source": "no cached CHIRPS raster available; documented CHIRPS global 0.05 degree grid, origin (-180, 50)"
+    },
+    "D4_era5_grid": {
+      "area": {
+        "east": 35.6,
+        "north": 1.0,
+        "south": -1.0,
+        "west": 34.2
+      },
+      "resolution_deg": 0.1,
+      "source": "documented 0.1 degree lattice, nearest point; extraction used xarray sel(method='nearest')"
+    },
+    "bands_km": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        5,
+        10
+      ],
+      [
+        10,
+        20
+      ],
+      [
+        20,
+        40
+      ],
+      [
+        40,
+        80
+      ],
+      [
+        80,
+        120
+      ]
+    ],
+    "earth_radius_km": 6371.0088,
+    "kappa_limit": 100000000.0,
+    "min_distinct_vectors": 11,
+    "min_pairs_per_band": 30,
+    "numeric_predictors": [
+      "rice_pct_1000m",
+      "dist_to_nearest_rice_m",
+      "elevation_m",
+      "slope_deg",
+      "dist_to_water_m",
+      "rainfall_30d",
+      "temp_mean_7d",
+      "dewpoint_mean_7d",
+      "wind_mean_7d",
+      "ndvi_nearest_composite"
+    ]
+  },
+  "script_blobs": {
+    "src/cv_audit_common.py": "fe650f301938dd58ee3dc3cb615c2275a5569c4e",
+    "src/cv_audit_d.py": "e56ee8ae9839bc3c09d5c107763995d0ad445e1f"
+  },
+  "started_utc": "2026-11-12T08:49:03Z"
+}
