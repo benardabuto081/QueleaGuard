@@ -1,0 +1,21 @@
+CV audit M0 run M0_20261113T063421Z_fcb5193
+HEAD fcb5193d494b8435b601bba53efe4163720123fa
+
+Per-fold metrics (full precision in m0_fold_metrics.csv):
+ fold  n_test  n_presence_test  precision  recall    f1  roc_auc  tn  fp  fn  tp
+    0      50                8      1.000   0.125 0.222    0.961  42   0   7   1
+    1      14                9      0.700   0.778 0.737    0.867   2   3   2   7
+    2      31               11      0.500   0.909 0.645    0.718  10  10   1  10
+    3      58               36      0.882   0.833 0.857    0.886  18   4   6  30
+    4     113               69      0.833   0.362 0.505    0.839  39   5  44  25
+
+Aggregate across folds (unweighted mean, sample SD):
+  precision: mean=0.783 sd=0.191 (printed 0.783 / 0.191)
+  recall: mean=0.602 sd=0.340 (printed 0.602 / 0.340)
+  f1: mean=0.593 sd=0.244 (printed 0.593 / 0.244)
+  roc_auc: mean=0.854 sd=0.089 (printed 0.854 / 0.089)
+
+Largest absolute difference from the original results file, by metric: f1=0.000e+00, n_presence_test=0.000e+00, n_test=0.000e+00, precision=0.000e+00, recall=1.110e-16, roc_auc=1.110e-16
+Two-run maximum probability difference: 0.000e+00
+
+REPRODUCTION: PASSED

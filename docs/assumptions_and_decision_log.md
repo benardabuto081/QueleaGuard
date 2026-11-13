@@ -683,3 +683,37 @@ Fold 4 follow-up (`src/diagnose_fold4_persistent_site.py`): 60 of Fold 4's 113 t
 **Logged by:** Project owner
 
 ---
+
+## Log Entry 025 - CV Audit Stage M0: Baseline Re-Execution and Reproduction Gate
+
+**Date:** 2026-11-13 (document date; the Git commit timestamp is the verifiable record)
+
+**Context:** Stage M0 of the frozen CV Audit Protocol v1.2 (Entry 023) re-executed the baseline logistic-regression spatial-CV evaluation (Entries 018-020) under an identical specification, to establish whether the reported baseline numbers can be regenerated from the committed code and data. The script `src/cv_audit_m0.py` (blob 149957b1fcc7cbbde0198ec2a05ecf2247529681) was committed first as fcb5193d494b8435b601bba53efe4163720123fa. The run was executed once and wrote 8 files to `reports/cv_audit/M0_20261113T063421Z_fcb5193/` (`manifest.json`, `run_summary.txt`, `m0_oof_predictions.csv`, `m0_fold_metrics.csv`, `m0_reproduction_comparison.csv`, `m0_calibration_diagnostic.csv`, `m0_fold4_groups.csv`, `m0_fold_models.json`). The manifest records HEAD fcb5193d494b8435b601bba53efe4163720123fa and the script blobs `src/cv_audit_common.py` fe650f301938dd58ee3dc3cb615c2275a5569c4e, `src/cv_audit_m0.py` 149957b1fcc7cbbde0198ec2a05ecf2247529681 and `src/train_baseline_logistic_regression.py` fefea508c3271a95ea78bc89f4f21539cbae72db. Environment of the run: Python 3.14.3, numpy 2.5.1, pandas 3.0.5, scikit-learn 1.9.0, core.autocrlf true. The library versions of the original baseline run were never recorded (Entry 020), so nothing is claimed about how they relate to these.
+
+**Testing disclosure:** After the protocol was frozen, the script was developed and tested in an exploratory scratch environment (Python 3.12.3, numpy 2.5.4, pandas 3.0.6, scikit-learn 1.9.1) on the committed inputs. That test reproduced the baseline and also exercised the stop-on-failure path by altering one reference confusion cell inside a scratch process only (not in the repository), which produced the expected `FAILED.txt` and manifest. Scratch outputs were not kept and are development only; every result below is from the official run. No tolerance, threshold, fold, parameter, input or code was changed after any scratch output was seen.
+
+**Gates before fitting (all passed):** the three gated blobs; the protocol blob at HEAD and in the working copy; the exact 29-column list; 266 rows with unique keys, 133/133 classes and no missing cells; fold-file identity and per-fold class counts; background keys equal to the pseudo-absence file and presence keys present in the occurrence file; the season values equal to the fixed set (dry_cool, dry_hot, long_rains, short_rains); the explicitly built season dummies (dry_cool as the all-zero reference) equal to `get_dummies(drop_first=True)` in values and column order. The baseline's own numeric column order is used, which differs from the grouped order in the shared helper module; the sets are identical and the D-stage results do not depend on column order.
+
+**Reproduction criteria and result (established):** n_test and n_presence_test exact; precision, recall and F1 within 1e-12; ROC-AUC within 1e-9; confusion cells exact against both the printed output and the counts recomputed from the original results file; aggregates equal to the printed values at three decimals; two executions in one session within 1e-9; no convergence warning. All 51 assertions passed, and the hashes of the 52 protected files (the 8 protected inputs and baseline artefacts plus the 44 D-stage output files) were unchanged after the run. Largest absolute differences from the original results file: n_test 0, n_presence_test 0, precision 0, F1 0, recall 1.110e-16, ROC-AUC 1.110e-16; the two executions differed by 0.0. Per-fold results (three decimals; full precision in `m0_fold_metrics.csv`):
+
+| Fold | n | Presences | Precision | Recall | F1 | ROC-AUC | [[TN,FP],[FN,TP]] |
+|---|---|---|---|---|---|---|---|
+| 0 | 50 | 8 | 1.000 | 0.125 | 0.222 | 0.961 | [[42,0],[7,1]] |
+| 1 | 14 | 9 | 0.700 | 0.778 | 0.737 | 0.867 | [[2,3],[2,7]] |
+| 2 | 31 | 11 | 0.500 | 0.909 | 0.645 | 0.718 | [[10,10],[1,10]] |
+| 3 | 58 | 36 | 0.882 | 0.833 | 0.857 | 0.886 | [[18,4],[6,30]] |
+| 4 | 113 | 69 | 0.833 | 0.362 | 0.505 | 0.839 | [[39,5],[44,25]] |
+
+Unweighted mean (sample SD) across folds: precision 0.783 (0.191), recall 0.602 (0.340), F1 0.593 (0.244), ROC-AUC 0.854 (0.089). The calibration diagnostic for each fold and the four Fold 4 groups (presence and background, inside and outside `cell_0080`) also matched the values printed in the protocol at three decimals.
+
+**Fitted-model facts (established, from `m0_fold_models.json`):** LogisticRegression with C=1.0, no class weights, solver lbfgs, tol 0.0001, max_iter 1000, random_state 42. In scikit-learn 1.9 the L2 default is recorded as l1_ratio 0.0 with the `penalty` argument marked deprecated; the reproduction to 1e-16 is consistent with the L2 baseline described in Entry 020, but it does not show which penalty argument the original run was given. Iterations per fold 13, 15, 16, 15 and 15, all far below the cap, and no convergence or other warning in any fold. The standardised intercepts are 0.0618, -0.5905, -0.1972, -1.5836 and -1.0136 for Folds 0-4. The file also stores the per-fold standardised coefficients and scaler means and scales, which M1 will use to compare back-transformed coefficients.
+
+**Outputs kept for later stages:** `m0_oof_predictions.csv` holds the 266 out-of-fold probabilities and 0.5-threshold predictions (columns record_key, fold, presence, record_type, grid_cell_id, p_hat, y_pred). The R analyses re-score these fixed predictions without refitting.
+
+**What M0 does and does not establish:** it establishes that the numbers in Entry 020 are regenerated, to floating-point precision, by the committed code and data in this environment. It does not show that the baseline is a good model, that its probabilities are calibrated, that the spatial-CV design is adequate, or that the metrics are comparable across folds; those questions belong to the R and M1 analyses and to the limits already recorded in Entries 020 and 024. A successful reproduction is also not independent confirmation of the baseline's correctness, because the code and data are the same.
+
+**Decision:** Commit the M0 outputs and this entry unchanged. The stop rule was not triggered and nothing was adjusted to obtain agreement. Proceed to the R analyses on the fixed M0 predictions under the frozen protocol. M1 refits will use the same estimator construction, with weights or ablations applied only as the protocol specifies.
+
+**Logged by:** Project owner
+
+---
