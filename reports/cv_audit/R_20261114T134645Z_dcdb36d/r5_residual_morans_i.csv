@@ -1,0 +1,33 @@
+class,stratum,unit,band_lo_km,band_hi_km,n_units,pairs,participating_points,max_point_pair_share,pairs_same_cell,expected_I,morans_I,status
+presence,within_fold,"distinct coordinate, mean residual",0,1,29,9,7,0.3333333333333333,7,-0.03571428571428571,,not estimable: fewer than 30 pairs
+presence,within_fold,"distinct coordinate, mean residual",1,2,29,5,8,0.4,4,-0.03571428571428571,,not estimable: fewer than 30 pairs
+presence,within_fold,"distinct coordinate, mean residual",2,5,29,21,19,0.23809523809523808,2,-0.03571428571428571,,not estimable: fewer than 30 pairs
+presence,within_fold,"distinct coordinate, mean residual",5,10,29,21,21,0.2857142857142857,0,-0.03571428571428571,,not estimable: fewer than 30 pairs
+presence,within_fold,"distinct coordinate, mean residual",10,20,29,18,20,0.3333333333333333,0,-0.03571428571428571,,not estimable: fewer than 30 pairs
+presence,within_fold,"distinct coordinate, mean residual",20,40,29,9,12,0.5555555555555556,0,-0.03571428571428571,,not estimable: fewer than 30 pairs
+presence,within_fold,"distinct coordinate, mean residual",40,80,29,0,0,,0,-0.03571428571428571,,not estimable: fewer than 30 pairs
+presence,within_fold,"distinct coordinate, mean residual",80,120,29,0,0,,0,-0.03571428571428571,,not estimable: fewer than 30 pairs
+presence,cross_fold,"distinct coordinate, mean residual",0,1,29,0,0,,0,-0.03571428571428571,,not estimable: fewer than 30 pairs
+presence,cross_fold,"distinct coordinate, mean residual",1,2,29,0,0,,0,-0.03571428571428571,,not estimable: fewer than 30 pairs
+presence,cross_fold,"distinct coordinate, mean residual",2,5,29,0,0,,0,-0.03571428571428571,,not estimable: fewer than 30 pairs
+presence,cross_fold,"distinct coordinate, mean residual",5,10,29,11,14,0.8181818181818182,0,-0.03571428571428571,,not estimable: fewer than 30 pairs
+presence,cross_fold,"distinct coordinate, mean residual",10,20,29,65,23,0.15384615384615385,0,-0.03571428571428571,0.09723776449072365,computed under the predeclared rule
+presence,cross_fold,"distinct coordinate, mean residual",20,40,29,146,29,0.1232876712328767,0,-0.03571428571428571,-0.09593114727258199,computed under the predeclared rule
+presence,cross_fold,"distinct coordinate, mean residual",40,80,29,100,29,0.21,0,-0.03571428571428571,-0.011888493419793828,computed under the predeclared rule
+presence,cross_fold,"distinct coordinate, mean residual",80,120,29,1,2,1.0,0,-0.03571428571428571,,not estimable: fewer than 30 pairs
+background,within_fold,"distinct coordinate, mean residual",0,1,103,10,17,0.2,8,-0.00980392156862745,,not estimable: fewer than 30 pairs
+background,within_fold,"distinct coordinate, mean residual",1,2,103,10,16,0.2,8,-0.00980392156862745,,not estimable: fewer than 30 pairs
+background,within_fold,"distinct coordinate, mean residual",2,5,103,57,55,0.10526315789473684,8,-0.00980392156862745,0.7451299979540102,computed under the predeclared rule
+background,within_fold,"distinct coordinate, mean residual",5,10,103,147,90,0.06802721088435375,0,-0.00980392156862745,0.387806408237331,computed under the predeclared rule
+background,within_fold,"distinct coordinate, mean residual",10,20,103,297,101,0.04713804713804714,0,-0.00980392156862745,0.37459087129920904,computed under the predeclared rule
+background,within_fold,"distinct coordinate, mean residual",20,40,103,478,103,0.056485355648535567,0,-0.00980392156862745,0.009802944652501295,computed under the predeclared rule
+background,within_fold,"distinct coordinate, mean residual",40,80,103,390,88,0.04871794871794872,0,-0.00980392156862745,0.01853106164951063,computed under the predeclared rule
+background,within_fold,"distinct coordinate, mean residual",80,120,103,4,5,1.0,0,-0.00980392156862745,,not estimable: fewer than 30 pairs
+background,cross_fold,"distinct coordinate, mean residual",0,1,103,0,0,,0,-0.00980392156862745,,not estimable: fewer than 30 pairs
+background,cross_fold,"distinct coordinate, mean residual",1,2,103,0,0,,0,-0.00980392156862745,,not estimable: fewer than 30 pairs
+background,cross_fold,"distinct coordinate, mean residual",2,5,103,8,13,0.25,1,-0.00980392156862745,,not estimable: fewer than 30 pairs
+background,cross_fold,"distinct coordinate, mean residual",5,10,103,43,34,0.16279069767441862,0,-0.00980392156862745,1.2820959318975322,computed under the predeclared rule
+background,cross_fold,"distinct coordinate, mean residual",10,20,103,191,68,0.10471204188481675,0,-0.00980392156862745,0.53039505965321,computed under the predeclared rule
+background,cross_fold,"distinct coordinate, mean residual",20,40,103,865,101,0.04971098265895954,0,-0.00980392156862745,0.2220828542467224,computed under the predeclared rule
+background,cross_fold,"distinct coordinate, mean residual",40,80,103,2123,103,0.0287329251059821,0,-0.00980392156862745,-0.2602087541818347,computed under the predeclared rule
+background,cross_fold,"distinct coordinate, mean residual",80,120,103,630,78,0.06984126984126984,0,-0.00980392156862745,-0.15439347123445232,computed under the predeclared rule

@@ -1,0 +1,45 @@
+CV audit R run R_20261114T134645Z_dcdb36d
+HEAD dcdb36dee21e40f00be26668a5be5550e300614b
+
+R1: 20 fold-cell rows for 20 presence-bearing cells; background p_hat fraction >= 0.5 by fold: fold 0=0.000, fold 1=0.600, fold 2=0.500, fold 3=0.182, fold 4=0.114.
+
+R2 (Fold 4, focal cell_0080) and R3 (Fold 3, focal cell_0156); Cell-weighted confusion cells are weighted counts:
+analysis        subset  records  presences  background   tn  fp    fn    tp  recall  precision    f1  roc_auc                                                       flags
+      R2           All      113         69          44 39.0 5.0 44.00 25.00   0.362      0.833 0.505    0.839                                                            
+      R2         Focal       62         60           2  1.0 1.0 39.00 21.00   0.350        NaN   NaN      NaN <3 presence cells; limited: fewer than 3 records in a class
+      R2          Rest       51          9          42 38.0 4.0  5.00  4.00   0.444      0.500 0.471    0.918                                           <3 presence cells
+      R2 Cell-weighted      113         69          44 39.0 5.0 37.95 31.05   0.450      0.861 0.591    0.878                                                            
+      R3           All       58         36          22 18.0 4.0  6.00 30.00   0.833      0.882 0.857    0.886                                                            
+      R3         Focal       27         27           0  0.0 0.0  0.00 27.00   1.000        NaN   NaN      NaN <3 presence cells; limited: fewer than 3 records in a class
+      R3          Rest       31          9          22 18.0 4.0  6.00  3.00   0.333      0.429 0.375    0.667                                                            
+      R3 Cell-weighted       58         36          22 18.0 4.0 12.00 24.00   0.667      0.857 0.750    0.789                                                            
+
+R4 primary (cell removed), min-max over removed cells beside the full-fold value (a range, not an interval):
+  fold 0 recall: full=0.125 range=[0.000, 0.250] defined for 4 of 4 cells
+  fold 0 precision: full=1.000 range=[1.000, 1.000] defined for 3 of 4 cells
+  fold 0 f1: full=0.222 range=[0.000, 0.400] defined for 4 of 4 cells
+  fold 0 roc_auc: full=0.961 range=[0.935, 0.988] defined for 4 of 4 cells
+  fold 1 recall: full=0.778 range=[0.000, 1.000] defined for 2 of 2 cells
+  fold 1 precision: full=0.700 range=[0.778, 0.778] defined for 1 of 2 cells
+  fold 1 f1: full=0.737 range=[0.875, 0.875] defined for 1 of 2 cells
+  fold 1 roc_auc: full=0.867 range=[1.000, 1.000] defined for 1 of 2 cells
+  fold 2 recall: full=0.909 range=[0.833, 1.000] defined for 5 of 5 cells
+  fold 2 precision: full=0.500 range=[0.357, 0.533] defined for 5 of 5 cells
+  fold 2 f1: full=0.645 range=[0.500, 0.667] defined for 5 of 5 cells
+  fold 2 roc_auc: full=0.718 range=[0.667, 0.740] defined for 5 of 5 cells
+  fold 3 recall: full=0.833 range=[0.333, 0.938] defined for 6 of 6 cells
+  fold 3 precision: full=0.882 range=[0.429, 0.882] defined for 6 of 6 cells
+  fold 3 f1: full=0.857 range=[0.375, 0.909] defined for 6 of 6 cells
+  fold 3 roc_auc: full=0.886 range=[0.667, 0.929] defined for 6 of 6 cells
+  fold 4 recall: full=0.362 range=[0.348, 0.444] defined for 3 of 3 cells
+  fold 4 precision: full=0.833 range=[0.500, 0.852] defined for 3 of 3 cells
+  fold 4 f1: full=0.505 range=[0.471, 0.511] defined for 3 of 3 cells
+  fold 4 roc_auc: full=0.839 range=[0.855, 0.918] defined for 3 of 3 cells
+
+R5 bands meeting the predeclared 30-pair minimum, by class and stratum (counts-only pre-check):
+  background cross_fold: units=103, pairs per band=[0, 0, 8, 43, 191, 865, 2123, 630], bands meeting minimum=5
+  background within_fold: units=103, pairs per band=[10, 10, 57, 147, 297, 478, 390, 4], bands meeting minimum=5
+  presence cross_fold: units=29, pairs per band=[0, 0, 0, 11, 65, 146, 100, 1], bands meeting minimum=3
+  presence within_fold: units=29, pairs per band=[9, 5, 21, 21, 18, 9, 0, 0], bands meeting minimum=0 -> not estimable under this design
+
+Failed non-fatal checks: none
