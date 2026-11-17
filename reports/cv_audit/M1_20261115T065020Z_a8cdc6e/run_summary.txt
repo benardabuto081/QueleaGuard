@@ -1,0 +1,105 @@
+CV audit M1 run M1_20261115T065020Z_a8cdc6e
+HEAD a8cdc6e72ea237ff30f7af19a614654e8116a2d8
+
+Unit-weight refit reproduces M0: max probability difference 1.110e-16, max coefficient difference 0.000e+00
+
+Paired change in p_hat versus V0, by variant, ablated cell and evaluated fold:
+            variant      cell  fold  n_test  mean_delta  mean_abs_delta  p95_abs_delta  max_abs_delta  spearman_with_v0
+    V1_exact_repeat               0      50      -0.001           0.008          0.040          0.049             0.989
+    V1_exact_repeat               1      14       0.011           0.019          0.082          0.114             1.000
+    V1_exact_repeat               2      31      -0.027           0.039          0.110          0.243             0.898
+    V1_exact_repeat               3      58       0.023           0.037          0.116          0.196             0.987
+    V1_exact_repeat               4     113       0.055           0.058          0.136          0.194             0.988
+   V2_cell_balanced               0      50       0.042           0.043          0.235          0.546             0.776
+   V2_cell_balanced               1      14      -0.047           0.047          0.186          0.221             0.973
+   V2_cell_balanced               2      31      -0.063           0.084          0.292          0.327             0.756
+   V2_cell_balanced               3      58       0.133           0.178          0.697          0.850             0.796
+   V2_cell_balanced               4     113       0.064           0.078          0.184          0.372             0.956
+V3_ablate_cell_0080 cell_0080     0      50      -0.005           0.013          0.080          0.124             0.778
+V3_ablate_cell_0080 cell_0080     1      14      -0.080           0.080          0.260          0.272             0.973
+V3_ablate_cell_0080 cell_0080     2      31      -0.281           0.281          0.611          0.616             0.735
+V3_ablate_cell_0080 cell_0080     3      58       0.021           0.123          0.364          0.646             0.906
+V3_ablate_cell_0156 cell_0156     0      50      -0.001           0.006          0.040          0.050             0.996
+V3_ablate_cell_0156 cell_0156     1      14      -0.005           0.006          0.021          0.028             0.999
+V3_ablate_cell_0156 cell_0156     2      31       0.008           0.011          0.027          0.034             0.992
+V3_ablate_cell_0156 cell_0156     4     113      -0.041           0.047          0.116          0.174             0.976
+V3_ablate_cell_0097 cell_0097     0      50      -0.002           0.002          0.011          0.021             0.999
+V3_ablate_cell_0097 cell_0097     2      31      -0.006           0.008          0.022          0.024             0.989
+V3_ablate_cell_0097 cell_0097     3      58      -0.445           0.459          0.924          0.931             0.595
+V3_ablate_cell_0097 cell_0097     4     113      -0.011           0.013          0.027          0.040             0.999
+V3_ablate_cell_0009 cell_0009     0      50       0.004           0.004          0.023          0.025             0.997
+V3_ablate_cell_0009 cell_0009     1      14       0.008           0.010          0.035          0.051             0.996
+V3_ablate_cell_0009 cell_0009     3      58      -0.012           0.013          0.066          0.086             0.999
+V3_ablate_cell_0009 cell_0009     4     113      -0.060           0.076          0.180          0.297             0.935
+V3_ablate_cell_0099 cell_0099     0      50       0.003           0.004          0.027          0.029             0.996
+V3_ablate_cell_0099 cell_0099     1      14       0.006           0.007          0.033          0.056             0.968
+V3_ablate_cell_0099 cell_0099     2      31       0.017           0.022          0.058          0.059             0.986
+V3_ablate_cell_0099 cell_0099     3      58       0.008           0.012          0.033          0.050             0.990
+
+Metrics, V0 -> variant (none designated headline):
+            variant      cell  fold  precision_v0  precision_variant  recall_v0  recall_variant  f1_v0  f1_variant  roc_auc_v0  roc_auc_variant  mean_p_v0  mean_p_variant
+    V1_exact_repeat               0         1.000              1.000      0.125           0.125  0.222       0.222       0.961            0.961      0.053           0.052
+    V1_exact_repeat               1         0.700              0.727      0.778           0.889  0.737       0.800       0.867            0.867      0.750           0.761
+    V1_exact_repeat               2         0.500              0.500      0.909           0.909  0.645       0.645       0.718            0.750      0.517           0.490
+    V1_exact_repeat               3         0.882              0.833      0.833           0.833  0.857       0.833       0.886            0.881      0.539           0.562
+    V1_exact_repeat               4         0.833              0.857      0.362           0.522  0.505       0.649       0.839            0.868      0.341           0.396
+   V2_cell_balanced               0         1.000              1.000      0.125           0.250  0.222       0.400       0.961            0.905      0.053           0.095
+   V2_cell_balanced               1         0.700              0.700      0.778           0.778  0.737       0.737       0.867            0.867      0.750           0.704
+   V2_cell_balanced               2         0.500              0.579      0.909           1.000  0.645       0.733       0.718            0.777      0.517           0.454
+   V2_cell_balanced               3         0.882              0.783      0.833           1.000  0.857       0.878       0.886            0.879      0.539           0.672
+   V2_cell_balanced               4         0.833              0.818      0.362           0.522  0.505       0.637       0.839            0.823      0.341           0.405
+V3_ablate_cell_0080 cell_0080     0         1.000              1.000      0.125           0.125  0.222       0.222       0.961            0.952      0.053           0.048
+V3_ablate_cell_0080 cell_0080     1         0.700              0.778      0.778           0.778  0.737       0.778       0.867            0.867      0.750           0.670
+V3_ablate_cell_0080 cell_0080     2         0.500              1.000      0.909           0.182  0.645       0.308       0.718            0.768      0.517           0.236
+V3_ablate_cell_0080 cell_0080     3         0.882              0.886      0.833           0.861  0.857       0.873       0.886            0.914      0.539           0.560
+V3_ablate_cell_0156 cell_0156     0         1.000              1.000      0.125           0.125  0.222       0.222       0.961            0.955      0.053           0.052
+V3_ablate_cell_0156 cell_0156     1         0.700              0.700      0.778           0.778  0.737       0.737       0.867            0.867      0.750           0.746
+V3_ablate_cell_0156 cell_0156     2         0.500              0.500      0.909           0.909  0.645       0.645       0.718            0.727      0.517           0.526
+V3_ablate_cell_0156 cell_0156     4         0.833              0.833      0.362           0.362  0.505       0.505       0.839            0.796      0.341           0.300
+V3_ablate_cell_0097 cell_0097     0         1.000              1.000      0.125           0.125  0.222       0.222       0.961            0.961      0.053           0.052
+V3_ablate_cell_0097 cell_0097     2         0.500              0.500      0.909           0.909  0.645       0.645       0.718            0.705      0.517           0.511
+V3_ablate_cell_0097 cell_0097     3         0.882              0.250      0.833           0.028  0.857       0.050       0.886            0.529      0.539           0.093
+V3_ablate_cell_0097 cell_0097     4         0.833              0.833      0.362           0.362  0.505       0.505       0.839            0.830      0.341           0.330
+V3_ablate_cell_0009 cell_0009     0         1.000              1.000      0.125           0.125  0.222       0.222       0.961            0.955      0.053           0.057
+V3_ablate_cell_0009 cell_0009     1         0.700              0.700      0.778           0.778  0.737       0.737       0.867            0.867      0.750           0.758
+V3_ablate_cell_0009 cell_0009     3         0.882              0.879      0.833           0.806  0.857       0.841       0.886            0.886      0.539           0.527
+V3_ablate_cell_0009 cell_0009     4         0.833              0.727      0.362           0.232  0.505       0.352       0.839            0.836      0.341           0.281
+V3_ablate_cell_0099 cell_0099     0         1.000              1.000      0.125           0.125  0.222       0.222       0.961            0.955      0.053           0.056
+V3_ablate_cell_0099 cell_0099     1         0.700              0.700      0.778           0.778  0.737       0.737       0.867            0.867      0.750           0.757
+V3_ablate_cell_0099 cell_0099     2         0.500              0.500      0.909           0.909  0.645       0.645       0.718            0.705      0.517           0.534
+V3_ablate_cell_0099 cell_0099     3         0.882              0.882      0.833           0.833  0.857       0.857       0.886            0.886      0.539           0.547
+
+Fit diagnostics:
+            variant      cell  fold  n_train  n_iter  converged  norm_beta_std  weighted_log_loss_mean  stationarity
+    V1_exact_repeat               0      216      14       True         3.3017                  0.2897        0.0001
+    V1_exact_repeat               1      252      16       True         3.3049                  0.2528        0.0000
+    V1_exact_repeat               2      235      16       True         3.3445                  0.2449        0.0001
+    V1_exact_repeat               3      208      17       True         3.0242                  0.2723        0.0001
+    V1_exact_repeat               4      153      16       True         2.6750                  0.2526        0.0001
+   V2_cell_balanced               0      216      18       True         2.9592                  0.3126        0.0001
+   V2_cell_balanced               1      252      15       True         3.3405                  0.2834        0.0001
+   V2_cell_balanced               2      235      17       True         2.9890                  0.2827        0.0001
+   V2_cell_balanced               3      208      16       True         2.9616                  0.3225        0.0001
+   V2_cell_balanced               4      153      16       True         2.9288                  0.2966        0.0001
+V3_ablate_cell_0080 cell_0080     0      154      17       True         3.1152                  0.2427        0.0000
+V3_ablate_cell_0080 cell_0080     1      190      16       True         3.3024                  0.2094        0.0001
+V3_ablate_cell_0080 cell_0080     2      173      17       True         2.9533                  0.2052        0.0001
+V3_ablate_cell_0080 cell_0080     3      146      16       True         2.8866                  0.2420        0.0001
+V3_ablate_cell_0156 cell_0156     0      189      17       True         3.1956                  0.3220        0.0001
+V3_ablate_cell_0156 cell_0156     1      225      17       True         3.1981                  0.2843        0.0001
+V3_ablate_cell_0156 cell_0156     2      208      15       True         3.2242                  0.2656        0.0001
+V3_ablate_cell_0156 cell_0156     4      126      13       True         2.5405                  0.2739        0.0001
+V3_ablate_cell_0097 cell_0097     0      209      17       True         3.2505                  0.2918        0.0001
+V3_ablate_cell_0097 cell_0097     2      228      15       True         3.2672                  0.2415        0.0001
+V3_ablate_cell_0097 cell_0097     3      201      16       True         3.0647                  0.2696        0.0000
+V3_ablate_cell_0097 cell_0097     4      146      15       True         2.7269                  0.2456        0.0001
+V3_ablate_cell_0009 cell_0009     0      210      15       True         3.3536                  0.2790        0.0001
+V3_ablate_cell_0009 cell_0009     1      246      15       True         3.3411                  0.2521        0.0001
+V3_ablate_cell_0009 cell_0009     3      202      16       True         2.9987                  0.2656        0.0000
+V3_ablate_cell_0009 cell_0009     4      147      14       True         3.0434                  0.2145        0.0001
+V3_ablate_cell_0099 cell_0099     0      208      17       True         3.3150                  0.2753        0.0001
+V3_ablate_cell_0099 cell_0099     1      244      16       True         3.3238                  0.2489        0.0001
+V3_ablate_cell_0099 cell_0099     2      227      17       True         3.3471                  0.2245        0.0001
+V3_ablate_cell_0099 cell_0099     3      200      17       True         3.1060                  0.2598        0.0000
+
+Failed non-fatal checks: none
