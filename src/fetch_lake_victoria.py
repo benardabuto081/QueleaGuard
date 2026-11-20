@@ -9,7 +9,7 @@ import json
 import requests
 
 OVERPASS_URL = "https://overpass-api.de/api/interpreter"
-HEADERS = {"User-Agent": "QueleaGuard-Capstone-Research/1.0"}
+HEADERS = {"User-Agent": "QueleaGuard-Research/1.0"}
 LAKE_QUERY = """
 [out:json][timeout:120];
 relation["natural"="water"]["name"~"Victoria",i](-1.0,34.0,0.5,35.6);

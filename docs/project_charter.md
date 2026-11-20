@@ -1,5 +1,7 @@
 ﻿# Project Charter
 
+> **Status: historical planning document (version 1).** Written at the start of the project and superseded by `docs/research_protocol_v2.md`, the frozen audit protocol and the audit synthesis (`docs/cv_audit_synthesis.md`). It is retained because the research record refers to it. Its scope, timeline and wording (for example "infestation risk") describe the original plan and are not current claims: the project models recorded occurrence and habitat suitability, not infestation or crop damage.
+
 **Project Name:** QueleaGuard
 
 **Project Title:** QueleaGuard: An AI-Based Early Warning System for Predicting Quelea Bird Infestation Risk in the Ahero Rice Irrigation Scheme and Surrounding Communities, Kisumu County, Kenya
@@ -10,14 +12,8 @@
 
 **Project Type:** Machine Learning | Geospatial Analytics | Environmental AI
 
-**Institution:** Ngao Labs Data Science & AI/ML Bootcamp
-
 **Team:**
 - Bernard Abuto
-
-**Group:** Group 3
-
-**Project Duration:** 5 Weeks
 
 **Repository:** QueleaGuard
 
@@ -31,7 +27,7 @@ QueleaGuard is an end-to-end machine learning project that aims to develop an in
 
 The project addresses a persistent agricultural challenge affecting rice farmers, where seasonal invasions of quelea birds result in significant crop losses and reduced productivity. By integrating historical bird occurrence records with environmental, climatic, vegetation, and geospatial data, QueleaGuard seeks to generate predictive insights that support proactive pest management rather than reactive control.
 
-Beyond fulfilling the requirements of the Ngao Labs Data Science & AI/ML Capstone Project, QueleaGuard is intended to serve as a professional portfolio project that demonstrates practical skills in data engineering, geospatial analysis, machine learning, model evaluation, explainable AI, and technical documentation. The project is also designed as the foundation for a future agricultural decision-support platform that could evolve into a real-world solution for farmers and agricultural stakeholders.
+QueleaGuard is designed as the foundation for a future agricultural decision-support platform that could evolve into a real-world solution for farmers and agricultural stakeholders.
 
 ---
 
@@ -100,7 +96,7 @@ To develop a machine learning-based early warning system capable of predicting t
 
 ### Excluded
 
-The following components are outside the scope of this capstone and are considered future work:
+The following components are outside the scope of this phase of the project and are considered future work:
 
 - Mobile application development
 - SMS alert services
@@ -124,7 +120,6 @@ The following components are outside the scope of this capstone and are consider
 - Model evaluation notebook
 - Responsible AI report
 - GitHub repository
-- Technical presentation
 
 ---
 
@@ -135,7 +130,6 @@ The project will be considered successful if it:
 - Produces a reliable and reproducible machine learning dataset.
 - Demonstrates meaningful predictive performance using appropriate evaluation metrics.
 - Identifies key environmental drivers of quelea infestations.
-- Meets all Ngao Labs capstone requirements.
 - Is fully documented, reproducible, and suitable for publication on GitHub.
 - Demonstrates industry-standard project organization and documentation.
 

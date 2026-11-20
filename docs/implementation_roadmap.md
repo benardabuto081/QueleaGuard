@@ -1,5 +1,7 @@
 ﻿# Implementation Roadmap
 
+> **Status: historical planning document (version 1).** Written at the start of the project and superseded by `docs/research_protocol_v2.md`, the frozen audit protocol and the audit synthesis (`docs/cv_audit_synthesis.md`). It is retained because the research record refers to it. Its scope, timeline and wording (for example "infestation risk") describe the original plan and are not current claims: the project models recorded occurrence and habitat suitability, not infestation or crop damage.
+
 **Project:** QueleaGuard
 
 **Version:** 1.1
@@ -12,9 +14,9 @@
 
 # 1. Purpose
 
-This document defines the implementation strategy for QueleaGuard. It provides a structured execution plan covering project milestones, task breakdown, deliverables, quality assurance, collaboration workflow, and submission readiness.
+This document defines the implementation strategy for QueleaGuard. It provides a structured execution plan covering project milestones, task breakdown, deliverables, quality assurance, collaboration workflow, and release readiness.
 
-The roadmap serves as the operational guide throughout the project lifecycle, ensuring that all technical, documentation, and capstone requirements are completed in a systematic and reproducible manner.
+The roadmap serves as the operational guide throughout the project lifecycle, ensuring that all technical and documentation requirements are completed in a systematic and reproducible manner.
 
 ---
 
@@ -30,7 +32,6 @@ The roadmap serves as the operational guide throughout the project lifecycle, en
 | Machine Learning | Week 3 | Planned |
 | Model Evaluation | Week 4 | Planned |
 | Documentation | Week 4 | Planned |
-| Final Presentation | Week 5 | Planned |
 
 ---
 
@@ -204,14 +205,11 @@ Tasks
 - Final documentation
 - Repository cleanup
 - README completion
-- Presentation slides
 - Final review
 
 Deliverables
 
 - GitHub Repository
-- Final Presentation
-- Complete Capstone Submission
 
 ---
 
@@ -250,7 +248,6 @@ Deliverables
 ### Phase 6 - Delivery
 
 - Documentation
-- Presentation
 - GitHub publication
 
 ---
@@ -276,7 +273,6 @@ Primary Responsibilities
 - Feature engineering
 - Model testing
 - Weekly reviews
-- Final presentation
 - Report writing
 
 ---
@@ -293,7 +289,6 @@ main
 +-- src/
 +-- models/
 +-- reports/
-+-- presentation/
 +-- README.md
 
 
@@ -337,55 +332,9 @@ Before any task is considered complete, verify that:
 
 ---
 
-# 9. Ngao Labs Submission Checklist
+# 9. Submission Checklist (removed)
 
-## Documentation
-
-- [x] Project Charter
-- [x] Project Specification
-- [x] Technical Architecture
-- [x] Data & Methodology
-- [x] Implementation Roadmap
-- [ ] README
-- [x] Dataset Feasibility Study
-- [x] Assumptions & Decision Log
-
----
-
-## Data
-
-- [x] Dataset collected
-- [x] Dataset cleaned
-- [ ] Data dictionary completed
-
----
-
-## Machine Learning
-
-- [ ] Baseline model
-- [ ] Advanced model(s)
-- [ ] Evaluation completed
-- [ ] Error analysis completed
-- [ ] Responsible AI statement completed
-
----
-
-## GitHub
-
-- [x] Repository organized
-- [ ] Documentation complete
-- [x] Requirements file added
-- [x] License added
-- [ ] Final commit completed
-
----
-
-## Presentation
-
-- [ ] Slides prepared
-- [ ] Results summarized
-- [ ] Demo tested
-- [ ] Speaking notes prepared
+This section was a checklist for an external submission process that no longer applies. It was removed when the project became independent research (see the decision log, Entry 028).
 
 ---
 
@@ -393,19 +342,17 @@ Before any task is considered complete, verify that:
 
 The project will be considered complete when:
 
-- All Ngao Labs capstone requirements have been satisfied.
 - Every notebook executes successfully from start to finish.
 - The dataset is fully documented and reproducible.
 - The repository follows a professional structure.
 - All project documentation is complete.
-- The README provides a clear entry point for users and recruiters.
-- The project is ready to be showcased as a professional portfolio piece.
+- The README provides a clear entry point for users.
 
 ---
 
 # 11. Future Roadmap
 
-Following the successful completion of the capstone, QueleaGuard may evolve through the following phases:
+Following completion of the initial implementation phase, QueleaGuard may evolve through the following phases:
 
 ### Phase 2 - Prototype
 

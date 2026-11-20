@@ -2,7 +2,7 @@
 import json
 
 OVERPASS_URL = "https://overpass-api.de/api/interpreter"
-HEADERS = {"User-Agent": "QueleaGuard-Capstone-Research/1.0"}
+HEADERS = {"User-Agent": "QueleaGuard-Research/1.0"}
 
 QUERY = """
 [out:json][timeout:60];

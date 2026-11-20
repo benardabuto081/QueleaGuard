@@ -13,7 +13,7 @@ import time
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/search"
 
 # Nominatim requires a descriptive User-Agent per its usage policy.
-HEADERS = {"User-Agent": "QueleaGuard-Capstone-Research/1.0"}
+HEADERS = {"User-Agent": "QueleaGuard-Research/1.0"}
 
 QUERIES = [
     "Ahero Irrigation Scheme, Kenya",

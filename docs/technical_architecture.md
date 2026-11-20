@@ -1,5 +1,7 @@
 ﻿# Technical Architecture
 
+> **Status: historical planning document (version 1).** Written at the start of the project and superseded by `docs/research_protocol_v2.md`, the frozen audit protocol and the audit synthesis (`docs/cv_audit_synthesis.md`). It is retained because the research record refers to it. Its scope, timeline and wording (for example "infestation risk") describe the original plan and are not current claims: the project models recorded occurrence and habitat suitability, not infestation or crop damage.
+
 **Project:** QueleaGuard
 
 **Version:** 1.1
@@ -283,7 +285,6 @@ QueleaGuard/
 +-- src/
 +-- models/
 +-- reports/
-+-- presentation/
 +-- requirements.txt
 +-- README.md
 
@@ -350,4 +351,4 @@ Future versions of QueleaGuard may include:
 - Farmer-reported sightings
 - Cloud deployment
 
-These components are intentionally excluded from the capstone scope but define the long-term product vision.
+These components are intentionally excluded from the initial implementation scope but define the long-term product vision.

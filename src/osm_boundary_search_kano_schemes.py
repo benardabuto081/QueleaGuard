@@ -2,7 +2,7 @@
 import time
 
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/search"
-HEADERS = {"User-Agent": "QueleaGuard-Capstone-Research/1.0"}
+HEADERS = {"User-Agent": "QueleaGuard-Research/1.0"}
 
 QUERIES = [
     "West Kano Irrigation Scheme, Kenya",

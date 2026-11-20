@@ -3,7 +3,7 @@ import time
 import json
 
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/reverse"
-HEADERS = {"User-Agent": "QueleaGuard-Capstone-Research/1.0"}
+HEADERS = {"User-Agent": "QueleaGuard-Research/1.0"}
 
 # Top 10 patches by area, from the earlier connected-component analysis
 # (lat, lon, area_km2)

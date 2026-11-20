@@ -10,7 +10,7 @@ import requests
 import json
 
 OVERPASS_URL = "https://overpass-api.de/api/interpreter"
-HEADERS = {"User-Agent": "QueleaGuard-Capstone-Research/1.0"}
+HEADERS = {"User-Agent": "QueleaGuard-Research/1.0"}
 
 # Query for the specific farmland way identified in Milestone 2.1's Nominatim search
 QUERY = """

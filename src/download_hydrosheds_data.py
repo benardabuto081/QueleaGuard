@@ -16,7 +16,7 @@ RIVERS_URL = "https://data.hydrosheds.org/file/HydroRIVERS/HydroRIVERS_v10_af.gd
 RIVERS_PATH = CACHE_DIR / "HydroRIVERS_v10_af.gdb.zip"
 
 OVERPASS_URL = "https://overpass-api.de/api/interpreter"
-HEADERS = {"User-Agent": "QueleaGuard-Capstone-Research/1.0"}
+HEADERS = {"User-Agent": "QueleaGuard-Research/1.0"}
 LAKE_QUERY = """
 [out:json][timeout:90];
 relation["natural"="water"]["name"~"Victoria",i](-1.0,34.0,0.5,35.6);

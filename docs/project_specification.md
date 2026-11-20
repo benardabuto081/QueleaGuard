@@ -1,5 +1,7 @@
 ﻿# Project Specification
 
+> **Status: historical planning document (version 1).** Written at the start of the project and superseded by `docs/research_protocol_v2.md`, the frozen audit protocol and the audit synthesis (`docs/cv_audit_synthesis.md`). It is retained because the research record refers to it. Its scope, timeline and wording (for example "infestation risk") describe the original plan and are not current claims: the project models recorded occurrence and habitat suitability, not infestation or crop damage.
+
 **Project:** QueleaGuard
 
 **Version:** 1.1
@@ -237,29 +239,12 @@ The completed project will include:
 - Explainability analysis
 - Responsible AI assessment
 - GitHub repository
-- Technical presentation
 
 ---
 
-# 12. Ngao Labs Capstone Requirements Mapping
+# 12. Requirements Mapping (removed)
 
-The project will be developed to satisfy the official Ngao Labs Capstone requirements.
-
-| Ngao Labs Requirement | QueleaGuard Deliverable |
-|------------------------|-------------------------|
-| Clearly defined problem statement | Project documentation |
-| Well-documented dataset | Custom integrated dataset + Data Dictionary |
-| Exploratory Data Analysis | EDA Notebook |
-| Data preprocessing | Preprocessing Notebook |
-| Feature engineering | Feature Engineering Workflow |
-| Baseline model | Logistic Regression (or another appropriate baseline) |
-| Advanced model(s) | Random Forest, Gradient Boosting, XGBoost (subject to experimentation) |
-| Model evaluation using multiple metrics | Evaluation Notebook |
-| Error analysis | Evaluation Report |
-| Responsible AI Statement (500-700 words) | Responsible_AI.md |
-| GitHub repository | Fully documented public repository |
-| Presentation | Final capstone presentation |
-| Reproducible workflow | Complete project documentation and notebooks |
+This section mapped the deliverables to external assessment requirements that no longer apply. It was removed when the project became independent research (see the decision log, Entry 028). The requirement below is retained because it is a research design element.
 
 **Additional Requirement:**
 The project will also include **disaggregated evaluation by spatial partition** (e.g., spatial cross-validation fold or distance-from-scheme-center band) if the dataset supports meaningful subgroup analysis. This supersedes the block-level disaggregation approach considered after the Nyamware correction (docs/assumptions_and_decision_log.md, Log Entry 001), following the adoption of a grid-based spatial framework in Log Entry 002 - operational block boundaries are not available from any authoritative source, whereas spatial partitions within the grid require no such data and are standard SDM evaluation practice.
@@ -287,9 +272,6 @@ The project will also include **disaggregated evaluation by spatial partition** 
 
 The project will be considered successful if it:
 
-- Meets all Ngao Labs Capstone requirements.
 - Produces a reproducible machine learning workflow.
 - Demonstrates meaningful predictive performance.
 - Is well documented.
-- Is suitable for inclusion in a professional GitHub portfolio.
-- Serves as a strong showcase project for internships, research opportunities, and entry-level machine learning or data science roles.

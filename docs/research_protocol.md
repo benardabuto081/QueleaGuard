@@ -7,7 +7,7 @@
 
 ## 0. Purpose and Scope of This Document
 
-This protocol formalizes the QueleaGuard research redesign following the Ngao Labs presentation. It supersedes the implicit single-level "environment -> occurrence" framing of the original Specification/Methodology documents, while preserving all completed Level 1 data engineering as the foundation of the new three-level architecture.
+This protocol formalizes the QueleaGuard research redesign following the initial phase of the project. It supersedes the implicit single-level "environment -> occurrence" framing of the original Specification/Methodology documents, while preserving all completed Level 1 data engineering as the foundation of the new three-level architecture.
 
 **This document does not authorize new data downloads.** It is a design and feasibility-gap document for review, per the instruction to design before acquiring.
 

@@ -1,5 +1,7 @@
 ﻿# Data & Methodology
 
+> **Status: historical planning document (version 1).** Written at the start of the project and superseded by `docs/research_protocol_v2.md`, the frozen audit protocol and the audit synthesis (`docs/cv_audit_synthesis.md`). It is retained because the research record refers to it. Its scope, timeline and wording (for example "infestation risk") describe the original plan and are not current claims: the project models recorded occurrence and habitat suitability, not infestation or crop damage.
+
 **Project:** QueleaGuard
 
 **Version:** 1.1
@@ -314,7 +316,7 @@ The project will explicitly evaluate:
 - Model transparency
 - Ethical considerations for agricultural decision support
 
-A Responsible AI statement will be prepared as a required capstone deliverable.
+A Responsible AI statement will be prepared as part of the research documentation.
 
 ---
 
